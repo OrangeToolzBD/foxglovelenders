@@ -75,7 +75,7 @@ function IndustryPage() {
           </div>
         </div>
 
-        {/* Hero — dark anchor band */}
+        {/* Hero - dark anchor band */}
         <section
           className="relative overflow-hidden border-b border-white/10 py-16 text-white sm:py-20"
           style={{ background: "var(--gradient-hero)" }}
@@ -132,7 +132,7 @@ function IndustryPage() {
           </section>
         )}
 
-        {/* Services list — uniform card grid */}
+        {/* Services list - uniform card grid */}
         <section className="mx-auto max-w-7xl px-6 py-20">
           <div className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-vermillion)]">
             <span aria-hidden className="h-px w-10 bg-[color:var(--brand-vermillion)]" />

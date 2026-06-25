@@ -45,7 +45,7 @@ function ApplyNowPage() {
       <Header />
       <div aria-hidden className="h-20" />
 
-      {/* Hero — dark anchor band */}
+      {/* Hero - dark anchor band */}
       <section
         className="relative overflow-hidden border-b border-white/10 py-14 text-white"
         style={{ background: "var(--gradient-hero)" }}
@@ -67,7 +67,7 @@ function ApplyNowPage() {
           </h1>
           <p className="mt-4 max-w-2xl text-white/80">
             Share a few details about your business and Anchor will pre-screen the right lenders for
-            your file — across {CITY_STATE} and the broader Texas market.
+            your file - across {CITY_STATE} and the broader Texas market.
           </p>
           <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-[color:var(--brand-vermillion)]/40 bg-[color:var(--brand-vermillion)]/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[color:var(--brand-vermillion)] backdrop-blur">
             <ShieldCheck className="h-3.5 w-3.5" /> Soft pull · No credit impact
@@ -133,7 +133,7 @@ function ApplyNowPage() {
               {[
                 "Soft credit pull, never affects your score",
                 "Bank-level 256-bit encryption",
-                "No obligation — compare offers freely",
+                "No obligation - compare offers freely",
                 "Texas-licensed lending partners only",
               ].map((t) => (
                 <li key={t} className="flex gap-2.5">
@@ -144,7 +144,7 @@ function ApplyNowPage() {
             </ul>
           </div>
 
-          {/* Anchor ledger — dark metric tiles */}
+          {/* Anchor ledger - dark metric tiles */}
           <div className="rounded-none border border-white/10 bg-[color:var(--brand-charcoal)] p-5 text-white">
             <div className="flex items-center justify-between">
               <span className="font-display text-[11px] font-bold uppercase tracking-[0.18em] text-[color:var(--brand-vermillion)]">
@@ -173,7 +173,7 @@ function ApplyNowPage() {
             </div>
           </div>
 
-          {/* Need help — call CTA */}
+          {/* Need help - call CTA */}
           <div className="rounded-none border border-[color:var(--brand-vermillion)]/30 bg-[color:var(--brand-vermillion)]/8 p-5">
             <div className="font-display text-sm font-semibold uppercase tracking-[0.14em] text-[color:var(--brand-charcoal)]">
               Need a quick gut-check?
@@ -189,7 +189,7 @@ function ApplyNowPage() {
             </a>
             <div className="mt-3 flex items-center gap-2 text-[11px] uppercase tracking-[0.14em] text-muted-foreground">
               <Clock className="h-3 w-3 text-[color:var(--brand-vermillion)]" />
-              Mon–Fri · 8am–7pm CT
+              Mon-Fri · 8am-7pm CT
             </div>
           </div>
 

@@ -1,5 +1,5 @@
-// Anchor Capital Group — San Antonio neighborhood pages.
-// Unique local content per neighborhood — never a city-page find/replace.
+// Anchor Capital Group - San Antonio neighborhood pages.
+// Unique local content per neighborhood - never a city-page find/replace.
 
 export type Suburb = {
   slug: string;
@@ -8,9 +8,9 @@ export type Suburb = {
   county: string;
   /** Short tagline / sub-heading. */
   tagline: string;
-  /** First paragraph — unique local intro (700+ word pages should expand on this). */
+  /** First paragraph - unique local intro (700+ word pages should expand on this). */
   intro: string;
-  /** Local landmarks and notable spots — used in body copy. */
+  /** Local landmarks and notable spots - used in body copy. */
   landmarks: string[];
   /** Notable local industries / business types. */
   industries: string[];
@@ -27,7 +27,7 @@ export const SUBURBS: Suburb[] = [
     county: "City of San Antonio",
     tagline: "Riverwalk hospitality, professional services and tourism operators",
     intro:
-      "Downtown San Antonio is the city's tourism, hospitality and professional-services engine — anchored by the Riverwalk, the Convention Center, the Alamo and a deep base of law, accounting and consulting firms. Anchor Capital Group works with Downtown owners on hotel financing, restaurant working capital, professional-services lines and SBA acquisition deals tailored to event-driven cash flow.",
+      "Downtown San Antonio is the city's tourism, hospitality and professional-services engine - anchored by the Riverwalk, the Convention Center, the Alamo and a deep base of law, accounting and consulting firms. Anchor Capital Group works with Downtown owners on hotel financing, restaurant working capital, professional-services lines and SBA acquisition deals tailored to event-driven cash flow.",
     landmarks: ["The Alamo", "San Antonio River Walk", "Henry B. González Convention Center", "Tower of the Americas", "Hemisfair"],
     industries: ["Hospitality", "Tourism", "Restaurants", "Professional services"],
     sampleBusinesses: [
@@ -43,7 +43,7 @@ export const SUBURBS: Suburb[] = [
     county: "City of San Antonio",
     tagline: "North-side medical, dental and high-income professional services",
     intro:
-      "Stone Oak is San Antonio's North-side hub for medical practices, dental groups, specialty clinics, and the professional services and retail that surround them. Anchor Capital Group finances Stone Oak operators with practice acquisition, equipment, build-out and partner-buy-in capital — sized for insurance-reimbursement cycles and high build-out costs.",
+      "Stone Oak is San Antonio's North-side hub for medical practices, dental groups, specialty clinics, and the professional services and retail that surround them. Anchor Capital Group finances Stone Oak operators with practice acquisition, equipment, build-out and partner-buy-in capital - sized for insurance-reimbursement cycles and high build-out costs.",
     landmarks: ["Stone Oak Parkway", "Methodist Stone Oak Hospital", "The Rim", "Sonterra"],
     industries: ["Medical", "Dental", "Professional services", "Specialty retail"],
     sampleBusinesses: [
@@ -59,8 +59,8 @@ export const SUBURBS: Suburb[] = [
     county: "City of San Antonio",
     tagline: "Chef-driven restaurants, boutique retail and creative studios",
     intro:
-      "The Pearl is San Antonio's chef-driven hospitality and boutique-retail district — built around the redeveloped Pearl Brewery, Hotel Emma and the Culinary Institute of America's San Antonio campus. Anchor Capital Group finances Pearl operators with restaurant working capital, hotel CapEx, equipment loans and inventory lines that respect the area's premium rent base.",
-    landmarks: ["The Pearl", "Hotel Emma", "CIA San Antonio", "San Antonio River — Museum Reach"],
+      "The Pearl is San Antonio's chef-driven hospitality and boutique-retail district - built around the redeveloped Pearl Brewery, Hotel Emma and the Culinary Institute of America's San Antonio campus. Anchor Capital Group finances Pearl operators with restaurant working capital, hotel CapEx, equipment loans and inventory lines that respect the area's premium rent base.",
+    landmarks: ["The Pearl", "Hotel Emma", "CIA San Antonio", "San Antonio River - Museum Reach"],
     industries: ["Restaurants", "Boutique retail", "Hospitality", "Food & beverage production"],
     sampleBusinesses: [
       { name: "Pearl Provisions Cafe", type: "Restaurant", useCase: "Equipment + build-out for second location" },
@@ -75,7 +75,7 @@ export const SUBURBS: Suburb[] = [
     county: "City of Alamo Heights",
     tagline: "Independent retail, dental and professional services on Broadway",
     intro:
-      "Alamo Heights — an independent municipality inside San Antonio — concentrates a deep base of independent retail, dental and professional services along the Broadway corridor, plus Trinity University and the San Antonio Botanical Garden. Anchor Capital Group works with '09 operators on acquisition, build-out, equipment and unsecured working capital.",
+      "Alamo Heights - an independent municipality inside San Antonio - concentrates a deep base of independent retail, dental and professional services along the Broadway corridor, plus Trinity University and the San Antonio Botanical Garden. Anchor Capital Group works with '09 operators on acquisition, build-out, equipment and unsecured working capital.",
     landmarks: ["Broadway corridor", "Trinity University", "San Antonio Botanical Garden", "Witte Museum"],
     industries: ["Independent retail", "Dental", "Professional services", "Education-adjacent services"],
     sampleBusinesses: [
@@ -91,7 +91,7 @@ export const SUBURBS: Suburb[] = [
     county: "City of San Antonio",
     tagline: "Arts district restaurants, breweries and creative trades",
     intro:
-      "Southtown is San Antonio's arts and creative district — King William mansions, the Blue Star Arts Complex, breweries and the chef-driven restaurants along South Alamo. Anchor Capital Group finances Southtown operators with restaurant working capital, brewery equipment loans and storefront build-out financing built for a tight rent base and event-driven sales.",
+      "Southtown is San Antonio's arts and creative district - King William mansions, the Blue Star Arts Complex, breweries and the chef-driven restaurants along South Alamo. Anchor Capital Group finances Southtown operators with restaurant working capital, brewery equipment loans and storefront build-out financing built for a tight rent base and event-driven sales.",
     landmarks: ["King William Historic District", "Blue Star Arts Complex", "South Alamo Street", "Mission Reach"],
     industries: ["Restaurants", "Craft beverage", "Arts & creative", "Boutique retail"],
     sampleBusinesses: [
@@ -107,7 +107,7 @@ export const SUBURBS: Suburb[] = [
     county: "City of San Antonio",
     tagline: "Family-owned manufacturing, auto and trades",
     intro:
-      "San Antonio's Westside is the cultural and manufacturing heart of the city — a deep base of family-owned panaderías, auto shops, light manufacturers and trades along Guadalupe Street and Commerce. Anchor Capital Group works with Westside owners on equipment, real estate and SBA acquisition deals priced for legacy operators and second-generation owners.",
+      "San Antonio's Westside is the cultural and manufacturing heart of the city - a deep base of family-owned panaderías, auto shops, light manufacturers and trades along Guadalupe Street and Commerce. Anchor Capital Group works with Westside owners on equipment, real estate and SBA acquisition deals priced for legacy operators and second-generation owners.",
     landmarks: ["Guadalupe Cultural Arts Center", "Market Square (El Mercado)", "Our Lady of the Lake University", "Westside business corridor"],
     industries: ["Light manufacturing", "Auto repair", "Family food production", "Trades"],
     sampleBusinesses: [
@@ -123,7 +123,7 @@ export const SUBURBS: Suburb[] = [
     county: "City of San Antonio",
     tagline: "Manufacturing, distribution and Toyota-corridor suppliers",
     intro:
-      "South San Antonio is the industrial backbone of the city — anchored by the Toyota Texas truck plant, Port San Antonio (the redeveloped Kelly AFB), and a wide base of distribution, manufacturing and aerospace-adjacent suppliers. Anchor Capital Group finances South Side operators with equipment loans, AR factoring and SBA 504 industrial real estate.",
+      "South San Antonio is the industrial backbone of the city - anchored by the Toyota Texas truck plant, Port San Antonio (the redeveloped Kelly AFB), and a wide base of distribution, manufacturing and aerospace-adjacent suppliers. Anchor Capital Group finances South Side operators with equipment loans, AR factoring and SBA 504 industrial real estate.",
     landmarks: ["Toyota Texas (Tundra plant)", "Port San Antonio", "Brooks City Base", "Mission Trail"],
     industries: ["Automotive manufacturing", "Aerospace & defense", "Distribution & logistics", "Industrial services"],
     sampleBusinesses: [
@@ -139,7 +139,7 @@ export const SUBURBS: Suburb[] = [
     county: "Bexar County",
     tagline: "USAA-area professional, healthcare and tech-enabled services",
     intro:
-      "The I-10 / Loop 1604 Northside corridor concentrates San Antonio's largest employers — USAA, Valero, the South Texas Medical Center and a thick base of tech-enabled professional services. Anchor Capital Group finances Northside operators with unsecured working capital, revenue-based financing and SBA expansion capital sized for white-collar businesses.",
+      "The I-10 / Loop 1604 Northside corridor concentrates San Antonio's largest employers - USAA, Valero, the South Texas Medical Center and a thick base of tech-enabled professional services. Anchor Capital Group finances Northside operators with unsecured working capital, revenue-based financing and SBA expansion capital sized for white-collar businesses.",
     landmarks: ["South Texas Medical Center", "USAA headquarters", "La Cantera", "The Rim", "UTSA Main Campus"],
     industries: ["Healthcare", "Insurance services", "Tech-enabled services", "Professional services"],
     sampleBusinesses: [
@@ -155,7 +155,7 @@ export const SUBURBS: Suburb[] = [
     county: "Guadalupe County",
     tagline: "I-35 NE distribution, trades and franchise operators",
     intro:
-      "Schertz and Cibolo together form the I-35 NE distribution corridor between San Antonio and Austin — Amazon, Sysco, and a deep base of franchise food, trades and distribution operators serving the metro from the suburbs. Anchor Capital Group works with Schertz/Cibolo owners on equipment, franchise SBA 7(a) and revolving lines.",
+      "Schertz and Cibolo together form the I-35 NE distribution corridor between San Antonio and Austin - Amazon, Sysco, and a deep base of franchise food, trades and distribution operators serving the metro from the suburbs. Anchor Capital Group works with Schertz/Cibolo owners on equipment, franchise SBA 7(a) and revolving lines.",
     landmarks: ["I-35 NE corridor", "Schertz/Cibolo Sports Complex", "Amazon Schertz fulfillment center", "Randolph AFB (adjacent)"],
     industries: ["Distribution & logistics", "Franchise food", "Trades", "Defense-adjacent services"],
     sampleBusinesses: [
@@ -171,7 +171,7 @@ export const SUBURBS: Suburb[] = [
     county: "Comal County",
     tagline: "Hospitality, tubing-economy retail and Tex-German manufacturing",
     intro:
-      "New Braunfels sits at the north end of the San Antonio metro on the Comal and Guadalupe rivers — a hospitality and tubing-economy town with a growing roster of manufacturers and breweries. Anchor Capital Group works with New Braunfels owners on seasonal working capital, hospitality SBA and equipment financing structured for the warm-season revenue curve.",
+      "New Braunfels sits at the north end of the San Antonio metro on the Comal and Guadalupe rivers - a hospitality and tubing-economy town with a growing roster of manufacturers and breweries. Anchor Capital Group works with New Braunfels owners on seasonal working capital, hospitality SBA and equipment financing structured for the warm-season revenue curve.",
     landmarks: ["Schlitterbahn", "Comal River", "Gruene Historic District", "Wurstfest grounds"],
     industries: ["Hospitality & tourism", "Restaurants", "Manufacturing", "Outdoor recreation retail"],
     sampleBusinesses: [

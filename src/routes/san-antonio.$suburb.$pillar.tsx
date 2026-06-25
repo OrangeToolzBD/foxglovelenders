@@ -154,7 +154,7 @@ function SuburbPillarPage() {
                 <p className="mt-3 text-muted-foreground">
                   A {suburb.sampleBusinesses[0]!.type.toLowerCase()} near {suburb.landmarks[0]} used{" "}
                   {pillar.title.toLowerCase()} for: {suburb.sampleBusinesses[0]!.useCase}. The deal
-                  closed with a soft credit pull only — no impact to the owner's personal score.
+                  closed with a soft credit pull only - no impact to the owner's personal score.
                 </p>
               </div>
             </div>

@@ -73,7 +73,7 @@ function SuburbPage() {
           </div>
         </div>
 
-        {/* Hero — dark anchor band */}
+        {/* Hero - dark anchor band */}
         <section
           className="relative overflow-hidden border-b border-white/10 py-16 text-white sm:py-20"
           style={{ background: "var(--gradient-hero)" }}
@@ -107,7 +107,7 @@ function SuburbPage() {
           </div>
         </section>
 
-        {/* Local context — landmarks + industries */}
+        {/* Local context - landmarks + industries */}
         <section className="mx-auto grid max-w-7xl gap-px overflow-hidden border-x border-b border-border bg-border px-0 md:grid-cols-2">
           <div className="bg-card p-7">
             <div className="font-display text-[11px] font-bold uppercase tracking-[0.18em] text-[color:var(--brand-vermillion)]">
@@ -169,7 +169,7 @@ function SuburbPage() {
             <h2 className="mt-3 font-display text-2xl font-bold tracking-tight md:text-3xl">
               {suburb.name} businesses Anchor works with
             </h2>
-            <p className="mt-2 text-muted-foreground">Representative case studies — composite profiles drawn from real funding outcomes.</p>
+            <p className="mt-2 text-muted-foreground">Representative case studies - composite profiles drawn from real funding outcomes.</p>
             <ul className="mt-8 grid gap-px overflow-hidden border border-border bg-border md:grid-cols-3">
               {suburb.sampleBusinesses.map((b: { name: string; type: string; useCase: string }, i: number) => (
                 <li key={b.name} className="bg-card p-6">
@@ -267,7 +267,7 @@ function SuburbPage() {
               Anchor {suburb.name} businesses, fast.
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-white/70">
-              Get matched with the right program in minutes — soft credit pull, no obligation.
+              Get matched with the right program in minutes - soft credit pull, no obligation.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Button asChild size="lg" className="anchor-bevel rounded-none bg-[image:var(--gradient-cta)] px-7 text-sm font-bold uppercase tracking-[0.16em] text-white shadow-[var(--shadow-glow)]">

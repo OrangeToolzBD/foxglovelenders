@@ -87,7 +87,7 @@ export const SITE_CONFIG = {
   featuredStat: {
     value: "3.2 million",
     claim: "small businesses operating across Texas",
-    sourceName: "SBA Office of Advocacy — Texas Profile",
+    sourceName: "SBA Office of Advocacy - Texas Profile",
     sourceUrl: "https://advocacy.sba.gov/",
   },
 

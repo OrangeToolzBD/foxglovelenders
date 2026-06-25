@@ -60,7 +60,7 @@ function ContactPage() {
             <span className="block text-[color:var(--brand-vermillion)]">No scripts, no pressure.</span>
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-white/80">
-            Questions, custom scenarios or ready to apply? Our funding desk is standing by — typically
+            Questions, custom scenarios or ready to apply? Our funding desk is standing by - typically
             back within the hour during business days.
           </p>
           <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-semibold uppercase tracking-[0.16em] text-white/65">
@@ -85,7 +85,7 @@ function ContactPage() {
               icon: Phone,
               title: "Call the desk",
               value: SITE_CONFIG.phone,
-              sub: "Mon–Fri · 8am-7pm CT · Sat 9am-2pm",
+              sub: "Mon-Fri · 8am-7pm CT · Sat 9am-2pm",
               href: SITE_CONFIG.phoneHref,
             },
             {
@@ -182,7 +182,7 @@ function ContactPage() {
             </div>
           </div>
 
-          {/* CTA — dark anchor card */}
+          {/* CTA - dark anchor card */}
           <div className="relative overflow-hidden rounded-none border border-white/10 bg-[color:var(--brand-charcoal)] p-6 text-white">
             <div aria-hidden className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full opacity-30 blur-3xl" style={{ background: "radial-gradient(circle, var(--brand-vermillion) 0%, transparent 70%)" }} />
             <div className="relative">

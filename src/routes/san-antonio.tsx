@@ -54,7 +54,7 @@ function SanAntonioHub() {
               <span className="text-[color:var(--brand-vermillion)]">Every neighborhood.</span>
             </h1>
             <p className="mt-5 max-w-2xl text-lg text-white/80">
-              The complete Anchor Capital Group directory for San Antonio, TX — every loan program we
+              The complete Anchor Capital Group directory for San Antonio, TX - every loan program we
               broker, mapped to every neighborhood and adjacent community we serve.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -131,7 +131,7 @@ function SanAntonioHub() {
 
         {/* Money pillars */}
         <PillarGrid
-          title="Money pillars — general business financing"
+          title="Money pillars - general business financing"
           subtitle="The 14 core funding programs Anchor brokers for San Antonio businesses, with the six active GBP plays first."
           icon={Banknote}
           pillars={MONEY_PILLARS}
@@ -142,7 +142,7 @@ function SanAntonioHub() {
 
         {/* Vertical pillars */}
         <PillarGrid
-          title="Vertical pillars — industry-specific funding"
+          title="Vertical pillars - industry-specific funding"
           subtitle="10 industry-specialized lending programs for South Texas operators."
           icon={Briefcase}
           pillars={VERTICAL_PILLARS}
@@ -280,7 +280,7 @@ function SuburbServicesMatrix() {
                   params={{ suburb: s.slug }}
                   className="text-[color:var(--brand-vermillion)] hover:underline"
                 >
-                  View hub →
+                  View hub ->
                 </Link>
               </div>
             </div>

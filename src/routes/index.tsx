@@ -363,7 +363,7 @@ function MegaItem({
 export function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[color:var(--brand-charcoal)]/95 text-white shadow-[0_8px_24px_-12px_oklch(0.1_0.01_30/0.6)] backdrop-blur supports-[backdrop-filter]:bg-[color:var(--brand-charcoal)]/85">
-      {/* thin vermillion top edge — visual anchor for the dark navbar */}
+      {/* thin vermillion top edge - visual anchor for the dark navbar */}
       {/* <div aria-hidden className="absolute inset-x-0 top-0 h-[3px] bg-[image:var(--gradient-anchor)]" /> */}
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 md:px-6">
         <a href="/" className="flex items-center font-semibold">
@@ -396,7 +396,7 @@ export function Header() {
                     <div className="text-sm">
                       <div className="font-semibold">Not sure which capital fits?</div>
                       <div className="text-muted-foreground">
-                        Get matched in 60 seconds — soft credit pull only.
+                        Get matched in 60 seconds - soft credit pull only.
                       </div>
                     </div>
                     <Button asChild size="sm" className="bg-[image:var(--gradient-cta)] text-[color:var(--accent-success-foreground)]">
@@ -664,11 +664,11 @@ export function Header() {
   );
 }
 
-/* ---------------- Hero — Anchor identity: split-pane with stat callouts ---------------- */
+/* ---------------- Hero - Anchor identity: split-pane with stat callouts ---------------- */
 function Hero() {
   return (
     <section className="relative overflow-hidden bg-[color:var(--brand-charcoal)] text-white">
-      {/* Background image — port/freight scene with baked-in brand glow on the left */}
+      {/* Background image - port/freight scene with baked-in brand glow on the left */}
       <img
         src="/anchorhero-bg.png"
         alt=""
@@ -744,7 +744,7 @@ function Hero() {
           </div>
         </div>
 
-        {/* Right pane — funding desk preview card */}
+        {/* Right pane - funding desk preview card */}
         <div className="relative hidden min-w-0 lg:block">
           <div className="absolute inset-0 -z-10 rounded-3xl bg-[color:var(--brand-bronze)]/15 blur-3xl" />
           <div className="rounded-3xl border border-white/15 bg-white/5 p-6 backdrop-blur-xl">
@@ -797,7 +797,7 @@ function Hero() {
   );
 }
 
-/* ---------------- Anchor Ledger — relocated metrics + GBP plays on a dark band ---------------- */
+/* ---------------- Anchor Ledger - relocated metrics + GBP plays on a dark band ---------------- */
 function AnchorLedger() {
   const metrics = [
     { value: SITE_CONFIG.stats.businessesFunded, label: "Businesses funded" },
@@ -825,12 +825,12 @@ function AnchorLedger() {
             The Ledger
           </div>
           <h2 className="max-w-3xl text-3xl font-bold tracking-tight md:text-4xl">
-            What Anchor brokers — and the numbers that back it.
+            What Anchor brokers - and the numbers that back it.
           </h2>
         </div>
 
         <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_1.1fr]">
-          {/* Metrics column — large ticker numbers */}
+          {/* Metrics column - large ticker numbers */}
           <div>
             <div className="grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-white/10 bg-white/10">
               {metrics.map((m) => (
@@ -871,7 +871,7 @@ function AnchorLedger() {
             </p>
           </div>
 
-          {/* Plays column — vertical list with monospaced index */}
+          {/* Plays column - vertical list with monospaced index */}
           <div>
             <div className="flex items-baseline justify-between gap-4">
               <h3 className="font-display text-lg font-semibold text-white">
@@ -994,15 +994,15 @@ function CityHubCTA() {
   );
 }
 
-/* ---------------- Capital Desk — the 6 GBP plays as full cards ----------------
-   Icons come from /capitaldeskicons.png — a 1536x1024 sprite sheet laid out
+/* ---------------- Capital Desk - the 6 GBP plays as full cards ----------------
+   Icons come from /capitaldeskicons.png - a 1536x1024 sprite sheet laid out
    as 3 cols × 2 rows of 512×512 cells, in the same order as the desk array. */
 function CapitalDesk() {
   const desk = [
     {
       slug: "accounts-receivable-financing",
       title: "Accounts Receivable Financing",
-      lede: "Revolving line secured by your open invoices — without selling them.",
+      lede: "Revolving line secured by your open invoices - without selling them.",
       stat: "Up to 90% AR advance",
       tag: "Lines $250K-$20M",
     },
@@ -1017,15 +1017,15 @@ function CapitalDesk() {
       slug: "revenue-based-financing",
       title: "Revenue Based Financing",
       lede: "Repay as a fixed percentage of monthly revenue. No equity.",
-      stat: "$50K – $5M",
+      stat: "$50K - $5M",
       tag: "Flexible repayment",
     },
     {
       slug: "small-business-loans",
       title: "Small Business Loans",
-      lede: "One soft-pull application — every major loan product compared.",
+      lede: "One soft-pull application - every major loan product compared.",
       stat: "75+ lenders",
-      tag: "$5K – $5M",
+      tag: "$5K - $5M",
     },
     {
       slug: "small-business-loans-near-me",
@@ -1053,7 +1053,7 @@ function CapitalDesk() {
             The six programs San Antonio asks for most
           </h2>
           <p className="mt-4 text-muted-foreground">
-            These are the active plays — the loan products we route most often for South Texas operators.
+            These are the active plays - the loan products we route most often for South Texas operators.
           </p>
         </div>
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -1103,12 +1103,12 @@ function CapitalDesk() {
   );
 }
 
-/* ---------------- How it works — Texas-flavored 4-step ---------------- */
+/* ---------------- How it works - Texas-flavored 4-step ---------------- */
 function HowItWorks() {
   const steps = [
     { n: 1, title: "Tell us the brief", desc: "60 seconds: how much, what for, how soon. No documents up front." },
     { n: 2, title: "We shop the bench", desc: "Anchor pre-screens 75+ Texas-active lenders against your profile." },
-    { n: 3, title: "Compare real offers", desc: "Side-by-side: rates, terms, fees and remit schedules — no spin." },
+    { n: 3, title: "Compare real offers", desc: "Side-by-side: rates, terms, fees and remit schedules - no spin." },
     { n: 4, title: "Funded", desc: "Sign the docs and receive funds in as little as 24 hours." },
   ];
   return (
@@ -1150,7 +1150,7 @@ function HowItWorks() {
   );
 }
 
-/* ---------------- Industries — numbered ledger with Texas-specialty markers ---------------- */
+/* ---------------- Industries - numbered ledger with Texas-specialty markers ---------------- */
 function Industries() {
   type Ind = { icon: LucideIcon; label: string; slug: string; blurb: string; tx?: boolean };
   const inds: Ind[] = [
@@ -1181,7 +1181,7 @@ function Industries() {
               The ten sectors Anchor underwrites first
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Each row is a specialty bench. Texas-specific verticals carry a <span className="font-semibold text-[color:var(--brand-vermillion)]">TX</span> marker — these are deals we won't hand off to a generalist.
+              Each row is a specialty bench. Texas-specific verticals carry a <span className="font-semibold text-[color:var(--brand-vermillion)]">TX</span> marker - these are deals we won't hand off to a generalist.
             </p>
           </div>
           <Button asChild variant="outline" size="lg" className="rounded-none border-[color:var(--brand-charcoal)]/20 bg-transparent text-xs font-semibold uppercase tracking-[0.14em] text-[color:var(--brand-charcoal)] hover:border-[color:var(--brand-vermillion)] hover:bg-[color:var(--brand-vermillion)]/10 hover:text-[color:var(--brand-vermillion)]">
@@ -1343,7 +1343,7 @@ function SuccessStories() {
           Composite outcomes from real deals across South Texas. Names changed; structures unchanged.
         </p>
       </div>
-      {/* Wrapper isolates Carousel from useScrollReveal — without it, the
+      {/* Wrapper isolates Carousel from useScrollReveal - without it, the
           hook adds .reveal (opacity:0, translateY) onto the Embla viewport
           itself and Embla mis-measures slide layout at mount. */}
       <div className="relative mx-auto mt-12 max-w-7xl px-2 sm:px-10">
@@ -1409,7 +1409,7 @@ function CityIntro() {
           </p>
           <p className="mt-4 text-muted-foreground">
             Anchor works with short-term lenders, SBA Preferred Banks active in Texas, equipment
-            financiers and merchant cash advance providers — so you can compare{" "}
+            financiers and merchant cash advance providers - so you can compare{" "}
             <strong>fast business loans</strong>, <strong>startup business loans</strong> and{" "}
             <strong>same-day business funding</strong> in one place.
           </p>

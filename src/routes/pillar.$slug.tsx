@@ -72,7 +72,7 @@ function PillarPage() {
           </div>
         </div>
 
-        {/* Hero — dark anchor band */}
+        {/* Hero - dark anchor band */}
         <section
           className="relative overflow-hidden border-b border-white/10 py-16 text-white sm:py-20"
           style={{ background: "var(--gradient-hero)" }}
@@ -136,7 +136,7 @@ function PillarPage() {
               <p key={i} className="mt-4 text-muted-foreground">{p}</p>
             ))}
             <p className="mt-4 text-muted-foreground">
-              Every Anchor Capital Group application runs through Texas-licensed lending partners —
+              Every Anchor Capital Group application runs through Texas-licensed lending partners -
               one soft credit pull, side-by-side offers, no fee until close.
             </p>
           </div>

@@ -1,4 +1,4 @@
-// Anchor Capital Group — SEO pillar pages for San Antonio, TX.
+// Anchor Capital Group - SEO pillar pages for San Antonio, TX.
 // 14 Money Pillars + 10 Vertical Pillars = 24 total.
 // The first 6 Money pillars mirror the active Google Business Profile plays:
 // accounts-receivable-financing, invoice-factoring, revenue-based-financing,
@@ -14,7 +14,7 @@ export type Pillar = {
   description: string;
   bullets: string[];
   highlight: string;
-  /** Approximate national monthly search volume — used for SEO ordering. */
+  /** Approximate national monthly search volume - used for SEO ordering. */
   volume?: number;
 };
 
@@ -80,7 +80,7 @@ export const MONEY_PILLARS: Pillar[] = [
     kind: "money",
     tagline: "Government-backed funding for San Antonio businesses",
     description:
-      "SBA 7(a), 504 and Express loans for South Texas owners — the longest terms and lowest rates in commercial lending, accessed through a network of SBA Preferred banks active in the San Antonio market.",
+      "SBA 7(a), 504 and Express loans for South Texas owners - the longest terms and lowest rates in commercial lending, accessed through a network of SBA Preferred banks active in the San Antonio market.",
     bullets: ["Up to $5,000,000", "25-year amortization on real estate", "10% down on acquisitions"],
     highlight: "From 8.25% APR",
     volume: 165000,
@@ -101,7 +101,7 @@ export const MONEY_PILLARS: Pillar[] = [
     kind: "money",
     tagline: "Revolving credit, draw only what you need",
     description:
-      "Keep capital ready for inventory swings, payroll or opportunity buys. Pay interest only on the balance you draw — and reuse the limit as you repay.",
+      "Keep capital ready for inventory swings, payroll or opportunity buys. Pay interest only on the balance you draw - and reuse the limit as you repay.",
     bullets: ["Lines from $25K-$500K", "Same-day draws", "Soft pre-qualification"],
     highlight: "From 9.75% APR",
   },
@@ -121,7 +121,7 @@ export const MONEY_PILLARS: Pillar[] = [
     kind: "money",
     tagline: "Finance machinery, vehicles and tools",
     description:
-      "Use the equipment itself as collateral — preserving working capital for the things financing can't buy. Section 179 deductions still apply.",
+      "Use the equipment itself as collateral - preserving working capital for the things financing can't buy. Section 179 deductions still apply.",
     bullets: ["100% financing available", "Section 179 eligible", "Approvals in 24-48 hrs"],
     highlight: "From 6.75%",
   },
@@ -141,7 +141,7 @@ export const MONEY_PILLARS: Pillar[] = [
     kind: "money",
     tagline: "Buy an existing San Antonio business",
     description:
-      "SBA-backed acquisition financing for partner buyouts, succession purchases and add-on deals across the I-10 corridor — including goodwill, working capital and earn-out structures.",
+      "SBA-backed acquisition financing for partner buyouts, succession purchases and add-on deals across the I-10 corridor - including goodwill, working capital and earn-out structures.",
     bullets: ["10% down with SBA 7(a)", "Goodwill financing", "Earn-out friendly"],
     highlight: "Up to $5M",
   },
@@ -161,7 +161,7 @@ export const MONEY_PILLARS: Pillar[] = [
     kind: "money",
     tagline: "No blanket UCC, no hard collateral",
     description:
-      "Cash-flow underwritten loans for established San Antonio businesses with consistent monthly revenue — no UCC blanket lien required.",
+      "Cash-flow underwritten loans for established San Antonio businesses with consistent monthly revenue - no UCC blanket lien required.",
     bullets: ["Up to $500K", "Terms 1-5 years", "Funded in 1-3 days"],
     highlight: "Soft pull pre-qual",
   },
@@ -184,7 +184,7 @@ export const VERTICAL_PILLARS: Pillar[] = [
     kind: "vertical",
     tagline: "Fit-out, expansion and equipment",
     description:
-      "Open a second location, refresh the dining room or weather a slow season with capital sized to San Antonio hospitality cash flow — Pearl District, Stone Oak and beyond.",
+      "Open a second location, refresh the dining room or weather a slow season with capital sized to San Antonio hospitality cash flow - Pearl District, Stone Oak and beyond.",
     bullets: ["Daily, weekly or monthly payments", "Same-day approvals", "No equity required"],
     highlight: "$25K-$2M",
   },
@@ -224,7 +224,7 @@ export const VERTICAL_PILLARS: Pillar[] = [
     kind: "vertical",
     tagline: "Eagle Ford & Permian service operators",
     description:
-      "Equipment, working capital and AR factoring for the service crews supplying the Eagle Ford basin and Permian out of South Texas — sized to the rig-count cycle.",
+      "Equipment, working capital and AR factoring for the service crews supplying the Eagle Ford basin and Permian out of South Texas - sized to the rig-count cycle.",
     bullets: ["AR factoring for slow-pay E&Ps", "Equipment & rolling stock", "Bridge through slow quarters"],
     highlight: "Up to $5M",
   },
@@ -254,7 +254,7 @@ export const VERTICAL_PILLARS: Pillar[] = [
     kind: "vertical",
     tagline: "SBA Express for veteran owners",
     description:
-      "Expedited SBA Express financing with reduced fees for veteran-owned businesses — a meaningful program in a city anchored by JBSA and a strong veteran owner-operator community.",
+      "Expedited SBA Express financing with reduced fees for veteran-owned businesses - a meaningful program in a city anchored by JBSA and a strong veteran owner-operator community.",
     bullets: ["Up to $500K", "Reduced SBA fees for veterans", "36-hour SBA turnaround"],
     highlight: "Veteran-friendly",
   },
@@ -264,7 +264,7 @@ export const VERTICAL_PILLARS: Pillar[] = [
     kind: "vertical",
     tagline: "CNC, robotics and production lines",
     description:
-      "Finance individual machines or full production cells with structures aligned to ROI timelines — including soft costs and step-payment options.",
+      "Finance individual machines or full production cells with structures aligned to ROI timelines - including soft costs and step-payment options.",
     bullets: ["New & used equipment", "Soft costs included", "Step payment options"],
     highlight: "Up to $10M",
   },
