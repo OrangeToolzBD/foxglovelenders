@@ -25,6 +25,14 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
+} from "@/components/ui/carousel";
 import { buildHead } from "@/lib/seo";
 import { buildGraph, faqNode } from "@/lib/seo-schema";
 import { SITE_CONFIG } from "@/lib/site-config";
@@ -1229,12 +1237,102 @@ function Industries() {
 
 /* ---------------- Success Stories ---------------- */
 function SuccessStories() {
+  // Embla can mis-measure on the first hydrated paint (slidesInView returns 0,
+  // transform stays at 0). reInit after two animation frames (so layout has
+  // fully settled) plus on any container resize.
+  const [api, setApi] = useState<CarouselApi | null>(null);
+  useEffect(() => {
+    if (!api) return;
+    let raf = 0;
+    raf = window.requestAnimationFrame(() => {
+      raf = window.requestAnimationFrame(() => api.reInit());
+    });
+    const container = api.containerNode();
+    const ro = new ResizeObserver(() => api.reInit());
+    if (container) ro.observe(container);
+    const autoplay = setInterval(() => {
+      if (!api.canScrollNext()) {
+        api.scrollTo(0);
+      } else {
+        api.scrollNext();
+      }
+    }, 3500);
+    return () => {
+      window.cancelAnimationFrame(raf);
+      ro.disconnect();
+      clearInterval(autoplay);
+    };
+  }, [api]);
   const stories = [
-    { name: "Eagle Ford Wireline Co.", amount: "$420,000", result: "Same-day cash on E&P invoices through factoring.", type: "Invoice Factoring" },
-    { name: "I-35 NE Distribution", amount: "$1,800,000", result: "Revolving AR line scaled with their big-box customer base.", type: "Accounts Receivable Financing" },
-    { name: "Stone Oak Dental Partners", amount: "$2,400,000", result: "SBA 7(a) for partner buy-in plus new CBCT scanner.", type: "SBA 7(a) Loan" },
-    { name: "Pearl District Kitchen Co.", amount: "$180,000", result: "Working capital line that flexes with event-driven sales.", type: "Working Capital Loan" },
+    {
+      name: "Eagle Ford Wireline Co.",
+      amount: "$420,000",
+      result: "Same-day cash on E&P invoices through factoring.",
+      type: "Invoice Factoring",
+      person: "Marco Delgado",
+      role: "Owner & Operator",
+      tint: "from-[oklch(0.55_0.18_30)] to-[oklch(0.36_0.18_22)]",
+      photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=96&h=96&fit=crop&crop=face&q=80",
+    },
+    {
+      name: "I-35 NE Distribution",
+      amount: "$1,800,000",
+      result: "Revolving AR line scaled with their big-box customer base.",
+      type: "Accounts Receivable Financing",
+      person: "Renee Calderon",
+      role: "CFO",
+      tint: "from-[oklch(0.62_0.2_35)] to-[oklch(0.42_0.19_25)]",
+      photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=96&h=96&fit=crop&crop=face&q=80",
+    },
+    {
+      name: "Stone Oak Dental Partners",
+      amount: "$2,400,000",
+      result: "SBA 7(a) for partner buy-in plus new CBCT scanner.",
+      type: "SBA 7(a) Loan",
+      person: "Dr. Priya Anand",
+      role: "Managing Partner",
+      tint: "from-[oklch(0.65_0.18_40)] to-[oklch(0.45_0.19_25)]",
+      photo: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=96&h=96&fit=crop&crop=face&q=80",
+    },
+    {
+      name: "Pearl District Kitchen Co.",
+      amount: "$180,000",
+      result: "Working capital line that flexes with event-driven sales.",
+      type: "Working Capital Loan",
+      person: "Tomás Reyes",
+      role: "Executive Chef & Co-Founder",
+      tint: "from-[oklch(0.58_0.19_35)] to-[oklch(0.36_0.18_22)]",
+      photo: "https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=96&h=96&fit=crop&crop=face&q=80",
+    },
+    {
+      name: "Alamo Heights HVAC",
+      amount: "$650,000",
+      result: "Equipment line to refresh the service fleet ahead of peak season.",
+      type: "Equipment Financing",
+      person: "Jordan Whitfield",
+      role: "President",
+      tint: "from-[oklch(0.7_0.16_45)] to-[oklch(0.48_0.18_28)]",
+      photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=96&h=96&fit=crop&crop=face&q=80",
+    },
+    {
+      name: "Southtown Hospitality Group",
+      amount: "$1,100,000",
+      result: "Bridge financing to acquire a second concept off Roosevelt Ave.",
+      type: "Business Term Loan",
+      person: "Camila Vargas",
+      role: "Founder",
+      tint: "from-[oklch(0.6_0.2_30)] to-[oklch(0.4_0.19_22)]",
+      photo: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=96&h=96&fit=crop&crop=face&q=80",
+    },
   ];
+  const initials = (n: string) =>
+    n
+      .replace(/^(Dr\.|Mr\.|Ms\.|Mrs\.)\s+/i, "")
+      .split(/\s+/)
+      .filter(Boolean)
+      .slice(0, 2)
+      .map((p) => p[0]?.toUpperCase() ?? "")
+      .join("");
   return (
     <section id="stories" className="relative overflow-hidden px-6 py-12 sm:py-20">
       <div className="relative mx-auto max-w-2xl text-center">
@@ -1245,20 +1343,43 @@ function SuccessStories() {
           Composite outcomes from real deals across South Texas. Names changed; structures unchanged.
         </p>
       </div>
-      <div className="relative mx-auto mt-12 grid max-w-7xl gap-6 md:grid-cols-2 lg:grid-cols-4">
-        {stories.map((s) => (
-          <div key={s.name} className="rounded-2xl border border-border bg-card p-6">
-            <div className="flex items-center gap-1 text-[color:var(--brand-bronze)]">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={`star-${s.name}-${i}`} className="h-4 w-4 fill-current" />
-              ))}
-            </div>
-            <h3 className="mt-4 text-lg font-semibold">{s.name}</h3>
-            <div className="mt-1 text-xs uppercase tracking-wide text-muted-foreground">{s.type}</div>
-            <div className="mt-4 text-3xl font-bold text-[color:var(--brand-emerald)]">{s.amount}</div>
-            <p className="mt-2 text-sm text-muted-foreground">{s.result}</p>
-          </div>
-        ))}
+      {/* Wrapper isolates Carousel from useScrollReveal — without it, the
+          hook adds .reveal (opacity:0, translateY) onto the Embla viewport
+          itself and Embla mis-measures slide layout at mount. */}
+      <div className="relative mx-auto mt-12 max-w-7xl px-2 sm:px-10">
+        <Carousel opts={{ align: "start" }} setApi={setApi} className="relative">
+          <CarouselContent className="-ml-4">
+            {stories.map((s) => (
+              <CarouselItem key={s.name} className="pl-4 sm:basis-1/2 lg:basis-1/3">
+                <div className="flex h-full flex-col rounded-2xl border border-border bg-card p-6">
+                  <div className="flex items-center gap-3">
+                    <img
+                      src={s.photo}
+                      alt={s.person}
+                      className="h-12 w-12 shrink-0 rounded-full object-cover ring-2 ring-[color:var(--brand-bronze)]/40"
+                    />
+                    <div className="min-w-0 flex-1">
+                      <div className="truncate text-sm font-semibold">{s.person}</div>
+                      <div className="truncate text-xs text-muted-foreground">
+                        {s.role} · {s.name}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-4 flex items-center gap-1 text-[color:var(--brand-bronze)]">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star key={`star-${s.name}-${i}`} className="h-4 w-4 fill-current" />
+                    ))}
+                  </div>
+                  <div className="mt-2 text-xs uppercase tracking-wide text-muted-foreground">{s.type}</div>
+                  <div className="mt-3 text-3xl font-bold text-[color:var(--brand-emerald)]">{s.amount}</div>
+                  <p className="mt-2 text-sm text-muted-foreground">{s.result}</p>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="left-0 sm:-left-2" />
+          <CarouselNext className="right-0 sm:-right-2" />
+        </Carousel>
       </div>
     </section>
   );

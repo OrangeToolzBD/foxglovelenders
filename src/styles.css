@@ -197,7 +197,7 @@
   }
 
   html {
-    font-family: "Lexend", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-family: "Saira", system-ui, -apple-system, "Segoe UI", sans-serif;
     font-optical-sizing: auto;
     overflow-x: hidden;
   }
@@ -210,9 +210,10 @@
 
   h1, h2, h3, h4, h5, h6,
   .font-display {
-    font-family: "Lexend", system-ui, -apple-system, sans-serif;
+    font-family: "Saira Condensed", "Saira", system-ui, -apple-system, sans-serif;
     font-optical-sizing: auto;
-    letter-spacing: -0.015em;
+    letter-spacing: 0.005em;
+    font-weight: 700;
   }
 }
 
@@ -249,6 +250,22 @@
      without becoming a parallelogram. */
   .anchor-bevel {
     clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  }
+  /* Companion to .anchor-bevel for bordered (outline) buttons. clip-path slices
+     the rectangular CSS border at the two diagonal cuts, leaving no visible
+     stroke there. We re-paint a stroke under the border via two layered
+     background-images (one clipped to padding-box, one to border-box) so the
+     ring follows the clipped shape on every edge. */
+  .anchor-bevel-ring {
+    background-image:
+      linear-gradient(var(--bevel-fill, transparent), var(--bevel-fill, transparent)),
+      linear-gradient(
+        var(--bevel-stroke, color-mix(in oklab, currentColor 30%, transparent)),
+        var(--bevel-stroke, color-mix(in oklab, currentColor 30%, transparent))
+      );
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+    background-repeat: no-repeat;
   }
   /* Header nav item — small left tick that animates in on hover/active */
   .nav-item {
