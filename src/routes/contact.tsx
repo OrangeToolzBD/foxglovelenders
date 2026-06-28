@@ -21,7 +21,7 @@ export const Route = createFileRoute("/contact")({
   head: () => {
     const title = "Contact Us";
     const description =
-      "Have questions about funding? Reach out to Anchor Capital Group. Fast responses, no obligation, 100% confidential.";
+      "Have questions about funding? Reach out to Foxglove Lenders. Fast responses, no obligation, 100% confidential.";
     return buildHead({
       title,
       description,
@@ -36,7 +36,7 @@ function ContactPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
-      <div aria-hidden className="h-20" />
+      <div aria-hidden className="h-14" />
 
       {/* Hero */}
       <section
@@ -50,10 +50,10 @@ function ContactPage() {
           style={{ background: "radial-gradient(circle, var(--brand-vermillion) 0%, transparent 60%)" }}
         />
         <div className="relative mx-auto max-w-7xl px-6">
-          <div className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-vermillion)]">
-            <span aria-hidden className="h-px w-10 bg-[color:var(--brand-vermillion)]" />
+          <div className="fg-eyebrow">
+            <span aria-hidden className="fg-eyebrow-dot" />
             <Compass className="h-3.5 w-3.5" />
-            Talk to Anchor
+            Talk to Foxglove Lenders
           </div>
           <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl">
             Straight answers.
@@ -126,7 +126,7 @@ function ContactPage() {
       <section className="mx-auto max-w-7xl px-6 pb-20">
         <div className="grid gap-5 md:grid-cols-3">
           {/* HQ / Service area */}
-          <div className="rounded-none border border-border bg-card p-6">
+          <div className="rounded-2xl border border-border bg-card p-6">
             <div className="flex items-center gap-2 font-display text-[11px] font-bold uppercase tracking-[0.18em] text-[color:var(--brand-vermillion)]">
               <Building2 className="h-4 w-4" />
               {SITE_CONFIG.hasPublicOffice ? "Headquarters" : "Service area"}
@@ -157,7 +157,7 @@ function ContactPage() {
           </div>
 
           {/* Business hours */}
-          <div className="rounded-none border border-border bg-card p-6">
+          <div className="rounded-2xl border border-border bg-card p-6">
             <div className="flex items-center gap-2 font-display text-[11px] font-bold uppercase tracking-[0.18em] text-[color:var(--brand-vermillion)]">
               <Clock className="h-4 w-4" />
               Desk Hours
@@ -183,7 +183,7 @@ function ContactPage() {
           </div>
 
           {/* CTA - dark anchor card */}
-          <div className="relative overflow-hidden rounded-none border border-white/10 bg-[color:var(--brand-charcoal)] p-6 text-white">
+          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[color:var(--brand-charcoal)] p-6 text-white">
             <div aria-hidden className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full opacity-30 blur-3xl" style={{ background: "radial-gradient(circle, var(--brand-vermillion) 0%, transparent 70%)" }} />
             <div className="relative">
               <div className="font-display text-[11px] font-bold uppercase tracking-[0.18em] text-[color:var(--brand-vermillion)]">
@@ -197,7 +197,7 @@ function ContactPage() {
               </p>
               <Button
                 asChild
-                className="anchor-bevel mt-5 inline-flex h-11 rounded-none bg-[image:var(--gradient-cta)] px-5 text-xs font-bold uppercase tracking-[0.16em] text-white shadow-[var(--shadow-glow)]"
+                className="btn-foxglove mt-5 inline-flex h-11 px-5 text-xs font-bold text-white"
               >
                 <Link to="/apply-now">
                   Apply Now <ArrowRight className="ml-2 h-4 w-4" />

@@ -4,7 +4,7 @@
 
 const RAW_SITE_URL =
   (import.meta.env?.VITE_SITE_URL as string | undefined) ??
-  "https://anchorcapitalgroup.com";
+  "https://foxglovelenders.com";
 
 export const SITE_URL: string = RAW_SITE_URL.replace(/\/+$/, "");
 
@@ -15,27 +15,27 @@ export const SITE_CONFIG = {
   url: SITE_URL,
   indexable: INDEXABLE,
 
-  name: "Anchor Capital Group",
-  legalName: "Anchor Capital Group, LLC",
-  tagline: "Steady capital for Texas operators",
+  name: "Foxglove Lenders",
+  legalName: "Foxglove Lenders, LLC",
+  tagline: "Boutique business capital for Music City operators",
   defaultDescription:
-    "Working capital, invoice factoring, AR financing, SBA loans and small business loans for San Antonio, TX. Pre-qualify with a soft credit pull and review offers in 24 hours.",
+    "Working capital, invoice factoring, AR financing, SBA loans and small business loans for Nashville, TN. Pre-qualify with a soft credit pull and review offers in 24 hours.",
 
-  phone: "(726) 265-1699",
-  phoneHref: "tel:+17262651699",
+  phone: "(615) 637-2366",
+  phoneHref: "tel:+16156372366",
   email: "",
 
   hasPublicOffice: true,
   address: {
-    streetAddress: "112 E Pecan St, Suite 600",
-    addressLocality: "San Antonio",
-    addressRegion: "TX",
-    postalCode: "78205",
+    streetAddress: "150 4th Ave N",
+    addressLocality: "Nashville",
+    addressRegion: "TN",
+    postalCode: "37219",
     addressCountry: "US",
   },
   geo: {
-    latitude: 29.4252,
-    longitude: -98.4946,
+    latitude: 36.1627,
+    longitude: -86.7816,
   },
 
   openingHours: [
@@ -48,46 +48,46 @@ export const SITE_CONFIG = {
   ],
 
   license: {
-    state: "TX",
-    licenseNumber: "TX-CFB-118742",
+    state: "TN",
+    licenseNumber: "TN-FSL-118742",
   },
 
   areasServed: [
-    "San Antonio, TX",
-    "Bexar County, TX",
-    "South Texas",
+    "Nashville, TN",
+    "Davidson County, TN",
+    "Middle Tennessee",
   ],
 
   social: {
-    googleBusinessProfile: "https://www.google.com/maps/place/Anchor+Capital+Group",
-    linkedin: "https://www.linkedin.com/company/anchor-capital-group",
-    facebook: "https://www.facebook.com/anchorcapitalgroup",
-    twitter: "https://twitter.com/AnchorCapGroup",
+    googleBusinessProfile: "https://www.google.com/maps/place/Foxglove+Lenders",
+    linkedin: "https://www.linkedin.com/company/foxglove-lenders",
+    facebook: "https://www.facebook.com/foxglovelenders",
+    twitter: "https://twitter.com/FoxgloveLenders",
   },
 
   defaultOgImage: "/og-default.svg",
 
   stats: {
-    reviewsCount: "1,650+",
+    reviewsCount: "1,280+",
     reviewsRating: "4.9",
-    businessesFunded: "7,800+",
-    loansFacilitated: "$420M+",
+    businessesFunded: "5,400+",
+    loansFacilitated: "$310M+",
     fastestFundingHours: "24h",
   },
 
   trustBadges: ["Soft Pull · No Credit Impact"],
 
   author: {
-    name: "Daniela Vargas",
-    title: "Director of Capital Markets",
-    credentials: "MBA, 14+ years SBA & commercial lending",
-    profileUrl: "https://www.linkedin.com/in/daniela-vargas-acg",
+    name: "Harper Caldwell",
+    title: "Head of Capital Markets",
+    credentials: "MBA, 12+ years SBA & boutique commercial lending",
+    profileUrl: "https://www.linkedin.com/in/harper-caldwell-foxglove",
   },
 
   featuredStat: {
-    value: "3.2 million",
-    claim: "small businesses operating across Texas",
-    sourceName: "SBA Office of Advocacy - Texas Profile",
+    value: "697,000",
+    claim: "small businesses operating across Tennessee",
+    sourceName: "SBA Office of Advocacy — Tennessee Profile",
     sourceUrl: "https://advocacy.sba.gov/",
   },
 

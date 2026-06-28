@@ -8,16 +8,16 @@ import { buildHead } from "@/lib/seo";
 import { buildGraph, serviceNode, placeNode } from "@/lib/seo-schema";
 import { SITE_CONFIG } from "@/lib/site-config";
 
-export const Route = createFileRoute("/san-antonio/$suburb/$pillar")({
+export const Route = createFileRoute("/nashville/$suburb/$pillar")({
   head: ({ params }) => {
     const s = getSuburb(params.suburb);
     const p = getPillar(params.pillar);
-    const title = s && p ? `${p.title} in ${s.name}, TX` : "San Antonio Loan Program";
+    const title = s && p ? `${p.title} in ${s.name}, TN` : "Nashville Loan Program";
     const description =
       s && p
         ? `${p.title} for ${s.name} businesses: ${p.tagline.toLowerCase()}. ${p.highlight}. Soft credit pull only.`
-        : "San Antonio business funding programs.";
-    const path = `/san-antonio/${params.suburb}/${params.pillar}`;
+        : "Nashville business funding programs.";
+    const path = `/nashville/${params.suburb}/${params.pillar}`;
     return buildHead({
       title,
       description,
@@ -30,7 +30,7 @@ export const Route = createFileRoute("/san-antonio/$suburb/$pillar")({
           s && p
             ? [
                 serviceNode({ path, name: `${p.title} in ${s.name}`, description: p.description, serviceType: p.title }),
-                placeNode({ path, name: `${s.name}, TX` }),
+                placeNode({ path, name: `${s.name}, TN` }),
               ]
             : [],
       }),
@@ -45,7 +45,7 @@ export const Route = createFileRoute("/san-antonio/$suburb/$pillar")({
   notFoundComponent: () => (
     <div className="mx-auto max-w-2xl px-6 py-32 text-center">
       <h1 className="text-3xl font-bold">Page not found</h1>
-      <Button asChild className="mt-6"><Link to="/san-antonio">Back to hub</Link></Button>
+      <Button asChild className="mt-6"><Link to="/nashville">Back to hub</Link></Button>
     </div>
   ),
   errorComponent: ({ reset }) => (
@@ -70,7 +70,7 @@ function SuburbPillarPage() {
         <div className="border-b border-border/60 bg-[color:var(--brand-cream)]">
           <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.16em]">
             <Link
-              to="/san-antonio/$suburb"
+              to="/nashville/$suburb"
               params={{ suburb: suburb.slug }}
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-[color:var(--brand-vermillion)]"
             >
@@ -110,7 +110,7 @@ function SuburbPillarPage() {
               {pillar.description} For {suburb.name} business owners, this typically means working
               with operators near {suburb.landmarks.slice(0, 2).join(" and ")}:{" "}
               {suburb.industries.slice(0, 2).join(" and ").toLowerCase()} and service businesses
-              tied to San Antonio's I-10 / I-35 economy and the broader South Texas market.
+              tied to Nashville's I-24 / I-65 economy and the broader Middle Tennessee market.
             </p>
             <ul className="mt-8 grid gap-3 sm:grid-cols-2">
               {pillar.bullets.map((b: string) => (
@@ -175,7 +175,7 @@ function SuburbPillarPage() {
               {otherPillars.map((p, i) => (
                 <li key={p.slug}>
                   <Link
-                    to="/san-antonio/$suburb/$pillar"
+                    to="/nashville/$suburb/$pillar"
                     params={{ suburb: suburb.slug, pillar: p.slug }}
                     className="group relative flex items-start justify-between gap-3 bg-card p-5 transition-colors hover:bg-[color:var(--brand-charcoal)] hover:text-white"
                   >

@@ -10,7 +10,7 @@ import { SUBURBS } from "./src/lib/suburbs-data";
 const suburbPillarPairs: string[] = [];
 for (const s of SUBURBS) {
   for (const p of TOP_MONEY_PILLARS) {
-    suburbPillarPairs.push(`/san-antonio/${s.slug}/${p.slug}`);
+    suburbPillarPairs.push(`/nashville/${s.slug}/${p.slug}`);
   }
 }
 
@@ -18,12 +18,12 @@ export const prerenderPaths: string[] = [
   "/",
   "/contact",
   "/apply-now",
-  "/san-antonio",
-  // SSR route handlers — listing them forces Nitro to bake them to static files.
-  "/sitemap.xml",
+  "/nashville",
+  // robots.txt returns 200 (Disallow: / when non-indexable) — safe to prerender.
+  // sitemap.xml returns 404 when VITE_INDEXABLE=false — omit to avoid build failure.
   "/robots.txt",
   ...INDUSTRIES.map((i) => `/industry/${i.slug}`),
   ...PILLARS.map((p) => `/pillar/${p.slug}`),
-  ...SUBURBS.map((s) => `/san-antonio/${s.slug}`),
+  ...SUBURBS.map((s) => `/nashville/${s.slug}`),
   ...suburbPillarPairs,
 ];

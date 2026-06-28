@@ -1,8 +1,6 @@
-// Anchor Capital Group - SEO pillar pages for San Antonio, TX.
+// Foxglove Lenders — SEO pillar pages for Nashville, TN.
 // 14 Money Pillars + 10 Vertical Pillars = 24 total.
-// The first 6 Money pillars mirror the active Google Business Profile plays:
-// accounts-receivable-financing, invoice-factoring, revenue-based-financing,
-// small-business-loans, small-business-loans-near-me, sba-loans.
+// The first 6 Money pillars mirror the active Google Business Profile plays.
 
 export type PillarKind = "money" | "vertical";
 
@@ -25,7 +23,7 @@ export const MONEY_PILLARS: Pillar[] = [
     kind: "money",
     tagline: "Revolving line secured by your open invoices",
     description:
-      "Asset-based lines built around the receivables of San Antonio staffing firms, logistics operators, oilfield services and B2B vendors that wait 30-90 days to get paid. Borrow against the AR ledger without selling the invoices.",
+      "Asset-based lines built around the receivables of Nashville staffing firms, logistics operators, healthcare vendors and B2B suppliers that wait 30-90 days to get paid. Borrow against the AR ledger without selling the invoices.",
     bullets: ["Up to 90% advance on eligible AR", "Lines $250K-$20M", "Keep customer relationships in-house"],
     highlight: "Revolving",
     volume: 90000,
@@ -36,7 +34,7 @@ export const MONEY_PILLARS: Pillar[] = [
     kind: "money",
     tagline: "Sell your invoices, get cash within 24 hours",
     description:
-      "Same-day liquidity for South Texas trucking, staffing and government-contracting firms. Recourse and non-recourse programs with transparent advance rates and no long-term lock-ins.",
+      "Same-day liquidity for Middle Tennessee trucking, staffing and government-contracting firms. Recourse and non-recourse programs with transparent advance rates and no long-term lock-ins.",
     bullets: ["Advance rates up to 95%", "Non-recourse available", "Funded in 24 hours"],
     highlight: "Same-day cash",
     volume: 60000,
@@ -47,7 +45,7 @@ export const MONEY_PILLARS: Pillar[] = [
     kind: "money",
     tagline: "Repay as a fixed percentage of monthly revenue",
     description:
-      "Non-dilutive growth capital priced as a flat multiple and remitted as a small share of monthly revenue. Built for San Antonio SaaS, ecommerce, hospitality and multi-unit operators that need flexibility through seasonal swings.",
+      "Non-dilutive growth capital priced as a flat multiple and remitted as a small share of monthly revenue. Built for Nashville SaaS, hospitality, music-industry and multi-unit operators that need flexibility through seasonal swings.",
     bullets: ["$50K-$5M", "No equity, no warrants", "Payments flex with revenue"],
     highlight: "Pay as you earn",
     volume: 33000,
@@ -58,7 +56,7 @@ export const MONEY_PILLARS: Pillar[] = [
     kind: "money",
     tagline: "One soft-pull application, every major loan product",
     description:
-      "Compare term loans, SBA, lines of credit, equipment financing and revenue-based capital through a single soft-pull application. Anchor matches San Antonio operators with the lender most likely to fund their deal.",
+      "Compare term loans, SBA, lines of credit, equipment financing and revenue-based capital through a single soft-pull application. Foxglove matches Nashville operators with the lender most likely to fund their deal.",
     bullets: ["$5K-$5M", "75+ lender network", "Soft credit pull only"],
     highlight: "Funded in 24-72 hrs",
     volume: 246000,
@@ -67,10 +65,10 @@ export const MONEY_PILLARS: Pillar[] = [
     slug: "small-business-loans-near-me",
     title: "Small Business Loans Near Me",
     kind: "money",
-    tagline: "Local San Antonio loan advisors, statewide lender bench",
+    tagline: "Local Nashville loan advisors, statewide lender bench",
     description:
-      "Skip the call-the-bank routine. Talk to a San Antonio-based loan advisor who knows the Bexar County lender bench, then get matched with 75+ regional, SBA preferred and national programs in one application.",
-    bullets: ["San Antonio-based advisors", "75+ regional & national lenders", "One soft application"],
+      "Skip the call-the-bank routine. Talk to a Nashville-based loan advisor who knows the Davidson County lender bench, then get matched with 75+ regional, SBA preferred and national programs in one application.",
+    bullets: ["Nashville-based advisors", "75+ regional & national lenders", "One soft application"],
     highlight: "60-second match",
     volume: 49000,
   },
@@ -78,9 +76,9 @@ export const MONEY_PILLARS: Pillar[] = [
     slug: "sba-loans",
     title: "SBA Loans",
     kind: "money",
-    tagline: "Government-backed funding for San Antonio businesses",
+    tagline: "Government-backed funding for Nashville businesses",
     description:
-      "SBA 7(a), 504 and Express loans for South Texas owners - the longest terms and lowest rates in commercial lending, accessed through a network of SBA Preferred banks active in the San Antonio market.",
+      "SBA 7(a), 504 and Express loans for Middle Tennessee owners — the longest terms and lowest rates in commercial lending, accessed through a network of SBA Preferred banks active in the Nashville market.",
     bullets: ["Up to $5,000,000", "25-year amortization on real estate", "10% down on acquisitions"],
     highlight: "From 8.25% APR",
     volume: 165000,
@@ -91,7 +89,7 @@ export const MONEY_PILLARS: Pillar[] = [
     kind: "money",
     tagline: "Cover payroll, inventory and seasonal cash gaps",
     description:
-      "Operating capital sized to your monthly deposits and structured around your real cash cycle. A frequent fit for San Antonio restaurants, retailers, contractors and professional services firms.",
+      "Operating capital sized to your monthly deposits and structured around your real cash cycle. A frequent fit for Nashville restaurants, retailers, contractors and professional services firms.",
     bullets: ["$10K-$2M", "Daily, weekly or monthly remits", "No collateral options"],
     highlight: "Funded in 24 hrs",
   },
@@ -101,7 +99,7 @@ export const MONEY_PILLARS: Pillar[] = [
     kind: "money",
     tagline: "Revolving credit, draw only what you need",
     description:
-      "Keep capital ready for inventory swings, payroll or opportunity buys. Pay interest only on the balance you draw - and reuse the limit as you repay.",
+      "Keep capital ready for inventory swings, payroll or opportunity buys. Pay interest only on the balance you draw — and reuse the limit as you repay.",
     bullets: ["Lines from $25K-$500K", "Same-day draws", "Soft pre-qualification"],
     highlight: "From 9.75% APR",
   },
@@ -111,7 +109,7 @@ export const MONEY_PILLARS: Pillar[] = [
     kind: "money",
     tagline: "The SBA's flagship working-capital program",
     description:
-      "The most flexible SBA program for working capital, equipment, acquisition or partner buy-out. Popular among Stone Oak medical practices and Downtown San Antonio hospitality operators.",
+      "The most flexible SBA program for working capital, equipment, acquisition or partner buy-out. Popular among Brentwood medical practices and Downtown Nashville hospitality operators.",
     bullets: ["Up to $5M", "10-year working capital terms", "Real estate up to 25 years"],
     highlight: "From 8.25% APR",
   },
@@ -121,7 +119,7 @@ export const MONEY_PILLARS: Pillar[] = [
     kind: "money",
     tagline: "Finance machinery, vehicles and tools",
     description:
-      "Use the equipment itself as collateral - preserving working capital for the things financing can't buy. Section 179 deductions still apply.",
+      "Use the equipment itself as collateral — preserving working capital for the things financing can't buy. Section 179 deductions still apply.",
     bullets: ["100% financing available", "Section 179 eligible", "Approvals in 24-48 hrs"],
     highlight: "From 6.75%",
   },
@@ -139,9 +137,9 @@ export const MONEY_PILLARS: Pillar[] = [
     slug: "business-acquisition-loans",
     title: "Business Acquisition Loans",
     kind: "money",
-    tagline: "Buy an existing San Antonio business",
+    tagline: "Buy an existing Nashville business",
     description:
-      "SBA-backed acquisition financing for partner buyouts, succession purchases and add-on deals across the I-10 corridor - including goodwill, working capital and earn-out structures.",
+      "SBA-backed acquisition financing for partner buyouts, succession purchases and add-on deals across the I-65 corridor — including goodwill, working capital and earn-out structures.",
     bullets: ["10% down with SBA 7(a)", "Goodwill financing", "Earn-out friendly"],
     highlight: "Up to $5M",
   },
@@ -149,9 +147,9 @@ export const MONEY_PILLARS: Pillar[] = [
     slug: "startup-business-loans",
     title: "Startup Business Loans",
     kind: "money",
-    tagline: "Funding for new South Texas ventures",
+    tagline: "Funding for new Middle Tennessee ventures",
     description:
-      "Capital for businesses as young as 3 months, including SBA microloans and revenue-friendly products built for early-stage San Antonio operators.",
+      "Capital for businesses as young as 3 months, including SBA microloans and revenue-friendly products built for early-stage Nashville operators.",
     bullets: ["From 3 months in business", "SBA microloan options", "Personal-credit-based options"],
     highlight: "$5K-$250K",
   },
@@ -161,7 +159,7 @@ export const MONEY_PILLARS: Pillar[] = [
     kind: "money",
     tagline: "No blanket UCC, no hard collateral",
     description:
-      "Cash-flow underwritten loans for established San Antonio businesses with consistent monthly revenue - no UCC blanket lien required.",
+      "Cash-flow underwritten loans for established Nashville businesses with consistent monthly revenue — no UCC blanket lien required.",
     bullets: ["Up to $500K", "Terms 1-5 years", "Funded in 1-3 days"],
     highlight: "Soft pull pre-qual",
   },
@@ -174,7 +172,7 @@ export const VERTICAL_PILLARS: Pillar[] = [
     kind: "vertical",
     tagline: "Owner-operators to mid-size fleets",
     description:
-      "Capital to add tractors, cover insurance down payments and bridge slow-pay receivables, built for I-35 and I-10 freight economics and Eagle Ford oilfield runs.",
+      "Capital to add tractors, cover insurance down payments and bridge slow-pay receivables, built for I-40 and I-65 freight economics serving Nashville distribution corridors.",
     bullets: ["DOT-friendly underwriting", "Factoring + term combos", "Fuel & maintenance reserves"],
     highlight: "Funded in 24 hrs",
   },
@@ -184,7 +182,7 @@ export const VERTICAL_PILLARS: Pillar[] = [
     kind: "vertical",
     tagline: "Fit-out, expansion and equipment",
     description:
-      "Open a second location, refresh the dining room or weather a slow season with capital sized to San Antonio hospitality cash flow - Pearl District, Stone Oak and beyond.",
+      "Open a second location, refresh the dining room or weather a slow season with capital sized to Nashville hospitality cash flow — Germantown, 12 South and beyond.",
     bullets: ["Daily, weekly or monthly payments", "Same-day approvals", "No equity required"],
     highlight: "$25K-$2M",
   },
@@ -194,7 +192,7 @@ export const VERTICAL_PILLARS: Pillar[] = [
     kind: "vertical",
     tagline: "Clinics, physician groups & specialty",
     description:
-      "Acquisition, partner buy-in, expansion and working capital tailored to insurance reimbursement cycles. A regular fit for Stone Oak and South Texas Medical Center practices.",
+      "Acquisition, partner buy-in, expansion and working capital tailored to insurance reimbursement cycles. A regular fit for Brentwood and Belle Meade practices affiliated with Vanderbilt Medical Center and HCA.",
     bullets: ["Up to 100% project financing", "Terms up to 10 years", "Deferred payment options"],
     highlight: "$50K-$7M",
   },
@@ -204,7 +202,7 @@ export const VERTICAL_PILLARS: Pillar[] = [
     kind: "vertical",
     tagline: "Equipment, expansion & acquisition",
     description:
-      "Finance chairs, CBCT imaging, build-outs or a full practice purchase with structures designed for DSOs and solo San Antonio dentists.",
+      "Finance chairs, CBCT imaging, build-outs or a full practice purchase with structures designed for DSOs and solo Nashville dentists.",
     bullets: ["Chairs, imaging & software", "Practice acquisition", "Refinance existing debt"],
     highlight: "Rates from 7.25%",
   },
@@ -214,18 +212,18 @@ export const VERTICAL_PILLARS: Pillar[] = [
     kind: "vertical",
     tagline: "Ground-up, renovation and equipment",
     description:
-      "Multi-draw construction financing aligned to your build schedule, plus working capital and equipment loans for general contractors and trades across Bexar County.",
+      "Multi-draw construction financing aligned to your build schedule, plus working capital and equipment loans for general contractors and trades across Davidson County.",
     bullets: ["Up to 80% LTC", "12-36 month terms", "Convert to permanent financing"],
     highlight: "$250K-$25M",
   },
   {
     slug: "oilfield-services-loans",
-    title: "Oilfield Services Loans",
+    title: "Hospitality & Event Industry Loans",
     kind: "vertical",
-    tagline: "Eagle Ford & Permian service operators",
+    tagline: "Venues, tour operators & event-driven businesses",
     description:
-      "Equipment, working capital and AR factoring for the service crews supplying the Eagle Ford basin and Permian out of South Texas - sized to the rig-count cycle.",
-    bullets: ["AR factoring for slow-pay E&Ps", "Equipment & rolling stock", "Bridge through slow quarters"],
+      "Working capital, equipment and AR factoring for Nashville's hospitality and event ecosystem — sized to the bachelorette cycle, the convention calendar and event-driven cash flow patterns.",
+    bullets: ["AR factoring for slow-pay event contracts", "Equipment & venue FF&E", "Bridge through slow months"],
     highlight: "Up to $5M",
   },
   {
@@ -234,7 +232,7 @@ export const VERTICAL_PILLARS: Pillar[] = [
     kind: "vertical",
     tagline: "Acquisition, PIP renovation & refinance",
     description:
-      "Capital for flagged and independent properties along the I-35 corridor and Riverwalk: acquisitions, brand-mandated PIPs, FF&E and refinances.",
+      "Capital for flagged and independent properties along the I-65 corridor and Downtown Nashville: acquisitions, brand-mandated PIPs, FF&E and refinances.",
     bullets: ["SBA 7(a) & 504", "Bridge to perm", "Up to 90% LTV"],
     highlight: "$500K-$25M",
   },
@@ -244,7 +242,7 @@ export const VERTICAL_PILLARS: Pillar[] = [
     kind: "vertical",
     tagline: "Inventory and storefront capital",
     description:
-      "Stock up for the season, open a second location or refresh your San Antonio storefront with capital sized to retail cash flow cycles.",
+      "Stock up for the season, open a second location or refresh your Nashville storefront with capital sized to retail cash flow cycles.",
     bullets: ["Seasonal payment structures", "Inventory financing", "POS-integrated underwriting"],
     highlight: "$15K-$1M",
   },
@@ -254,7 +252,7 @@ export const VERTICAL_PILLARS: Pillar[] = [
     kind: "vertical",
     tagline: "SBA Express for veteran owners",
     description:
-      "Expedited SBA Express financing with reduced fees for veteran-owned businesses - a meaningful program in a city anchored by JBSA and a strong veteran owner-operator community.",
+      "Expedited SBA Express financing with reduced fees for veteran-owned businesses — a meaningful program serving the veteran operator community in Middle Tennessee near Fort Campbell.",
     bullets: ["Up to $500K", "Reduced SBA fees for veterans", "36-hour SBA turnaround"],
     highlight: "Veteran-friendly",
   },
@@ -264,7 +262,7 @@ export const VERTICAL_PILLARS: Pillar[] = [
     kind: "vertical",
     tagline: "CNC, robotics and production lines",
     description:
-      "Finance individual machines or full production cells with structures aligned to ROI timelines - including soft costs and step-payment options.",
+      "Finance individual machines or full production cells with structures aligned to ROI timelines — including soft costs and step-payment options for Nashville and Middle Tennessee manufacturers.",
     bullets: ["New & used equipment", "Soft costs included", "Step payment options"],
     highlight: "Up to $10M",
   },
@@ -272,7 +270,7 @@ export const VERTICAL_PILLARS: Pillar[] = [
 
 export const PILLARS: Pillar[] = [...MONEY_PILLARS, ...VERTICAL_PILLARS];
 
-/** Top 6 money pillars (the active GBP plays) used to build the suburb × pillar SEO pages.
+/** Top 6 money pillars used to build the suburb × pillar SEO pages.
  *  10 suburbs × 6 = 60 locally written pages. */
 export const TOP_MONEY_PILLARS: Pillar[] = MONEY_PILLARS.slice(0, 6);
 

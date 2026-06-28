@@ -61,7 +61,7 @@ function IndustryPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
-      <div aria-hidden className="h-20" />
+      <div aria-hidden className="h-14" />
       <main>
         {/* Breadcrumb */}
         <div className="border-b border-border/60 bg-[color:var(--brand-cream)]">
@@ -87,8 +87,8 @@ function IndustryPage() {
             style={{ background: "radial-gradient(circle, var(--brand-vermillion) 0%, transparent 60%)" }}
           />
           <div className="relative mx-auto max-w-4xl px-6">
-            <div className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-vermillion)]">
-              <span aria-hidden className="h-px w-10 bg-[color:var(--brand-vermillion)]" />
+            <div className="fg-eyebrow">
+              <span aria-hidden className="fg-eyebrow-dot" />
               <Sparkles className="h-3.5 w-3.5" />
               Sector Brief · {industry.label}
             </div>
@@ -99,10 +99,10 @@ function IndustryPage() {
             <p className="mt-4 max-w-2xl font-display text-lg font-medium text-white/85">{industry.hero}</p>
             <p className="mt-5 max-w-2xl text-base text-white/70 md:text-lg">{industry.intro}</p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button asChild size="lg" className="anchor-bevel rounded-none bg-[image:var(--gradient-cta)] px-7 text-sm font-bold uppercase tracking-[0.16em] text-white shadow-[var(--shadow-glow)]">
+              <Button asChild size="lg" className="btn-foxglove px-7 text-sm font-bold text-white">
                 <Link to="/apply-now">Apply Now <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="rounded-none border-white/30 bg-transparent px-7 text-sm font-semibold uppercase tracking-[0.12em] text-white hover:bg-white/10 hover:text-white">
+              <Button asChild variant="outline" size="lg" className="btn-ghost-white px-7 text-sm font-semibold">
                 <a href={SITE_CONFIG.phoneHref}><Phone className="mr-2 h-4 w-4" /> Talk to a specialist</a>
               </Button>
             </div>
@@ -118,13 +118,14 @@ function IndustryPage() {
         {INDUSTRY_BODIES[industry.slug] && (
           <section className="bg-[color:var(--brand-cream)]">
             <div className="mx-auto max-w-4xl px-6 py-16">
-              <div className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-vermillion)]">
-                <span aria-hidden className="h-px w-10 bg-[color:var(--brand-vermillion)]" />
+              <div className="fg-eyebrow">
+                <span aria-hidden className="fg-eyebrow-dot" />
                 Sector Memo
               </div>
               <h2 className="mt-3 font-display text-2xl font-bold tracking-tight md:text-3xl">
-                {industry.label} financing for San Antonio businesses
+                {industry.label} financing for Nashville businesses
               </h2>
+              <span aria-hidden className="fg-rule" />
               {INDUSTRY_BODIES[industry.slug].map((p, i) => (
                 <p key={i} className="mt-4 text-muted-foreground">{p}</p>
               ))}
@@ -134,13 +135,14 @@ function IndustryPage() {
 
         {/* Services list - uniform card grid */}
         <section className="mx-auto max-w-7xl px-6 py-20">
-          <div className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-vermillion)]">
-            <span aria-hidden className="h-px w-10 bg-[color:var(--brand-vermillion)]" />
+          <div className="fg-eyebrow">
+            <span aria-hidden className="fg-eyebrow-dot" />
             Programs · {industry.label}
           </div>
           <h2 className="mt-3 font-display text-3xl font-bold tracking-tight md:text-4xl">
             The plays we route most for {industry.label.toLowerCase()}
           </h2>
+          <span aria-hidden className="fg-rule" />
           <p className="mt-3 max-w-2xl text-muted-foreground">
             Every option starts with a soft credit pull. Pre-screen takes 60 seconds.
           </p>
@@ -175,7 +177,7 @@ function IndustryPage() {
                     <div className="mt-auto pt-5">
                       <Link
                         to="/apply-now"
-                        className="anchor-bevel inline-flex w-full items-center justify-center gap-2 rounded-none bg-[image:var(--gradient-cta)] px-4 py-2.5 text-[11px] font-bold uppercase tracking-[0.16em] text-white"
+                        className="btn-foxglove inline-flex w-full items-center justify-center gap-2 px-4 py-2.5 text-[11px] font-bold text-white"
                       >
                         Apply Now <ArrowRight className="h-3.5 w-3.5" />
                       </Link>
@@ -192,13 +194,14 @@ function IndustryPage() {
           <div className="mx-auto max-w-7xl px-6 py-16">
             <div className="flex flex-wrap items-end justify-between gap-4">
               <div>
-                <div className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-vermillion)]">
-                  <span aria-hidden className="h-px w-10 bg-[color:var(--brand-vermillion)]" />
+                <div className="fg-eyebrow">
+                  <span aria-hidden className="fg-eyebrow-dot" />
                   Other Sectors
                 </div>
                 <h2 className="mt-3 font-display text-2xl font-bold tracking-tight md:text-3xl">Explore other sectors</h2>
+                <span aria-hidden className="fg-rule" />
               </div>
-              <Button asChild variant="outline" className="rounded-none border-[color:var(--brand-charcoal)]/20 bg-transparent text-xs font-semibold uppercase tracking-[0.14em] hover:border-[color:var(--brand-vermillion)] hover:bg-[color:var(--brand-vermillion)]/10 hover:text-[color:var(--brand-vermillion)]">
+              <Button asChild variant="outline" className="btn-foxglove-outline px-7 text-sm font-semibold">
                 <Link to="/">View all</Link>
               </Button>
             </div>
@@ -231,8 +234,8 @@ function IndustryPage() {
           <div aria-hidden className="pointer-events-none absolute inset-0 anchor-grid opacity-15" />
           <div aria-hidden className="pointer-events-none absolute -right-32 top-1/4 h-80 w-80 rounded-full opacity-30 blur-3xl" style={{ background: "radial-gradient(circle, var(--brand-vermillion) 0%, transparent 70%)" }} />
           <div className="relative mx-auto max-w-5xl px-6 text-center">
-            <div className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-vermillion)]">
-              <span aria-hidden className="h-px w-10 bg-[color:var(--brand-vermillion)]" />
+            <div className="fg-eyebrow">
+              <span aria-hidden className="fg-eyebrow-dot" />
               Ready to fund · {industry.label}
             </div>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight md:text-4xl">
@@ -240,10 +243,10 @@ function IndustryPage() {
               <span className="block text-[color:var(--brand-vermillion)]">Pre-qualify in 60 seconds.</span>
             </h2>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
-              <Button asChild size="lg" className="anchor-bevel rounded-none bg-[image:var(--gradient-cta)] px-7 text-sm font-bold uppercase tracking-[0.16em] text-white shadow-[var(--shadow-glow)]">
+              <Button asChild size="lg" className="btn-foxglove px-7 text-sm font-bold text-white">
                 <Link to="/apply-now">Apply Now <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-none border-white/30 bg-transparent px-7 text-sm font-semibold uppercase tracking-[0.12em] text-white hover:bg-white/10 hover:text-white">
+              <Button asChild size="lg" variant="outline" className="btn-ghost-white px-7 text-sm font-semibold">
                 <a href={SITE_CONFIG.phoneHref}><Phone className="mr-2 h-4 w-4" /> Call the desk</a>
               </Button>
             </div>

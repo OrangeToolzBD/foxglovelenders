@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
-const siteLogoUrl = "/anchorgrouplogo.png";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -76,6 +75,8 @@ import {
   Target,
 } from "lucide-react";
 
+const siteLogoUrl = "/foxlovkenders-removebg-preview.png";
+
 type MegaItemProps = Readonly<{
   icon: LucideIcon;
   label: string;
@@ -85,8 +86,8 @@ type MegaItemProps = Readonly<{
   homeHash?: string;
 }>;
 
-const CITY = "San Antonio";
-const CITY_STATE = `${CITY}, TX`;
+const CITY = "Nashville";
+const CITY_STATE = `${CITY}, TN`;
 
 const HOME_FAQS = [
   {
@@ -102,7 +103,7 @@ const HOME_FAQS = [
     a: "Most of our lenders work with scores starting at 550 FICO. SBA loans and the best lines of credit typically require 650+.",
   },
   {
-    q: "Can South Texas startups qualify?",
+    q: "Can Middle Tennessee startups qualify?",
     a: "Yes. We work with lenders that fund businesses as young as 3 months, including SBA microloan programs designed for newer ventures.",
   },
   {
@@ -140,7 +141,7 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground">
       <Header />
       <main>
-        <div aria-hidden className="h-20" />
+        <div aria-hidden className="h-14" />
         <Hero />
         <CityHubCTA />
         <CapitalDesk />
@@ -214,7 +215,7 @@ const LOAN_GROUPS: {
       { icon: Receipt, label: "Invoice Factoring", desc: "Same-day cash on invoices", slug: "invoice-factoring" },
       { icon: LineChart, label: "Revenue Based Financing", desc: "Repay as a % of monthly revenue", slug: "revenue-based-financing" },
       { icon: HandCoins, label: "Small Business Loans", desc: "Compare every funding product", slug: "small-business-loans" },
-      { icon: MapPin, label: "Small Business Loans Near Me", desc: "San Antonio-based loan advisors", slug: "small-business-loans-near-me" },
+      { icon: MapPin, label: "Small Business Loans Near Me", desc: "Nashville-based loan advisors", slug: "small-business-loans-near-me" },
       { icon: FileText, label: "SBA Loans", desc: "Government-backed funding programs", slug: "sba-loans" },
     ],
   },
@@ -232,7 +233,7 @@ const LOAN_GROUPS: {
     heading: "SBA, Acquisition & Equipment",
     items: [
       { icon: FileText, label: "SBA 7(a) Loan", desc: "The SBA's flagship program", slug: "sba-7a-loan" },
-      { icon: Briefcase, label: "Business Acquisition Loans", desc: "Buy an existing SA business", slug: "business-acquisition-loans" },
+      { icon: Briefcase, label: "Business Acquisition Loans", desc: "Buy an existing Nashville business", slug: "business-acquisition-loans" },
       { icon: Wrench, label: "Equipment Financing", desc: "Machinery, vehicles & tools", slug: "equipment-financing" },
       { icon: Factory, label: "Manufacturing Equipment", desc: "CNC, robotics & production", slug: "manufacturing-equipment-financing" },
     ],
@@ -269,10 +270,10 @@ const INDUSTRY_GROUPS: {
     ],
   },
   {
-    heading: "Texas Specialty",
+    heading: "Music City & Hospitality",
     items: [
-      { icon: Flame, label: "Oilfield Services Loans", desc: "Eagle Ford & Permian operators", slug: "oilfield-services-loans" },
-      { icon: Plane, label: "Defense & Aerospace", desc: "JBSA-adjacent operators", href: "/industry/defense-aerospace" },
+      { icon: Flame, label: "Hospitality & Events", desc: "Nashville event ecosystem", slug: "oilfield-services-loans" },
+      { icon: Plane, label: "Healthcare & Insurance", desc: "Vanderbilt & HCA operators", href: "/industry/defense-aerospace" },
       { icon: Shield, label: "Veteran Business Loans", desc: "SBA Express for veterans", slug: "veteran-business-loans" },
     ],
   },
@@ -280,28 +281,28 @@ const INDUSTRY_GROUPS: {
 
 const SERVICE_AREAS: { region: string; suburbs: { name: string; slug: string }[] }[] = [
   {
-    region: "City of San Antonio",
+    region: "City of Nashville",
     suburbs: [
-      { name: "Downtown San Antonio", slug: "downtown-san-antonio" },
-      { name: "Stone Oak", slug: "stone-oak" },
-      { name: "Pearl District", slug: "pearl-district" },
-      { name: "Southtown", slug: "southtown" },
-      { name: "Westside", slug: "westside" },
-      { name: "South San Antonio", slug: "south-san-antonio" },
+      { name: "Downtown Nashville", slug: "downtown-nashville" },
+      { name: "Germantown", slug: "germantown" },
+      { name: "12 South", slug: "twelve-south" },
+      { name: "East Nashville", slug: "east-nashville" },
+      { name: "The Gulch", slug: "the-gulch" },
+      { name: "Wedgewood-Houston", slug: "wedgewood-houston" },
     ],
   },
   {
-    region: "Greater Bexar County",
+    region: "Davidson County",
     suburbs: [
-      { name: "Alamo Heights", slug: "alamo-heights" },
-      { name: "Northside / I-10", slug: "northside" },
+      { name: "Belle Meade", slug: "belle-meade" },
+      { name: "Hendersonville", slug: "hendersonville" },
     ],
   },
   {
-    region: "I-35 Corridor & Hill Country",
+    region: "Williamson County",
     suburbs: [
-      { name: "Schertz & Cibolo", slug: "schertz-cibolo" },
-      { name: "New Braunfels", slug: "new-braunfels" },
+      { name: "Brentwood", slug: "brentwood" },
+      { name: "Franklin", slug: "franklin" },
     ],
   },
 ];
@@ -314,15 +315,15 @@ function MegaItem({
   slug,
   homeHash,
 }: MegaItemProps) {
-  const itemClass = "flex items-start gap-3 rounded-lg p-3 transition-colors hover:bg-secondary";
+  const itemClass = "group flex items-center gap-2.5 rounded-lg px-2.5 py-2 transition-colors hover:bg-[color:var(--brand-charcoal)]/5";
   const inner = (
     <>
-      <span className="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-[color:var(--brand-emerald-mid)]/10 text-[color:var(--brand-emerald-mid)]">
-        <Icon className="h-4 w-4" />
+      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-[color:var(--brand-vermillion)]/10 text-[color:var(--brand-vermillion)] transition-colors group-hover:bg-[color:var(--brand-vermillion)]/18">
+        <Icon className="h-3.5 w-3.5" />
       </span>
       <span className="min-w-0">
-        <span className="block text-sm font-semibold text-foreground">{label}</span>
-        <span className="mt-0.5 block text-xs leading-snug text-muted-foreground">{desc}</span>
+        <span className="block text-[13px] font-semibold leading-tight text-foreground">{label}</span>
+        <span className="mt-0.5 block text-[11px] leading-snug text-muted-foreground">{desc}</span>
       </span>
     </>
   );
@@ -362,143 +363,209 @@ function MegaItem({
 
 export function Header() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[color:var(--brand-charcoal)]/95 text-white shadow-[0_8px_24px_-12px_oklch(0.1_0.01_30/0.6)] backdrop-blur supports-[backdrop-filter]:bg-[color:var(--brand-charcoal)]/85">
-      {/* thin vermillion top edge - visual anchor for the dark navbar */}
-      {/* <div aria-hidden className="absolute inset-x-0 top-0 h-[3px] bg-[image:var(--gradient-anchor)]" /> */}
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 md:px-6">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-[color:var(--brand-charcoal)]/10 bg-white/97 text-[color:var(--brand-charcoal)] shadow-[0_2px_16px_-4px_oklch(0.1_0.02_148/0.10)] backdrop-blur supports-[backdrop-filter]:bg-white/92">
+      <div aria-hidden className="absolute inset-x-0 top-0 h-[3px] bg-[image:var(--gradient-cta)]" />
+      <div className="mx-auto flex h-14 max-w-7xl items-center justify-between gap-4 px-4 md:px-6">
         <a href="/" className="flex items-center font-semibold">
-          <img src={siteLogoUrl} alt={SITE_CONFIG.name} className="h-16 w-auto" />
+          <img src={siteLogoUrl} alt={SITE_CONFIG.name} className="h-9 w-auto" />
           <span className="sr-only">{SITE_CONFIG.name}</span>
         </a>
 
         <NavigationMenu className="hidden lg:flex">
-          <NavigationMenuList className="gap-1">
+          <NavigationMenuList className="gap-0">
+
+            {/* ── Capital ── */}
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="nav-item rounded-none bg-transparent text-white hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent">Capital</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="nav-item rounded-none bg-transparent text-[color:var(--brand-charcoal)] hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent">Capital</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <div className="light bg-popover text-popover-foreground max-w-[100vw] max-h-[calc(100vh-5rem)] overflow-auto">
-                <div className="w-[900px] p-6">
-                  <div className="grid grid-cols-3 gap-6">
-                    {LOAN_GROUPS.map((g) => (
-                      <div key={g.heading}>
-                        <div className="mb-3 text-xs font-semibold uppercase tracking-wider text-[color:var(--brand-emerald-mid)]">
-                          {g.heading}
-                        </div>
-                        <div className="space-y-1">
-                          {g.items.map((it) => (
-                            <MegaItem key={it.label} {...it} />
-                          ))}
-                        </div>
+                <div className="light flex w-[860px] overflow-hidden rounded-xl shadow-[0_20px_60px_-12px_oklch(0.1_0.02_148/0.18)] ring-1 ring-border">
+                  {/* Left sidebar */}
+                  <div className="flex w-52 shrink-0 flex-col justify-between bg-[color:var(--brand-charcoal)] p-5 text-white">
+                    <div>
+                      <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[color:var(--brand-vermillion)]/20">
+                        <Banknote className="h-4 w-4 text-[color:var(--brand-vermillion)]" />
                       </div>
-                    ))}
-                  </div>
-                  <div className="mt-6 flex items-center justify-between rounded-xl border border-border bg-secondary/60 p-4">
-                    <div className="text-sm">
-                      <div className="font-semibold">Not sure which capital fits?</div>
-                      <div className="text-muted-foreground">
-                        Get matched in 60 seconds - soft credit pull only.
-                      </div>
+                      <p className="mt-3 text-sm font-bold leading-snug">Capital Programs</p>
+                      <p className="mt-1 text-[11px] leading-relaxed text-white/55">
+                        15 active loan products. One soft-pull application.
+                      </p>
                     </div>
-                    <Button asChild size="sm" className="bg-[image:var(--gradient-cta)] text-[color:var(--accent-success-foreground)]">
-                      <Link to="/apply-now">
-                        Start Application <ArrowRight className="h-4 w-4" />
+                    <div className="mt-6 border-t border-white/10 pt-4">
+                      <p className="text-[10px] uppercase tracking-widest text-white/40">Quick apply</p>
+                      <Button asChild size="sm" className="btn-foxglove mt-2 w-full text-xs font-bold text-white">
+                        <Link to="/apply-now" className="gap-1.5">
+                          Start Application <ArrowRight className="h-3 w-3" />
+                        </Link>
+                      </Button>
+                      <p className="mt-2 text-[10px] text-white/35">Soft pull · No commitment</p>
+                    </div>
+                  </div>
+                  {/* Right link grid */}
+                  <div className="flex-1 overflow-auto p-5">
+                    <div className="grid grid-cols-3 gap-x-6 gap-y-1">
+                      {LOAN_GROUPS.map((g) => (
+                        <div key={g.heading}>
+                          <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.16em] text-[color:var(--brand-vermillion)]">
+                            {g.heading}
+                          </p>
+                          <div className="space-y-px">
+                            {g.items.map((it) => (
+                              <MegaItem key={it.label} {...it} />
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+
+            {/* ── Sectors ── */}
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="nav-item rounded-none bg-transparent text-[color:var(--brand-charcoal)] hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent">Sectors</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <div className="light flex w-[920px] overflow-hidden rounded-xl shadow-[0_20px_60px_-12px_oklch(0.1_0.02_148/0.18)] ring-1 ring-border">
+                  {/* Left sidebar */}
+                  <div className="flex w-52 shrink-0 flex-col justify-between bg-[color:var(--brand-charcoal)] p-5 text-white">
+                    <div>
+                      <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[color:var(--brand-vermillion)]/20">
+                        <Building2 className="h-4 w-4 text-[color:var(--brand-vermillion)]" />
+                      </div>
+                      <p className="mt-3 text-sm font-bold leading-snug">Industry Sectors</p>
+                      <p className="mt-1 text-[11px] leading-relaxed text-white/55">
+                        10 sectors. Specialist lender benches for each.
+                      </p>
+                    </div>
+                    <div className="mt-6 border-t border-white/10 pt-4">
+                      <Link
+                        to="/nashville"
+                        className="inline-flex items-center gap-1 text-[11px] font-semibold text-[color:var(--brand-vermillion)] hover:underline"
+                      >
+                        Browse all sectors <ArrowRight className="h-3 w-3" />
                       </Link>
-                    </Button>
+                    </div>
                   </div>
-                </div>
+                  {/* Right link grid */}
+                  <div className="flex-1 overflow-auto p-5">
+                    <div className="grid grid-cols-4 gap-x-5 gap-y-1">
+                      {INDUSTRY_GROUPS.map((g) => (
+                        <div key={g.heading}>
+                          <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.16em] text-[color:var(--brand-vermillion)]">
+                            {g.heading}
+                          </p>
+                          <div className="space-y-px">
+                            {g.items.map((it) => (
+                              <MegaItem key={it.label} {...it} />
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </NavigationMenuContent>
             </NavigationMenuItem>
 
+            {/* ── Coverage ── */}
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="nav-item rounded-none bg-transparent text-white hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent">Sectors</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="nav-item rounded-none bg-transparent text-[color:var(--brand-charcoal)] hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent">Coverage</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <div className="light bg-popover text-popover-foreground max-w-[100vw] max-h-[calc(100vh-5rem)] overflow-auto">
-                <div className="w-[1100px] p-6">
-                  <div className="grid grid-cols-4 gap-6">
-                    {INDUSTRY_GROUPS.map((g) => (
-                      <div key={g.heading}>
-                        <div className="mb-3 text-xs font-semibold uppercase tracking-wider text-[color:var(--brand-emerald-mid)]">
-                          {g.heading}
-                        </div>
-                        <div className="space-y-1">
-                          {g.items.map((it) => (
-                            <MegaItem key={it.label} {...it} />
-                          ))}
-                        </div>
+                <div className="light flex w-[680px] overflow-hidden rounded-xl shadow-[0_20px_60px_-12px_oklch(0.1_0.02_148/0.18)] ring-1 ring-border">
+                  {/* Left sidebar */}
+                  <div className="flex w-52 shrink-0 flex-col justify-between bg-[color:var(--brand-charcoal)] p-5 text-white">
+                    <div>
+                      <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[color:var(--brand-vermillion)]/20">
+                        <MapPin className="h-4 w-4 text-[color:var(--brand-vermillion)]" />
                       </div>
-                    ))}
+                      <p className="mt-3 text-sm font-bold leading-snug">Nashville Coverage</p>
+                      <p className="mt-1 text-[11px] leading-relaxed text-white/55">
+                        Every neighborhood in the greater {CITY_STATE} metro.
+                      </p>
+                    </div>
+                    <div className="mt-6 border-t border-white/10 pt-4">
+                      <Link
+                        to="/nashville"
+                        className="inline-flex items-center gap-1 text-[11px] font-semibold text-[color:var(--brand-vermillion)] hover:underline"
+                      >
+                        Full Nashville hub <ArrowRight className="h-3 w-3" />
+                      </Link>
+                    </div>
                   </div>
-                </div>
-                </div>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-
-            <NavigationMenuItem>
-              <NavigationMenuTrigger className="nav-item rounded-none bg-transparent text-white hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent">Coverage</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <div className="light bg-popover text-popover-foreground max-w-[100vw] max-h-[calc(100vh-5rem)] overflow-auto">
-                <div className="w-[760px] p-6">
-                  <div className="mb-4 flex items-center gap-2 text-sm text-muted-foreground">
-                    <MapPin className="h-4 w-4 text-[color:var(--brand-bronze)]" />
-                    Funding businesses across the greater {CITY_STATE} metro
-                  </div>
-                  <div className="grid grid-cols-2 gap-x-8 gap-y-5 md:grid-cols-3">
-                    {SERVICE_AREAS.map((sa) => (
-                      <div key={sa.region}>
-                        <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-[color:var(--brand-emerald-mid)]">
-                          {sa.region}
+                  {/* Right area */}
+                  <div className="flex-1 overflow-auto p-5">
+                    <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+                      {SERVICE_AREAS.map((sa) => (
+                        <div key={sa.region}>
+                          <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.16em] text-[color:var(--brand-vermillion)]">
+                            {sa.region}
+                          </p>
+                          <ul className="space-y-px">
+                            {sa.suburbs.map((s) => (
+                              <li key={s.slug}>
+                                <NavigationMenuLink asChild>
+                                  <Link
+                                    to="/nashville/$suburb"
+                                    params={{ suburb: s.slug }}
+                                    className="group flex items-center gap-2 rounded-lg px-2 py-1.5 text-sm text-foreground/70 transition-colors hover:bg-[color:var(--brand-charcoal)]/5 hover:text-[color:var(--brand-charcoal)]"
+                                  >
+                                    <span className="h-1 w-1 shrink-0 rounded-full bg-[color:var(--brand-vermillion)]/40 transition-colors group-hover:bg-[color:var(--brand-vermillion)]" />
+                                    {s.name}
+                                  </Link>
+                                </NavigationMenuLink>
+                              </li>
+                            ))}
+                          </ul>
                         </div>
-                        <ul className="space-y-1.5">
-                          {sa.suburbs.map((s) => (
-                            <li key={s.slug}>
-                              <NavigationMenuLink asChild>
-                                <Link
-                                  to="/san-antonio/$suburb"
-                                  params={{ suburb: s.slug }}
-                                  className="block rounded px-2 py-1 text-sm text-foreground/80 hover:bg-secondary hover:text-foreground"
-                                >
-                                  {s.name}
-                                </Link>
-                              </NavigationMenuLink>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
-                </div>
                 </div>
               </NavigationMenuContent>
             </NavigationMenuItem>
 
+            {/* ── Insights ── */}
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="nav-item rounded-none bg-transparent text-white hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent">Insights</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="nav-item rounded-none bg-transparent text-[color:var(--brand-charcoal)] hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent">Insights</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <div className="light bg-popover text-popover-foreground max-w-[100vw] max-h-[calc(100vh-5rem)] overflow-auto">
-                <div className="w-[520px] p-4">
-                  <div className="grid gap-1">
-                    <MegaItem icon={BookOpen} label="How It Works" desc="Our 4-step funding process" homeHash="how" />
-                    <MegaItem icon={Star} label="Success Stories" desc={`Real ${CITY} businesses we funded`} homeHash="stories" />
-                    <MegaItem icon={HelpCircle} label="FAQs" desc="Answers to common funding questions" homeHash="faq" />
+                <div className="light flex w-[460px] overflow-hidden rounded-xl shadow-[0_20px_60px_-12px_oklch(0.1_0.02_148/0.18)] ring-1 ring-border">
+                  {/* Left sidebar */}
+                  <div className="flex w-44 shrink-0 flex-col justify-between bg-[color:var(--brand-charcoal)] p-5 text-white">
+                    <div>
+                      <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[color:var(--brand-vermillion)]/20">
+                        <BookOpen className="h-4 w-4 text-[color:var(--brand-vermillion)]" />
+                      </div>
+                      <p className="mt-3 text-sm font-bold leading-snug">Resources</p>
+                      <p className="mt-1 text-[11px] leading-relaxed text-white/55">
+                        Guides, success stories and answers.
+                      </p>
+                    </div>
                   </div>
-                </div>
+                  {/* Right links */}
+                  <div className="flex-1 p-4">
+                    <div className="space-y-px">
+                      <MegaItem icon={BookOpen} label="How It Works" desc="Our 4-step funding process" homeHash="how" />
+                      <MegaItem icon={Star} label="Success Stories" desc={`Real ${CITY} businesses we funded`} homeHash="stories" />
+                      <MegaItem icon={HelpCircle} label="FAQs" desc="Answers to common funding questions" homeHash="faq" />
+                    </div>
+                  </div>
                 </div>
               </NavigationMenuContent>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <NavigationMenuLink asChild className="nav-item rounded-none bg-transparent text-white hover:bg-transparent focus:bg-transparent">
+              <NavigationMenuLink asChild className="nav-item rounded-none bg-transparent text-[color:var(--brand-charcoal)] hover:bg-transparent focus:bg-transparent">
                 <Link to="/contact">Contact</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
+
           </NavigationMenuList>
         </NavigationMenu>
 
         <div className="flex items-center gap-2">
           <a
             href={SITE_CONFIG.phoneHref}
-            className="hidden items-center gap-2 text-xs font-semibold uppercase tracking-wider text-white/70 transition-colors hover:text-[color:var(--brand-vermillion)] xl:inline-flex"
+            className="hidden items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[color:var(--brand-charcoal)]/60 transition-colors hover:text-[color:var(--brand-vermillion)] xl:inline-flex"
           >
             <PhoneCall className="h-3.5 w-3.5 text-[color:var(--brand-vermillion)]" />
             {SITE_CONFIG.phone}
@@ -506,7 +573,7 @@ export function Header() {
           <Button
             size="sm"
             asChild
-            className="anchor-bevel hidden h-10 rounded-none bg-[image:var(--gradient-cta)] px-5 text-[11px] font-bold uppercase tracking-[0.14em] text-white shadow-[0_8px_22px_-10px_oklch(0.45_0.19_25/0.7)] transition-transform hover:translate-y-[-1px] hover:opacity-95 sm:inline-flex"
+            className="btn-foxglove hidden h-9 px-5 text-[11px] font-bold uppercase tracking-[0.14em] text-white sm:inline-flex"
           >
             <Link to="/apply-now" className="gap-2">
               Apply Now <ArrowRight className="h-3.5 w-3.5" />
@@ -515,7 +582,7 @@ export function Header() {
 
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="rounded-none border border-white/15 bg-white/5 text-white hover:bg-white/10 hover:text-white lg:hidden" aria-label="Open menu">
+              <Button variant="ghost" size="icon" className="rounded-full border border-[color:var(--brand-charcoal)]/20 bg-transparent text-[color:var(--brand-charcoal)] hover:bg-[color:var(--brand-charcoal)]/8 hover:text-[color:var(--brand-charcoal)] lg:hidden" aria-label="Open menu">
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
@@ -608,7 +675,7 @@ export function Header() {
                             {sa.suburbs.map((s) => (
                               <SheetClose asChild key={s.slug}>
                                 <Link
-                                  to="/san-antonio/$suburb"
+                                  to="/nashville/$suburb"
                                   params={{ suburb: s.slug }}
                                   className="rounded-full border border-border bg-card px-2.5 py-1 text-xs text-muted-foreground hover:text-foreground"
                                 >
@@ -648,7 +715,7 @@ export function Header() {
                     <PhoneCall className="h-4 w-4 text-[color:var(--brand-bronze)]" /> {SITE_CONFIG.phone}
                   </a>
                   <SheetClose asChild>
-                    <Button asChild className="w-full bg-[image:var(--gradient-cta)] text-[color:var(--accent-success-foreground)]">
+                    <Button asChild className="btn-foxglove w-full text-sm font-bold text-white">
                       <a href={SITE_CONFIG.phoneHref} className="gap-2">
                         <PhoneCall className="h-4 w-4" /> Call {SITE_CONFIG.phone}
                       </a>
@@ -666,130 +733,106 @@ export function Header() {
 
 /* ---------------- Hero - Anchor identity: split-pane with stat callouts ---------------- */
 function Hero() {
+  const neighborhoods = [
+    { slug: "downtown-nashville", name: "Downtown Nashville", blurb: "Honky-tonks & music row" },
+    { slug: "germantown", name: "Germantown", blurb: "Restaurants & artisan trades" },
+    { slug: "twelve-south", name: "12 South", blurb: "Boutiques & food & beverage" },
+    { slug: "the-gulch", name: "The Gulch", blurb: "Tech, fitness & upscale dining" },
+    { slug: "east-nashville", name: "East Nashville", blurb: "Creative trades & hospitality" },
+    { slug: "brentwood", name: "Brentwood", blurb: "Professional services & retail" },
+  ];
   return (
-    <section className="relative overflow-hidden bg-[color:var(--brand-charcoal)] text-white">
-      {/* Background image - port/freight scene with baked-in brand glow on the left */}
-      <img
-        src="/anchorhero-bg.png"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center"
-      />
-      {/* Brand-tinted overlay so the headline column stays legible while the imagery shows on the right */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(to right, oklch(0.14 0.018 30 / 0.88) 0%, oklch(0.16 0.018 30 / 0.72) 38%, oklch(0.18 0.02 30 / 0.4) 70%, oklch(0.2 0.02 30 / 0.25) 100%)",
-        }}
-      />
-      <div aria-hidden className="pointer-events-none absolute inset-0 anchor-grid opacity-15" />
-      <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-[1.15fr_1fr] lg:py-28">
-        <div className="min-w-0">
-          <div className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-vermillion)]">
-            <span aria-hidden className="h-px w-10 bg-[color:var(--brand-vermillion)]" />
-            Capital · Anchored
+    <section className="relative overflow-hidden bg-[color:var(--brand-cream)]">
+      <div aria-hidden className="h-1 w-full bg-[image:var(--gradient-cta)]" />
+      <div className="mx-auto grid max-w-none lg:grid-cols-[1fr_500px] xl:grid-cols-[1fr_560px]">
+        {/* Left col — cream editorial */}
+        <div className="flex flex-col justify-center px-6 py-14 sm:px-10 lg:px-16 lg:py-28 xl:pl-24">
+          <div className="fg-eyebrow">
+            <span aria-hidden className="fg-eyebrow-dot" />
+            Nashville, Tennessee · Business Capital
           </div>
-          <h1 className="mt-5 text-4xl font-bold leading-tight tracking-tight md:text-6xl">
-            Steady capital{" "}
-            <span className="bg-gradient-to-r from-[oklch(0.86_0.12_85)] to-[oklch(0.74_0.16_75)] bg-clip-text text-transparent">
-              for the long haul.
-            </span>
+          <h1 className="mt-5 max-w-2xl text-4xl font-bold leading-[1.1] tracking-tight text-[color:var(--brand-charcoal)] sm:text-5xl lg:text-[3.5rem]">
+            Middle Tennessee's{" "}
+            <em className="not-italic text-[color:var(--primary)]">lending</em>{" "}
+            partner.
           </h1>
-          <p className="mt-5 max-w-xl text-lg text-white/80">
-            Anchor Capital Group brokers invoice factoring, accounts receivable financing,
-            SBA loans and working capital for {CITY_STATE} operators. Soft credit pull,
-            real offers in 24 hours.
+          <p className="mt-5 max-w-lg text-lg leading-relaxed text-muted-foreground">
+            Foxglove Lenders brokers invoice factoring, AR lines, SBA loans and working capital for Nashville and Middle Tennessee businesses. One soft-pull application, 75+ Tennessee-active lenders.
           </p>
-          <ul className="mt-6 grid max-w-lg grid-cols-1 gap-2 text-sm text-white/85 sm:grid-cols-2">
+          <div className="mt-8 grid grid-cols-3 divide-x divide-border border-y border-border py-5">
             {[
-              "No impact on credit score",
-              "75+ lender bench",
-              "Texas-licensed partners",
-              "$5K - $5M available",
-            ].map((t) => (
-              <li key={t} className="flex items-center gap-2">
-                <CheckCircle2 className="h-4 w-4 text-[color:var(--brand-bronze)]" /> {t}
-              </li>
+              { v: SITE_CONFIG.stats.businessesFunded, l: "Businesses funded" },
+              { v: SITE_CONFIG.stats.loansFacilitated, l: "Loans facilitated" },
+              { v: SITE_CONFIG.stats.fastestFundingHours, l: "Fastest funding" },
+            ].map(({ v, l }) => (
+              <div key={l} className="px-4 first:pl-0">
+                <div className="text-2xl font-bold text-[color:var(--primary)] md:text-3xl">{v}</div>
+                <div className="mt-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-muted-foreground">{l}</div>
+              </div>
             ))}
-          </ul>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          </div>
+          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <Button
               size="lg"
               asChild
-              className="anchor-bevel w-full rounded-none bg-[image:var(--gradient-cta)] px-7 text-sm font-bold uppercase tracking-[0.16em] text-white shadow-[var(--shadow-glow)] hover:opacity-95 sm:w-auto"
+              className="btn-foxglove px-8 text-sm font-bold tracking-wide text-white"
             >
-              <Link to="/apply-now">
-                Apply Now <ArrowRight className="h-4 w-4" />
-              </Link>
+              <Link to="/apply-now" className="gap-2">Get Funded <ArrowRight className="h-4 w-4" /></Link>
             </Button>
             <Button
               size="lg"
               variant="outline"
               asChild
-              className="w-full rounded-none border-white/25 bg-transparent px-7 text-sm font-semibold uppercase tracking-[0.12em] text-white hover:bg-white/10 hover:text-white sm:w-auto"
+              className="btn-foxglove-outline px-7 text-sm font-semibold"
             >
-              <a href={SITE_CONFIG.phoneHref}>
-                <PhoneCall className="h-4 w-4" /> {SITE_CONFIG.phone}
-              </a>
+              <a href={SITE_CONFIG.phoneHref} className="gap-2"><PhoneCall className="h-4 w-4" /> {SITE_CONFIG.phone}</a>
             </Button>
           </div>
-          <div className="mt-6 flex items-center gap-4 text-xs text-white/70">
-            <span className="inline-flex items-center gap-1">
-              <Lock className="h-3 w-3" /> 256-bit SSL secured
-            </span>
-            <span>•</span>
-            <span>Soft credit pull only</span>
+          <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-[11px] text-muted-foreground">
+            <span className="inline-flex items-center gap-1"><Lock className="h-3 w-3" /> Soft pull only</span>
+            <span aria-hidden>·</span>
+            <span>No commitment required</span>
           </div>
         </div>
 
-        {/* Right pane - funding desk preview card */}
-        <div className="relative hidden min-w-0 lg:block">
-          <div className="absolute inset-0 -z-10 rounded-3xl bg-[color:var(--brand-bronze)]/15 blur-3xl" />
-          <div className="rounded-3xl border border-white/15 bg-white/5 p-6 backdrop-blur-xl">
-            <div className="flex items-center justify-between text-xs uppercase tracking-wider text-white/60">
-              <span className="inline-flex items-center gap-2">
-                <Target className="h-3.5 w-3.5 text-[color:var(--brand-bronze)]" />
-                Today on the desk
-              </span>
-              <span className="rounded-full bg-emerald-400/20 px-2 py-0.5 text-[10px] font-semibold text-emerald-300">
-                Live
-              </span>
-            </div>
-            <div className="mt-5 space-y-3">
-              {[
-                { product: "Invoice Factoring", size: "$420K", industry: "Eagle Ford services", status: "Funded today" },
-                { product: "AR Line", size: "$1.8M", industry: "I-35 NE 3PL", status: "Term sheet" },
-                { product: "SBA 7(a)", size: "$2.4M", industry: "Stone Oak dental", status: "In underwriting" },
-                { product: "Working Capital", size: "$180K", industry: "Pearl restaurant", status: "Funded today" },
-              ].map((row) => (
-                <div
-                  key={row.product + row.size}
-                  className="flex items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3"
-                >
-                  <div className="min-w-0">
-                    <div className="truncate text-sm font-semibold text-white">{row.product}</div>
-                    <div className="truncate text-[11px] text-white/60">{row.industry}</div>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-sm font-bold text-[color:var(--brand-bronze)]">{row.size}</div>
-                    <div className="text-[10px] uppercase tracking-wider text-white/50">{row.status}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="mt-5 flex items-center justify-between rounded-xl bg-[color:var(--brand-bronze)]/15 px-4 py-3">
-              <span className="text-xs font-semibold uppercase tracking-wider text-[color:var(--brand-bronze)]">
-                Anchor advisor available
-              </span>
-              <a
-                href={SITE_CONFIG.phoneHref}
-                className="inline-flex items-center gap-1 text-sm font-semibold text-white hover:underline"
+        {/* Right col — botanical green panel with Nashville neighborhood grid */}
+        <div className="flex flex-col justify-center bg-[color:var(--primary)] px-6 py-14 sm:px-8 lg:px-10 lg:py-28">
+          <div className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[color:var(--brand-bronze)]">
+            Nashville neighborhoods
+          </div>
+          <h2 className="mt-2 text-xl font-bold text-white">Capital for every corner of Music City</h2>
+          <div className="mt-5 grid grid-cols-2 gap-2">
+            {neighborhoods.map((n) => (
+              <Link
+                key={n.slug}
+                to="/nashville/$suburb"
+                params={{ suburb: n.slug }}
+                className="group flex flex-col gap-1 border border-white/10 bg-white/5 px-3 py-3 transition-colors hover:bg-white/10"
               >
-                Call now <ArrowUpRight className="h-3.5 w-3.5" />
-              </a>
+                <span className="text-sm font-semibold text-white group-hover:text-[color:var(--brand-bronze)]">
+                  {n.name}
+                </span>
+                <span className="text-[11px] text-white/55">{n.blurb}</span>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-4 border border-[color:var(--brand-bronze)]/30 bg-[color:var(--brand-bronze)]/10 px-4 py-3">
+            <div className="text-[11px] font-semibold uppercase tracking-wider text-[color:var(--brand-bronze)]">
+              Foxglove Lenders advisor on call
             </div>
+            <a
+              href={SITE_CONFIG.phoneHref}
+              className="mt-1 inline-flex items-center gap-1 text-sm font-semibold text-white hover:underline"
+            >
+              {SITE_CONFIG.phone} <ArrowRight className="h-3.5 w-3.5" />
+            </a>
+          </div>
+          <div className="mt-5 flex flex-wrap gap-x-4 gap-y-2">
+            {SITE_CONFIG.trustBadges.slice(0, 3).map((b) => (
+              <span key={b} className="flex items-center gap-1.5 text-[11px] text-white/55">
+                <CheckCircle2 className="h-3 w-3 text-[color:var(--brand-bronze)]" /> {b}
+              </span>
+            ))}
           </div>
         </div>
       </div>
@@ -820,13 +863,14 @@ function AnchorLedger() {
       <div aria-hidden className="pointer-events-none absolute -left-24 bottom-0 h-64 w-64 rounded-full opacity-20 blur-3xl" style={{ background: "radial-gradient(circle, var(--brand-crimson) 0%, transparent 70%)" }} />
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="flex flex-col gap-3">
-          <div className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-vermillion)]">
-            <span aria-hidden className="h-px w-10 bg-[color:var(--brand-vermillion)]" />
+          <div className="fg-eyebrow">
+            <span aria-hidden className="fg-eyebrow-dot" />
             The Ledger
           </div>
           <h2 className="max-w-3xl text-3xl font-bold tracking-tight md:text-4xl">
-            What Anchor brokers - and the numbers that back it.
+            What Foxglove Lenders brokers - and the numbers that back it.
           </h2>
+          <span aria-hidden className="fg-rule" />
         </div>
 
         <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_1.1fr]">
@@ -927,14 +971,15 @@ function CityHubCTA() {
           <div aria-hidden className="pointer-events-none absolute inset-0 anchor-grid opacity-20" />
           <div className="relative grid items-center gap-10 md:grid-cols-[1.4fr_1fr]">
             <div>
-              <span className="inline-flex items-center gap-2 rounded-full border border-[color:var(--brand-bronze)]/40 bg-[color:var(--brand-bronze)]/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[color:var(--brand-bronze)] backdrop-blur">
-                <MapPin className="h-3.5 w-3.5" /> Explore the San Antonio Hub
-              </span>
+              <div className="fg-eyebrow backdrop-blur">
+                <span aria-hidden className="fg-eyebrow-dot" />
+                <MapPin className="h-3 w-3" /> Explore the Nashville Hub
+              </div>
               <h2 className="mt-4 text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
                 Every neighborhood. Every loan program. One directory.
               </h2>
               <p className="mt-3 max-w-xl text-white/80">
-                Jump into the San Antonio city hub to browse every neighborhood we serve and the
+                Jump into the Nashville city hub to browse every neighborhood we serve and the
                 programs available in each. Every combination opens its own locally written page.
               </p>
               <ul className="mt-6 space-y-2">
@@ -948,17 +993,16 @@ function CityHubCTA() {
                 <Button
                   asChild
                   size="lg"
-                  className="w-full bg-white text-[color:var(--brand-emerald)] hover:bg-white/90 sm:w-auto"
+                  className="btn-foxglove w-full px-7 text-sm font-bold text-white sm:w-auto"
                 >
-                  <Link to="/san-antonio">
-                    Visit the San Antonio Hub <ArrowRight className="ml-2 h-4 w-4" />
+                  <Link to="/nashville" className="gap-2">
+                    Visit the Nashville Hub <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
                 <Button
                   asChild
                   size="lg"
-                  variant="outline"
-                  className="w-full border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white sm:w-auto"
+                  className="btn-ghost-white w-full px-7 text-sm font-semibold sm:w-auto"
                 >
                   <Link to="/apply-now">Apply Now</Link>
                 </Button>
@@ -981,7 +1025,7 @@ function CityHubCTA() {
                 </div>
               </div>
               <Link
-                to="/san-antonio"
+                to="/nashville"
                 className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-white hover:underline"
               >
                 Browse the full directory <ArrowRight className="h-4 w-4" />
@@ -1030,73 +1074,106 @@ function CapitalDesk() {
     {
       slug: "small-business-loans-near-me",
       title: "Small Business Loans Near Me",
-      lede: "Local advisors who know the Bexar County lender bench.",
+      lede: "Local advisors who know the Davidson County lender bench.",
       stat: "60-second match",
-      tag: "San Antonio advisors",
+      tag: "Nashville advisors",
     },
     {
       slug: "sba-loans",
       title: "SBA Loans",
-      lede: "SBA 7(a), 504 and Express through Texas-active Preferred Lenders.",
+      lede: "SBA 7(a), 504 and Express through Tennessee-active Preferred Lenders.",
       stat: "From 8.25% APR",
       tag: "Up to $5M",
     },
   ];
+  const accentColors = [
+    { bg: "oklch(0.96 0.04 148)", text: "oklch(0.32 0.10 148)", border: "oklch(0.85 0.08 148)" },
+    { bg: "oklch(0.96 0.04 50)",  text: "oklch(0.55 0.11 50)",  border: "oklch(0.88 0.08 50)"  },
+    { bg: "oklch(0.94 0.05 148)", text: "oklch(0.28 0.10 148)", border: "oklch(0.82 0.09 148)" },
+    { bg: "oklch(0.95 0.05 50)",  text: "oklch(0.50 0.11 50)",  border: "oklch(0.85 0.09 50)"  },
+    { bg: "oklch(0.96 0.04 148)", text: "oklch(0.36 0.10 148)", border: "oklch(0.86 0.07 148)" },
+    { bg: "oklch(0.95 0.04 50)",  text: "oklch(0.52 0.10 50)",  border: "oklch(0.86 0.08 50)"  },
+  ];
   return (
-    <section id="capital" className="relative overflow-hidden py-12 sm:py-20">
+    <section id="capital" className="relative overflow-hidden bg-[color:var(--brand-charcoal)] py-14 sm:py-24 text-white">
+      <div aria-hidden className="pointer-events-none absolute inset-0 anchor-grid opacity-10" />
+      <div aria-hidden className="pointer-events-none absolute -right-40 top-0 h-96 w-96 rounded-full opacity-20 blur-3xl" style={{ background: "radial-gradient(circle, var(--brand-vermillion) 0%, transparent 70%)" }} />
       <div className="relative mx-auto max-w-7xl px-6">
-        <div className="mx-auto max-w-2xl text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-[color:var(--brand-bronze)]/40 bg-[color:var(--brand-bronze)]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[color:var(--brand-emerald)]">
-            <Anchor className="h-3.5 w-3.5" /> The Capital Desk
-          </span>
-          <h2 className="mt-4 text-3xl font-bold tracking-tight md:text-4xl">
-            The six programs San Antonio asks for most
-          </h2>
-          <p className="mt-4 text-muted-foreground">
-            These are the active plays - the loan products we route most often for South Texas operators.
+        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div>
+            <div className="fg-eyebrow">
+              <span aria-hidden className="fg-eyebrow-dot" />
+              The Capital Desk
+            </div>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight md:text-4xl">
+              Six programs Nashville<br className="hidden sm:block" /> asks for most
+            </h2>
+            <span aria-hidden className="fg-rule" />
+          </div>
+          <p className="max-w-sm text-sm text-white/60 md:text-right">
+            The active plays — loan products we route most often for Middle Tennessee operators.
           </p>
         </div>
-        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+
+        <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 md:grid-cols-2 lg:grid-cols-3">
           {desk.map((d, i) => {
-            const col = i % 3;
-            const row = Math.floor(i / 3);
+            const accent = accentColors[i];
+            const num = String(i + 1).padStart(2, "0");
             return (
               <Link
                 to="/pillar/$slug"
                 params={{ slug: d.slug }}
                 key={d.slug}
-                className="group relative overflow-hidden rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-1 hover:border-[color:var(--brand-bronze)]/50 hover:shadow-[var(--shadow-elegant)]"
+                className="group relative flex flex-col gap-0 bg-[color:var(--brand-charcoal)] transition-colors hover:bg-[color:var(--brand-charcoal-soft)]"
               >
-                <div
-                  aria-hidden
-                  className="pointer-events-none absolute -right-12 -top-12 h-32 w-32 rounded-full bg-[color:var(--brand-bronze)]/10 transition-transform duration-500 group-hover:scale-150"
-                />
-                <span
-                  aria-hidden
-                  className="relative -ml-10 block h-32 w-32 transition-transform duration-300 group-hover:scale-110"
-                  style={{
-                    backgroundImage: "url(/capitaldeskicons.png)",
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "300% 200%",
-                    backgroundPosition: `${col * 50}% ${row * 100}%`,
-                  }}
-                />
-                <h3 className="relative -mt-3 text-lg font-semibold">{d.title}</h3>
-                <p className="relative mt-2 text-sm text-muted-foreground">{d.lede}</p>
-                <div className="relative mt-5 flex flex-wrap items-center gap-2">
-                  <span className="rounded-full bg-[color:var(--brand-emerald)]/10 px-2.5 py-1 text-[11px] font-semibold text-[color:var(--brand-emerald)]">
-                    {d.stat}
+                {/* top accent bar grows on hover */}
+                <span aria-hidden className="absolute inset-x-0 top-0 h-[2px] origin-left scale-x-0 bg-[image:var(--gradient-cta)] transition-transform duration-500 group-hover:scale-x-100" />
+
+                {/* number + tag row */}
+                <div className="flex items-center justify-between border-b border-white/8 px-6 py-4">
+                  <span className="font-mono text-[11px] font-bold tracking-[0.22em] text-[color:var(--brand-vermillion)]">
+                    {num}
                   </span>
-                  <span className="rounded-full border border-border bg-background px-2.5 py-1 text-[11px] text-muted-foreground">
+                  <span
+                    className="rounded-sm px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider"
+                    style={{ background: accent.bg, color: accent.text, border: `1px solid ${accent.border}` }}
+                  >
                     {d.tag}
                   </span>
                 </div>
-                <span className="relative mt-5 inline-flex items-center gap-1 text-sm font-medium text-[color:var(--brand-bronze)] group-hover:underline">
-                  Open program details <ArrowRight className="h-4 w-4" />
-                </span>
+
+                {/* body */}
+                <div className="flex flex-1 flex-col px-6 py-5">
+                  <h3 className="text-base font-bold leading-snug tracking-tight text-white">
+                    {d.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-white/55 group-hover:text-white/75 transition-colors">
+                    {d.lede}
+                  </p>
+
+                  <div className="mt-auto pt-5 flex items-center justify-between">
+                    <span
+                      className="rounded-full px-3 py-1 text-[11px] font-bold"
+                      style={{ background: accent.bg, color: accent.text }}
+                    >
+                      {d.stat}
+                    </span>
+                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/50 transition-all group-hover:border-[color:var(--brand-vermillion)] group-hover:bg-[color:var(--brand-vermillion)]/15 group-hover:text-[color:var(--brand-vermillion)]">
+                      <ArrowUpRight className="h-4 w-4 -translate-x-px translate-y-px transition-transform group-hover:translate-x-0 group-hover:translate-y-0" />
+                    </span>
+                  </div>
+                </div>
               </Link>
             );
           })}
+        </div>
+
+        <div className="mt-8 flex justify-center">
+          <Button asChild size="lg" className="btn-foxglove px-9 text-sm font-bold tracking-wide text-white">
+            <Link to="/apply-now" className="gap-2">
+              See all capital programs <ArrowRight className="h-4 w-4" />
+            </Link>
+          </Button>
         </div>
       </div>
     </section>
@@ -1107,7 +1184,7 @@ function CapitalDesk() {
 function HowItWorks() {
   const steps = [
     { n: 1, title: "Tell us the brief", desc: "60 seconds: how much, what for, how soon. No documents up front." },
-    { n: 2, title: "We shop the bench", desc: "Anchor pre-screens 75+ Texas-active lenders against your profile." },
+    { n: 2, title: "We shop the bench", desc: "Foxglove Lenders pre-screens 75+ Tennessee-active lenders against your profile." },
     { n: 3, title: "Compare real offers", desc: "Side-by-side: rates, terms, fees and remit schedules - no spin." },
     { n: 4, title: "Funded", desc: "Sign the docs and receive funds in as little as 24 hours." },
   ];
@@ -1121,12 +1198,14 @@ function HowItWorks() {
       />
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-[color:var(--brand-bronze)]/40 bg-[color:var(--brand-bronze)]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[color:var(--brand-bronze)]">
-            <Compass className="h-3.5 w-3.5" /> The Anchor process
-          </span>
+          <div className="fg-eyebrow border-[color:var(--brand-bronze)]/40 bg-[color:var(--brand-bronze)]/10 text-[color:var(--brand-bronze)]" style={{ borderColor: "color-mix(in oklab, var(--brand-vermillion) 40%, transparent)" }}>
+            <span aria-hidden className="fg-eyebrow-dot" />
+            The Foxglove Lenders process
+          </div>
           <h2 className="mt-4 text-3xl font-bold tracking-tight md:text-4xl">
             Four steps. Zero surprises.
           </h2>
+          <span aria-hidden className="fg-rule mx-auto" style={{ background: "linear-gradient(135deg, var(--brand-vermillion), oklch(0.85 0.10 50))" }} />
           <p className="mt-4 text-white/75">
             How {CITY} operators move from "we need capital" to "the wire cleared."
           </p>
@@ -1135,9 +1214,10 @@ function HowItWorks() {
           {steps.map((s) => (
             <div
               key={s.n}
-              className="relative rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur"
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur transition-colors hover:border-[color:var(--brand-vermillion)]/30 hover:bg-white/[0.08]"
             >
-              <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[image:var(--gradient-cta)] font-bold text-[color:var(--accent-success-foreground)]">
+              <span aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-[2px] origin-left scale-x-0 bg-[image:var(--gradient-cta)] transition-transform duration-500 group-hover:scale-x-100 rounded-none" />
+              <div className="fg-step-badge">
                 {s.n}
               </div>
               <h3 className="mt-4 text-lg font-semibold">{s.title}</h3>
@@ -1155,14 +1235,14 @@ function Industries() {
   type Ind = { icon: LucideIcon; label: string; slug: string; blurb: string; tx?: boolean };
   const inds: Ind[] = [
     { icon: Building2, label: "Construction", slug: "construction", blurb: "GCs, trades & ground-up." },
-    { icon: Stethoscope, label: "Healthcare", slug: "healthcare", blurb: "Medical Center to Stone Oak." },
-    { icon: UtensilsCrossed, label: "Hospitality", slug: "hospitality", blurb: "Pearl, Riverwalk, Hill Country." },
-    { icon: Truck, label: "Transportation", slug: "transportation", blurb: "I-35 freight & cross-border." },
+    { icon: Stethoscope, label: "Healthcare", slug: "healthcare", blurb: "Vanderbilt to TriStar campuses." },
+    { icon: UtensilsCrossed, label: "Hospitality", slug: "hospitality", blurb: "Broadway to 12 South kitchens." },
+    { icon: Truck, label: "Transportation", slug: "transportation", blurb: "I-24/I-65 freight & logistics." },
     { icon: ShoppingBag, label: "Retail", slug: "retail", blurb: "Storefronts & inventory." },
-    { icon: Factory, label: "Manufacturing", slug: "manufacturing", blurb: "Toyota-corridor suppliers.", tx: true },
+    { icon: Factory, label: "Manufacturing", slug: "manufacturing", blurb: "Nissan corridor suppliers.", tx: true },
     { icon: Briefcase, label: "Professional", slug: "professional-services", blurb: "Law, accounting, consulting." },
-    { icon: Flame, label: "Oilfield Services", slug: "oilfield-services", blurb: "Eagle Ford & Permian crews.", tx: true },
-    { icon: Plane, label: "Defense & Aerospace", slug: "defense-aerospace", blurb: "JBSA & Port SA tenants.", tx: true },
+    { icon: Flame, label: "Oilfield Services", slug: "oilfield-services", blurb: "Music City event ecosystem.", tx: true },
+    { icon: Plane, label: "Defense & Aerospace", slug: "defense-aerospace", blurb: "HCA & insurance operators.", tx: true },
     // { icon: Package, label: "Distribution", slug: "distribution", blurb: "I-35 NE 3PLs & warehouses." },
   ];
   const n = (i: number) => String(i + 1).padStart(2, "0");
@@ -1173,20 +1253,21 @@ function Industries() {
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <div className="max-w-xl">
-            <div className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-vermillion)]">
-              <span aria-hidden className="h-px w-10 bg-[color:var(--brand-vermillion)]" />
+            <div className="fg-eyebrow">
+              <span aria-hidden className="fg-eyebrow-dot" />
               Sector Ledger · 010
             </div>
             <h2 className="mt-4 font-display text-3xl font-bold tracking-tight md:text-5xl">
-              The ten sectors Anchor underwrites first
+              The ten sectors Foxglove Lenders underwrites first
             </h2>
+            <span aria-hidden className="fg-rule" />
             <p className="mt-4 text-muted-foreground">
-              Each row is a specialty bench. Texas-specific verticals carry a <span className="font-semibold text-[color:var(--brand-vermillion)]">TX</span> marker - these are deals we won't hand off to a generalist.
+              Each row is a specialty bench. Tennessee-specific verticals carry a <span className="font-semibold text-[color:var(--brand-vermillion)]">TN</span> marker - these are deals we won't hand off to a generalist.
             </p>
           </div>
-          <Button asChild variant="outline" size="lg" className="rounded-none border-[color:var(--brand-charcoal)]/20 bg-transparent text-xs font-semibold uppercase tracking-[0.14em] text-[color:var(--brand-charcoal)] hover:border-[color:var(--brand-vermillion)] hover:bg-[color:var(--brand-vermillion)]/10 hover:text-[color:var(--brand-vermillion)]">
-            <Link to="/san-antonio">
-              View all 24 programs <ArrowRight className="ml-2 h-4 w-4" />
+          <Button asChild size="lg" className="btn-foxglove-outline px-7 text-sm font-semibold">
+            <Link to="/nashville" className="gap-2">
+              View all 24 programs <ArrowRight className="h-4 w-4" />
             </Link>
           </Button>
         </div>
@@ -1208,7 +1289,7 @@ function Industries() {
                     </span>
                     {ind.tx && (
                       <span className="inline-flex items-center gap-1 rounded-sm border border-[color:var(--brand-vermillion)]/50 bg-[color:var(--brand-vermillion)]/10 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.18em] text-[color:var(--brand-vermillion)]">
-                        TX Specialty
+                        TN Specialty
                       </span>
                     )}
                   </div>
@@ -1265,9 +1346,9 @@ function SuccessStories() {
   }, [api]);
   const stories = [
     {
-      name: "Eagle Ford Wireline Co.",
+      name: "Germantown Event Co.",
       amount: "$420,000",
-      result: "Same-day cash on E&P invoices through factoring.",
+      result: "Same-day cash on open event invoices through factoring.",
       type: "Invoice Factoring",
       person: "Marco Delgado",
       role: "Owner & Operator",
@@ -1275,7 +1356,7 @@ function SuccessStories() {
       photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=96&h=96&fit=crop&crop=face&q=80",
     },
     {
-      name: "I-35 NE Distribution",
+      name: "Brentwood Distribution Co.",
       amount: "$1,800,000",
       result: "Revolving AR line scaled with their big-box customer base.",
       type: "Accounts Receivable Financing",
@@ -1285,7 +1366,7 @@ function SuccessStories() {
       photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=96&h=96&fit=crop&crop=face&q=80",
     },
     {
-      name: "Stone Oak Dental Partners",
+      name: "Belle Meade Dental Partners",
       amount: "$2,400,000",
       result: "SBA 7(a) for partner buy-in plus new CBCT scanner.",
       type: "SBA 7(a) Loan",
@@ -1295,7 +1376,7 @@ function SuccessStories() {
       photo: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=96&h=96&fit=crop&crop=face&q=80",
     },
     {
-      name: "Pearl District Kitchen Co.",
+      name: "12 South Kitchen Co.",
       amount: "$180,000",
       result: "Working capital line that flexes with event-driven sales.",
       type: "Working Capital Loan",
@@ -1305,7 +1386,7 @@ function SuccessStories() {
       photo: "https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=96&h=96&fit=crop&crop=face&q=80",
     },
     {
-      name: "Alamo Heights HVAC",
+      name: "East Nashville HVAC",
       amount: "$650,000",
       result: "Equipment line to refresh the service fleet ahead of peak season.",
       type: "Equipment Financing",
@@ -1315,9 +1396,9 @@ function SuccessStories() {
       photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=96&h=96&fit=crop&crop=face&q=80",
     },
     {
-      name: "Southtown Hospitality Group",
+      name: "The Gulch Hospitality Group",
       amount: "$1,100,000",
-      result: "Bridge financing to acquire a second concept off Roosevelt Ave.",
+      result: "Bridge financing to acquire a second concept on Broadway.",
       type: "Business Term Loan",
       person: "Camila Vargas",
       role: "Founder",
@@ -1337,10 +1418,10 @@ function SuccessStories() {
     <section id="stories" className="relative overflow-hidden px-6 py-12 sm:py-20">
       <div className="relative mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-          {CITY} businesses Anchor has funded
+          {CITY} businesses Foxglove Lenders has funded
         </h2>
         <p className="mt-4 text-muted-foreground">
-          Composite outcomes from real deals across South Texas. Names changed; structures unchanged.
+          Composite outcomes from real deals across Middle Tennessee. Names changed; structures unchanged.
         </p>
       </div>
       {/* Wrapper isolates Carousel from useScrollReveal - without it, the
@@ -1388,8 +1469,8 @@ function SuccessStories() {
 /* ---------------- City Intro (SEO copy) ---------------- */
 function CityIntro() {
   const neighborhoods = [
-    "Downtown San Antonio", "Stone Oak", "Pearl District", "Alamo Heights",
-    "Southtown", "Westside", "South San Antonio", "Northside / I-10", "Schertz", "New Braunfels",
+    "Downtown Nashville", "Germantown", "12 South", "East Nashville",
+    "The Gulch", "Brentwood", "Belle Meade", "Franklin", "Hendersonville", "Wedgewood-Houston",
   ];
   const uses = ["Expansion", "Payroll", "Inventory", "Equipment", "Marketing", "Cash Flow"];
   return (
@@ -1401,14 +1482,14 @@ function CityIntro() {
           </h2>
           <p className="mt-4 text-muted-foreground">
             Whether you operate in {neighborhoods.slice(0, 5).join(", ")} or anywhere across
-            Bexar County and South Texas, our lending bench helps local businesses secure the
+            Davidson County and Middle Tennessee, our lending bench helps local businesses secure the
             capital they need to grow. From <strong>SBA 7(a) loans</strong> and{" "}
             <strong>business lines of credit</strong> to <strong>equipment financing</strong>,{" "}
             <strong>working capital loans</strong> and <strong>invoice factoring</strong>, we
             connect {CITY} owners with the right funding product, fast.
           </p>
           <p className="mt-4 text-muted-foreground">
-            Anchor works with short-term lenders, SBA Preferred Banks active in Texas, equipment
+            Foxglove Lenders works with short-term lenders, SBA Preferred Banks active in Tennessee, equipment
             financiers and merchant cash advance providers - so you can compare{" "}
             <strong>fast business loans</strong>, <strong>startup business loans</strong> and{" "}
             <strong>same-day business funding</strong> in one place.
@@ -1451,15 +1532,17 @@ function Security() {
     { icon: Lock, title: "SSL Secured" },
     { icon: ShieldCheck, title: "Bank-Level Encryption" },
     { icon: Users, title: "Privacy Protected" },
-    { icon: CheckCircle2, title: "Texas-Licensed Lending Partners" },
+    { icon: CheckCircle2, title: "Tennessee-Licensed Lending Partners" },
   ];
   return (
     <section className="relative overflow-hidden px-6 py-16">
-      <div className="relative mx-auto grid max-w-7xl gap-6 rounded-2xl border border-border bg-card p-8 md:grid-cols-4">
+      <div className="relative mx-auto grid max-w-7xl gap-5 rounded-2xl border border-border bg-card p-8 md:grid-cols-4">
         {items.map(({ icon: Icon, title }) => (
-          <div key={title} className="flex items-center gap-3">
-            <Icon className="h-6 w-6 text-[color:var(--brand-emerald)]" />
-            <span className="text-sm font-medium">{title}</span>
+          <div key={title} className="fg-trust-badge">
+            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[color:var(--brand-vermillion)]/10">
+              <Icon className="h-4.5 w-4.5 h-[18px] w-[18px] text-[color:var(--brand-vermillion)]" />
+            </span>
+            <span className="text-sm font-semibold">{title}</span>
           </div>
         ))}
       </div>
@@ -1472,7 +1555,14 @@ function FAQSection() {
   return (
     <section id="faq" className="relative overflow-hidden px-6 py-12 sm:py-20">
       <div className="relative mx-auto max-w-4xl text-center">
-        <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Frequently asked questions</h2>
+        <div className="flex justify-center">
+          <div className="fg-eyebrow">
+            <span aria-hidden className="fg-eyebrow-dot" />
+            Common Questions
+          </div>
+        </div>
+        <h2 className="mt-4 text-3xl font-bold tracking-tight md:text-4xl">Frequently asked questions</h2>
+        <span aria-hidden className="fg-rule mx-auto" />
         <p className="mt-4 text-muted-foreground">
           Everything {CITY} business owners want to know before applying.
         </p>
@@ -1506,25 +1596,24 @@ function FinalCTA() {
           Ready to talk capital in {CITY}?
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-white/80">
-          Get matched with Texas-licensed lenders serving {CITY_STATE}. Soft credit pull, no obligation.
+          Get matched with Tennessee-licensed lenders serving {CITY_STATE}. Soft credit pull, no obligation.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <Button
             size="lg"
             asChild
-            className="anchor-bevel rounded-none bg-[image:var(--gradient-cta)] px-7 text-sm font-bold uppercase tracking-[0.16em] text-white shadow-[var(--shadow-glow)]"
+            className="btn-foxglove px-9 text-sm font-bold tracking-wide text-white"
           >
-            <Link to="/apply-now">
+            <Link to="/apply-now" className="gap-2">
               Apply Now <ArrowRight className="h-4 w-4" />
             </Link>
           </Button>
           <Button
             size="lg"
-            variant="outline"
             asChild
-            className="rounded-none border-white/30 bg-transparent px-7 text-sm font-semibold uppercase tracking-[0.12em] text-white hover:bg-white/10 hover:text-white"
+            className="btn-ghost-white px-7 text-sm font-semibold"
           >
-            <a href={SITE_CONFIG.phoneHref}>
+            <a href={SITE_CONFIG.phoneHref} className="gap-2">
               <PhoneCall className="h-4 w-4" /> {SITE_CONFIG.phone}
             </a>
           </Button>
@@ -1542,7 +1631,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 md:grid-cols-4">
         <div>
           <div className="flex items-center font-semibold">
-            <img src={siteLogoUrl} alt={SITE_CONFIG.name} className="h-28 w-auto" />
+            <img src={siteLogoUrl} alt={SITE_CONFIG.name} className="h-14 w-auto brightness-0 invert" />
           </div>
           <address className="mt-6 not-italic space-y-1 text-sm text-white/65">
             <div className="font-semibold text-white">{SITE_CONFIG.name}</div>
@@ -1589,7 +1678,7 @@ export function Footer() {
             <Link to="/contact" className="hover:text-[color:var(--brand-vermillion)]">Contact</Link>
           </li>
           <li>
-            <Link to="/san-antonio" className="hover:text-[color:var(--brand-vermillion)]">San Antonio Hub</Link>
+            <Link to="/nashville" className="hover:text-[color:var(--brand-vermillion)]">Nashville Hub</Link>
           </li>
           <li>
             <Link to="/" hash="how" className="hover:text-[color:var(--brand-vermillion)]">How It Works</Link>

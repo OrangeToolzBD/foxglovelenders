@@ -63,7 +63,7 @@ export const INDUSTRIES: Industry[] = [
     icon: Building2,
     hero: "Capital that breaks ground.",
     intro:
-      "From ground-up commercial builds to heavy equipment, we structure financing that keeps San Antonio crews moving and Bexar County projects on schedule.",
+      "From ground-up commercial builds to heavy equipment, we structure financing that keeps Nashville crews moving and Davidson County projects on schedule.",
     services: [
       make(
         "construction-business-loans",
@@ -88,7 +88,7 @@ export const INDUSTRIES: Industry[] = [
         "AR Financing for GCs",
         Receipt,
         "Borrow against AIA progress billings",
-        "A revolving facility secured by your receivables - built for general contractors bridging slow-pay owners and AIA G702/G703 cycles.",
+        "A revolving facility secured by your receivables — built for general contractors bridging slow-pay owners and AIA G702/G703 cycles.",
         ["Up to 90% AR advance", "Lines $250K-$20M", "Reporting-friendly"],
         "Revolving",
       ),
@@ -109,7 +109,7 @@ export const INDUSTRIES: Industry[] = [
     icon: Stethoscope,
     hero: "Funding for those who care.",
     intro:
-      "Specialized lending for medical, dental and specialty practices across the South Texas Medical Center, Stone Oak and Alamo Heights.",
+      "Specialized lending for medical, dental and specialty practices across Brentwood, Belle Meade and the broader Vanderbilt Medical Center and HCA referral network.",
     services: [
       make(
         "medical-practice-loans",
@@ -125,7 +125,7 @@ export const INDUSTRIES: Industry[] = [
         "Dental Practice Loans",
         Smile,
         "Equipment, expansion & acquisition",
-        "Finance chairs, CBCT imaging, build-outs or a full practice purchase with structures designed for DSOs and solo San Antonio practices.",
+        "Finance chairs, CBCT imaging, build-outs or a full practice purchase with structures designed for DSOs and solo Nashville dentists.",
         ["Chairs, imaging & software", "Practice acquisition", "Refinance existing debt"],
         "Rates from 7.25%",
       ),
@@ -134,7 +134,7 @@ export const INDUSTRIES: Industry[] = [
         "SBA 7(a) for Practices",
         HandCoins,
         "Long-term, low-rate practice capital",
-        "The SBA's flagship program - common for partner buy-ins, satellite office expansion and full practice acquisitions.",
+        "The SBA's flagship program — common for partner buy-ins, satellite office expansion and full practice acquisitions.",
         ["Up to $5M", "10-year working capital terms", "Real estate up to 25 years"],
         "From 8.25% APR",
       ),
@@ -155,14 +155,14 @@ export const INDUSTRIES: Industry[] = [
     icon: UtensilsCrossed,
     hero: "Fuel the next service.",
     intro:
-      "Working capital, equipment financing and hotel CapEx for the operators driving the Riverwalk, the Pearl, Southtown and the Hill Country.",
+      "Working capital, equipment financing and hotel CapEx for the operators driving Broadway, Germantown, 12 South and the I-65 hotel corridor.",
     services: [
       make(
         "restaurant-loans",
         "Restaurant Loans",
         UtensilsCrossed,
         "Fit-out, expansion & equipment",
-        "Open a second location, refresh the dining room or weather a slow season with capital structured for San Antonio hospitality cash flow.",
+        "Open a second location, refresh the dining room or weather a slow season with capital structured for Nashville hospitality cash flow.",
         ["Daily, weekly or monthly payments", "Same-day approvals", "No equity required"],
         "$25K-$2M",
       ),
@@ -171,7 +171,7 @@ export const INDUSTRIES: Industry[] = [
         "Hotel Loans",
         Hotel,
         "Acquisition & PIP renovation",
-        "Capital for flagged and independent properties along the Riverwalk and I-35: acquisitions, brand-mandated PIPs, FF&E and refinances.",
+        "Capital for flagged and independent properties along the I-65 corridor and Downtown Nashville: acquisitions, brand-mandated PIPs and refinances.",
         ["SBA 7(a) & 504", "Bridge to perm", "Up to 90% LTV"],
         "$500K-$25M",
       ),
@@ -180,7 +180,7 @@ export const INDUSTRIES: Industry[] = [
         "Merchant Cash Advance",
         CreditCard,
         "Same-day capital from card sales",
-        "Fast capital advanced against future card and platform settlements - repaid as a small percentage of daily revenue.",
+        "Fast capital advanced against future card and platform settlements — repaid as a small percentage of daily revenue.",
         ["24-hour funding", "No fixed payments", "Bad credit considered"],
         "$10K-$1M",
       ),
@@ -201,14 +201,14 @@ export const INDUSTRIES: Industry[] = [
     icon: Truck,
     hero: "Keep the fleet rolling.",
     intro:
-      "From owner-operators on I-35 to mid-size fleets running the Eagle Ford and Mexico cross-border lanes: trucks, trailers, repair bays and the working capital that holds it all together.",
+      "From owner-operators on I-40 to mid-size fleets running the Southeast distribution lanes: trucks, trailers, repair bays and the working capital that holds it all together.",
     services: [
       make(
         "trucking-business-loans",
         "Trucking Business Loans",
         Truck,
         "Owner-operators to fleet expansion",
-        "Capital to add tractors, cover insurance down payments, fuel up and bridge slow-pay receivables, built for South Texas trucking economics.",
+        "Capital to add tractors, cover insurance down payments, fuel up and bridge slow-pay receivables, built for Middle Tennessee trucking economics.",
         ["DOT-friendly underwriting", "Factoring + term combos", "Fuel & maintenance reserves"],
         "Funded in 24 hours",
       ),
@@ -217,7 +217,7 @@ export const INDUSTRIES: Industry[] = [
         "Trucking Invoice Factoring",
         Receipt,
         "Same-day cash on freight invoices",
-        "Sell freight bills the day you deliver - non-recourse and recourse options with transparent advance rates.",
+        "Sell freight bills the day you deliver — non-recourse and recourse options with transparent advance rates.",
         ["Advance rates up to 95%", "Non-recourse available", "No long-term lock-in"],
         "24-hour funding",
       ),
@@ -247,14 +247,14 @@ export const INDUSTRIES: Industry[] = [
     icon: ShoppingBag,
     hero: "Stock more. Sell more.",
     intro:
-      "Inventory financing, build-outs and working capital for storefronts across the Pearl, La Cantera, North Star and Broadway corridor.",
+      "Inventory financing, build-outs and working capital for storefronts across Germantown, 12 South, Brentwood and the CoolSprings corridor.",
     services: [
       make(
         "retail-business-loans",
         "Retail Business Loans",
         ShoppingBag,
         "Inventory & storefront capital",
-        "Stock up for the season, open a second location, or refresh your San Antonio storefront with capital sized to retail cash flow cycles.",
+        "Stock up for the season, open a second location, or refresh your Nashville storefront with capital sized to retail cash flow cycles.",
         ["Seasonal payment structures", "Inventory financing", "POS-integrated underwriting"],
         "$15K-$1M",
       ),
@@ -263,7 +263,7 @@ export const INDUSTRIES: Industry[] = [
         "Inventory Line of Credit",
         CreditCard,
         "Draw what you need, when you need it",
-        "Revolving capital sized to your inventory turn - only pay interest on what you draw.",
+        "Revolving capital sized to your inventory turn — only pay interest on what you draw.",
         ["Lines $25K-$500K", "Same-day draws", "Pay interest only on used balance"],
         "Rates from 9.75%",
       ),
@@ -293,7 +293,7 @@ export const INDUSTRIES: Industry[] = [
     icon: Factory,
     hero: "Capital that scales the line.",
     intro:
-      "Heavy equipment, working capital and receivables financing for Toyota-corridor suppliers, Port San Antonio fabricators and Westside producers.",
+      "Heavy equipment, working capital and receivables financing for Nissan-corridor suppliers, Middle Tennessee manufacturers and Wedgewood-Houston producers.",
     services: [
       make(
         "manufacturing-equipment-financing",
@@ -339,7 +339,7 @@ export const INDUSTRIES: Industry[] = [
     icon: Briefcase,
     hero: "Capital for the firm.",
     intro:
-      "Tailored financing for San Antonio law firms, accounting practices, consulting groups and other partner-led firms - Downtown, Alamo Heights and Stone Oak.",
+      "Tailored financing for Nashville law firms, accounting practices, consulting groups and other partner-led firms — Downtown, Belle Meade, Brentwood and Franklin.",
     services: [
       make(
         "unsecured-business-loans",
@@ -372,7 +372,7 @@ export const INDUSTRIES: Industry[] = [
         "small-business-loans-near-me",
         "Local Loan Advisors",
         Calculator,
-        "San Antonio-based loan brokering",
+        "Nashville-based loan brokering",
         "Access 75+ vetted lenders through one application. We negotiate term sheets and present the best two or three.",
         ["75+ lender network", "One application", "We negotiate on your behalf"],
         "No fee until close",
@@ -381,36 +381,36 @@ export const INDUSTRIES: Industry[] = [
   },
   {
     slug: "oilfield-services",
-    label: "Oilfield Services",
+    label: "Hospitality & Events",
     icon: Flame,
-    hero: "Capital that follows the rig count.",
+    hero: "Capital for Music City operators.",
     intro:
-      "Equipment, working capital and AR factoring for the South Texas service crews supplying the Eagle Ford and Permian basins out of San Antonio.",
+      "Working capital, equipment and AR factoring for Nashville's hospitality and event ecosystem — sized to the bachelorette cycle, the convention calendar and event-driven cash flow.",
     services: [
       make(
         "oilfield-services-loans",
-        "Oilfield Services Loans",
+        "Hospitality & Event Industry Loans",
         Flame,
-        "E&P-adjacent service operators",
-        "Equipment, working capital and AR factoring for the service companies supplying the Eagle Ford basin.",
-        ["AR factoring for slow-pay E&Ps", "Equipment & rolling stock", "Bridge through slow quarters"],
+        "Venues, tour operators & event-driven businesses",
+        "Working capital, equipment and AR factoring for the event and hospitality ecosystem supporting Nashville's tourism economy.",
+        ["AR factoring for slow-pay event contracts", "Equipment & venue FF&E", "Bridge through slow months"],
         "Up to $5M",
       ),
       make(
         "invoice-factoring",
-        "Oilfield Invoice Factoring",
+        "Event Invoice Factoring",
         Receipt,
-        "Same-day cash on E&P invoices",
-        "Sell invoices to slow-pay operators the day you deliver - purpose-built for 60-90 day E&P payment cycles.",
+        "Same-day cash on event contracts",
+        "Sell invoices to slow-pay clients the day the event closes — purpose-built for event-industry payment cycles.",
         ["Advance rates up to 95%", "Non-recourse available", "Funded in 24 hours"],
         "Same-day cash",
       ),
       make(
         "equipment-financing",
-        "Oilfield Equipment Financing",
+        "Venue & Event Equipment Financing",
         Wrench,
-        "Rolling stock, pumps and trailers",
-        "Finance new and used oilfield equipment with the equipment itself as collateral.",
+        "Sound, lighting, FF&E and production",
+        "Finance new and used hospitality and event equipment with the equipment itself as collateral.",
         ["100% financing available", "Section 179 eligible", "Approvals in 24-48 hours"],
         "Rates from 6.99%",
       ),
@@ -419,7 +419,7 @@ export const INDUSTRIES: Industry[] = [
         "Asset-Based Lending",
         Boxes,
         "Revolving line on the AR ledger",
-        "A revolving facility secured by your receivables - cheaper than factoring at consistent volume.",
+        "A revolving facility secured by your receivables — cheaper than factoring at consistent volume.",
         ["Up to 90% AR advance", "Reporting-friendly", "Lines $250K-$20M"],
         "Revolving",
       ),
@@ -427,11 +427,11 @@ export const INDUSTRIES: Industry[] = [
   },
   {
     slug: "defense-aerospace",
-    label: "Defense & Aerospace",
+    label: "Healthcare & Insurance",
     icon: Plane,
-    hero: "Capital for JBSA-adjacent operators.",
+    hero: "Capital for Nashville's healthcare corridor.",
     intro:
-      "San Antonio is Military City USA - JBSA-Lackland, JBSA-Randolph, Port San Antonio and a deep base of MRO, defense IT and cleared-services contractors. Anchor finances cleared and veteran-owned operators with SBA Express, equipment and government-contract working capital.",
+      "Nashville is the nation's largest healthcare management hub — HCA headquarters, Vanderbilt Medical, CHS and a deep base of healthcare IT, revenue-cycle and insurance-adjacent firms. Foxglove finances these operators with SBA, equipment and practice-capital structures.",
     services: [
       make(
         "veteran-business-loans",
@@ -444,28 +444,28 @@ export const INDUSTRIES: Industry[] = [
       ),
       make(
         "accounts-receivable-financing",
-        "Govt Contract AR Financing",
+        "Healthcare AR Financing",
         Receipt,
-        "Borrow against federal receivables",
-        "A revolving line secured by federal and prime-contractor receivables. Lender comfort with FAR-billed AR.",
-        ["Up to 90% AR advance", "FAR-billing friendly", "Lines $250K-$20M"],
+        "Borrow against insurance receivables",
+        "A revolving line secured by insurance receivables and healthcare IT contracts. Lender comfort with payer-mix AR.",
+        ["Up to 90% AR advance", "Payer-mix friendly", "Lines $250K-$20M"],
         "Revolving",
       ),
       make(
         "working-capital-loans",
-        "Contract Mobilization Capital",
+        "Practice Launch Capital",
         Banknote,
-        "Stand up the contract before the first invoice clears",
-        "Working capital to mobilize crews, buy materials and staff up before the first government payment hits.",
+        "Stand up the practice before collections clear",
+        "Working capital to staff up, buy equipment and cover pre-opening costs before the first insurance payment hits.",
         ["$10K-$2M", "Daily, weekly or monthly payments", "No collateral options"],
         "Funded in 24 hrs",
       ),
       make(
         "sba-7a-loan",
-        "SBA 7(a) for Defense Contractors",
+        "SBA 7(a) for Healthcare IT",
         HandCoins,
-        "Long-term capital for cleared firms",
-        "Use SBA 7(a) for acquisition, expansion or real estate - popular among Port San Antonio tenants.",
+        "Long-term capital for health-tech firms",
+        "Use SBA 7(a) for acquisition, expansion or office real estate — popular among Nashville health-tech and RCM operators.",
         ["Up to $5M", "10-year working capital terms", "Real estate up to 25 years"],
         "From 8.25% APR",
       ),
@@ -477,7 +477,7 @@ export const INDUSTRIES: Industry[] = [
     icon: Package,
     hero: "Capital that ships on time.",
     intro:
-      "Working capital, equipment and AR financing for the warehouses and 3PLs along the I-35 NE corridor, Port San Antonio and the South Side distribution hubs.",
+      "Working capital, equipment and AR financing for the warehouses and 3PLs along the I-40/I-65 corridor and the Nashville distribution hubs.",
     services: [
       make(
         "accounts-receivable-financing",
@@ -493,7 +493,7 @@ export const INDUSTRIES: Industry[] = [
         "Freight Bill Factoring",
         Receipt,
         "Same-day cash on shipper invoices",
-        "Sell freight invoices the day you deliver - non-recourse and recourse options.",
+        "Sell freight invoices the day you deliver — non-recourse and recourse options.",
         ["Advance rates up to 95%", "Non-recourse available", "24-hour funding"],
         "Same-day cash",
       ),

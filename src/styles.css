@@ -59,80 +59,79 @@
 
 :root {
   --radius: 0.5rem;
-  /* Anchor Capital Group — San Antonio identity:
-     palette pulled from the Anchor logo — deep crimson anchor + vermillion
-     orange highlights against a near-black charcoal navbar. Light surfaces stay
-     warm off-white. */
-  --background: oklch(0.985 0.008 60);
-  --foreground: oklch(0.17 0.025 30);
+  /* Foxglove Lenders — Nashville TN identity:
+     botanical deep forest green primary + warm terracotta/sage accents against
+     a dark forest navbar. Light surfaces use linen cream for warmth. */
+  --background: oklch(0.985 0.008 90);
+  --foreground: oklch(0.16 0.025 148);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.17 0.025 30);
+  --card-foreground: oklch(0.16 0.025 148);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.17 0.025 30);
+  --popover-foreground: oklch(0.16 0.025 148);
 
-  --primary: oklch(0.45 0.19 25);                /* crimson red — anchor body */
-  --primary-foreground: oklch(0.985 0.01 60);
-  --primary-glow: oklch(0.62 0.2 35);
+  --primary: oklch(0.32 0.10 148);               /* botanical green — primary brand */
+  --primary-foreground: oklch(0.985 0.01 90);
+  --primary-glow: oklch(0.52 0.10 148);
 
-  --accent-success: oklch(0.65 0.18 40);         /* vermillion orange — CTA */
-  --accent-success-foreground: oklch(0.99 0.01 60);
+  --accent-success: oklch(0.68 0.10 50);         /* warm terracotta — CTA / highlights */
+  --accent-success-foreground: oklch(0.985 0.01 90);
 
-  /* Anchor logo-matched tokens */
-  --brand-crimson: oklch(0.45 0.19 25);          /* anchor body deep red */
-  --brand-crimson-deep: oklch(0.36 0.18 22);     /* darker shadow / pressed */
-  --brand-vermillion: oklch(0.65 0.18 40);       /* anchor highlights orange */
-  --brand-vermillion-hover: oklch(0.58 0.19 35);
-  --brand-charcoal: oklch(0.18 0.015 30);        /* navbar / dark surface */
-  --brand-charcoal-soft: oklch(0.24 0.018 30);
-  --brand-cream: oklch(0.97 0.012 70);
-  --brand-ink: oklch(0.17 0.025 30);
+  /* Foxglove Lenders brand tokens */
+  --brand-crimson: oklch(0.32 0.10 148);         /* botanical green — primary */
+  --brand-crimson-deep: oklch(0.24 0.07 148);    /* dark forest — shadow / pressed */
+  --brand-vermillion: oklch(0.68 0.10 50);       /* warm terracotta — highlights / CTA */
+  --brand-vermillion-hover: oklch(0.60 0.11 48);
+  --brand-charcoal: oklch(0.17 0.05 148);        /* very dark forest — navbar */
+  --brand-charcoal-soft: oklch(0.22 0.06 148);
+  --brand-cream: oklch(0.97 0.012 85);           /* linen cream */
+  --brand-ink: oklch(0.16 0.025 148);
 
   /* Legacy aliases — re-skin the rest of the codebase automatically. */
   --brand-emerald: var(--brand-crimson);
   --brand-emerald-mid: var(--brand-vermillion);
-  --brand-emerald-light: oklch(0.85 0.08 50);
+  --brand-emerald-light: oklch(0.87 0.06 50);
   --brand-bronze: var(--brand-vermillion);
   --brand-bronze-hover: var(--brand-vermillion-hover);
   --brand-blue: var(--brand-crimson);
   --brand-blue-hover: var(--brand-crimson-deep);
-  --brand-teal: oklch(0.85 0.08 50);
+  --brand-teal: oklch(0.87 0.06 50);
   --brand-coral: var(--brand-vermillion);
   --brand-sand: var(--brand-cream);
 
   --gradient-primary: linear-gradient(135deg, var(--brand-crimson-deep), var(--brand-crimson));
-  --gradient-hero: radial-gradient(ellipse 85% 65% at 85% 0%, color-mix(in oklab, var(--brand-vermillion) 38%, transparent), transparent 60%),
+  --gradient-hero: radial-gradient(ellipse 85% 65% at 85% 0%, color-mix(in oklab, var(--brand-vermillion) 28%, transparent), transparent 60%),
                    radial-gradient(ellipse 90% 70% at 15% 100%, color-mix(in oklab, var(--brand-crimson) 50%, transparent), transparent 70%),
-                   linear-gradient(180deg, oklch(0.2 0.018 28), oklch(0.13 0.012 30));
-  --gradient-cta: linear-gradient(135deg, var(--brand-vermillion), var(--brand-crimson));
+                   linear-gradient(180deg, oklch(0.19 0.05 148), oklch(0.13 0.04 148));
+  --gradient-cta: linear-gradient(135deg, var(--brand-vermillion), oklch(0.52 0.10 148));
   --gradient-anchor: linear-gradient(135deg, var(--brand-vermillion) 0%, var(--brand-crimson) 55%, var(--brand-crimson-deep) 100%);
 
   --shadow-elegant: 0 22px 50px -22px color-mix(in oklab, var(--brand-crimson) 50%, transparent);
   --shadow-glow: 0 0 60px color-mix(in oklab, var(--brand-vermillion) 38%, transparent);
 
-  --secondary: oklch(0.965 0.008 60);
-  --secondary-foreground: oklch(0.2 0.025 30);
-  --muted: oklch(0.96 0.008 60);
-  --muted-foreground: oklch(0.5 0.018 30);
-  --accent: oklch(0.93 0.035 45);
-  --accent-foreground: oklch(0.2 0.025 30);
+  --secondary: oklch(0.965 0.008 90);
+  --secondary-foreground: oklch(0.20 0.04 148);
+  --muted: oklch(0.96 0.008 90);
+  --muted-foreground: oklch(0.50 0.04 148);
+  --accent: oklch(0.93 0.04 50);
+  --accent-foreground: oklch(0.20 0.04 148);
   --destructive: oklch(0.58 0.22 25);
-  --destructive-foreground: oklch(0.985 0.005 60);
-  --border: oklch(0.9 0.012 50);
-  --input: oklch(0.9 0.012 50);
-  --ring: oklch(0.55 0.18 30);
-  --chart-1: oklch(0.45 0.19 25);
-  --chart-2: oklch(0.65 0.18 40);
-  --chart-3: oklch(0.36 0.18 22);
-  --chart-4: oklch(0.78 0.12 50);
-  --chart-5: oklch(0.85 0.08 50);
-  --sidebar: oklch(0.985 0.008 60);
-  --sidebar-foreground: oklch(0.2 0.025 30);
-  --sidebar-primary: oklch(0.45 0.19 25);
-  --sidebar-primary-foreground: oklch(0.985 0.01 60);
-  --sidebar-accent: oklch(0.965 0.008 60);
-  --sidebar-accent-foreground: oklch(0.2 0.025 30);
-  --sidebar-border: oklch(0.9 0.012 50);
-  --sidebar-ring: oklch(0.55 0.18 30);
+  --destructive-foreground: oklch(0.985 0.005 90);
+  --border: oklch(0.90 0.010 148);
+  --input: oklch(0.90 0.010 148);
+  --ring: oklch(0.45 0.10 148);
+  --chart-1: oklch(0.32 0.10 148);
+  --chart-2: oklch(0.68 0.10 50);
+  --chart-3: oklch(0.24 0.07 148);
+  --chart-4: oklch(0.87 0.06 50);
+  --chart-5: oklch(0.52 0.10 148);
+  --sidebar: oklch(0.985 0.008 90);
+  --sidebar-foreground: oklch(0.20 0.04 148);
+  --sidebar-primary: oklch(0.32 0.10 148);
+  --sidebar-primary-foreground: oklch(0.985 0.01 90);
+  --sidebar-accent: oklch(0.965 0.008 90);
+  --sidebar-accent-foreground: oklch(0.20 0.04 148);
+  --sidebar-border: oklch(0.90 0.010 148);
+  --sidebar-ring: oklch(0.45 0.10 148);
 }
 
 .dark {
@@ -197,7 +196,7 @@
   }
 
   html {
-    font-family: "Saira", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-family: "Nunito", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
     font-optical-sizing: auto;
     overflow-x: hidden;
   }
@@ -210,9 +209,9 @@
 
   h1, h2, h3, h4, h5, h6,
   .font-display {
-    font-family: "Saira Condensed", "Saira", system-ui, -apple-system, sans-serif;
+    font-family: "Lora", Georgia, "Times New Roman", serif;
     font-optical-sizing: auto;
-    letter-spacing: 0.005em;
+    letter-spacing: -0.015em;
     font-weight: 700;
   }
 }
@@ -275,7 +274,7 @@
     font-weight: 600;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: oklch(0.92 0.012 60);
+    color: inherit;
     transition: color 180ms ease;
   }
   .nav-item:hover,
@@ -296,6 +295,174 @@
   }
   .nav-item:hover::after,
   .nav-item[data-state="open"]::after { transform: scaleX(1); }
+
+  /* ── Foxglove Lenders signature components ───────────────────────────────── */
+
+  /* Eyebrow label: pill with a pulsing botanical dot mark */
+  .fg-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    border: 1px solid color-mix(in oklab, var(--brand-vermillion) 40%, transparent);
+    background: color-mix(in oklab, var(--brand-vermillion) 10%, transparent);
+    padding: 0.25rem 0.875rem 0.25rem 0.625rem;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--brand-vermillion);
+  }
+  .fg-eyebrow-dot {
+    flex-shrink: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--brand-vermillion);
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--brand-vermillion) 25%, transparent);
+    animation: fg-pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes fg-pulse {
+    0%, 100% { box-shadow: 0 0 0 3px color-mix(in oklab, var(--brand-vermillion) 25%, transparent); }
+    50%       { box-shadow: 0 0 0 5px color-mix(in oklab, var(--brand-vermillion) 10%, transparent); }
+  }
+
+  /* Section heading accent rule — gradient underline below h2 */
+  .fg-rule {
+    display: block;
+    width: 2.75rem;
+    height: 3px;
+    border-radius: 9999px;
+    background: var(--gradient-cta);
+    margin-top: 0.625rem;
+  }
+
+  /* Primary CTA button — consistent top-to-bottom green gradient */
+  .btn-foxglove {
+    background: linear-gradient(
+      to bottom,
+      oklch(0.38 0.11 148) 0%,
+      oklch(0.26 0.09 148) 100%
+    );
+    box-shadow:
+      0 4px 22px -6px color-mix(in oklab, var(--brand-crimson) 55%, transparent),
+      inset 0 1px 0 oklch(1 0 0 / 16%);
+    transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 220ms cubic-bezier(0.22, 1, 0.36, 1),
+                background 220ms ease;
+    border-radius: 9999px !important;
+    color: white;
+  }
+  .btn-foxglove:hover {
+    background: linear-gradient(
+      to bottom,
+      oklch(0.42 0.12 148) 0%,
+      oklch(0.30 0.10 148) 100%
+    );
+    transform: translateY(-2px);
+    box-shadow:
+      0 12px 32px -8px color-mix(in oklab, var(--brand-crimson) 65%, transparent),
+      0 0 0 3px color-mix(in oklab, var(--brand-crimson) 20%, transparent),
+      inset 0 1px 0 oklch(1 0 0 / 20%);
+  }
+  .btn-foxglove:active {
+    transform: translateY(0);
+    background: linear-gradient(
+      to bottom,
+      oklch(0.30 0.10 148) 0%,
+      oklch(0.24 0.08 148) 100%
+    );
+  }
+
+  /* Outline on light background — green border + text */
+  .btn-foxglove-outline {
+    border-radius: 9999px !important;
+    border: 1.5px solid color-mix(in oklab, var(--brand-crimson) 45%, transparent) !important;
+    background: transparent !important;
+    color: var(--brand-crimson) !important;
+    box-shadow: none !important;
+    outline: none !important;
+    transition: border-color 200ms ease, background 200ms ease, transform 200ms ease;
+  }
+  .btn-foxglove-outline:hover {
+    border-color: var(--brand-crimson) !important;
+    background: color-mix(in oklab, var(--brand-crimson) 7%, transparent) !important;
+    transform: translateY(-1px);
+  }
+  .btn-foxglove-outline:focus-visible {
+    outline: 2px solid var(--brand-crimson) !important;
+    outline-offset: 3px !important;
+    border-radius: 9999px !important;
+    box-shadow: none !important;
+  }
+  .btn-foxglove-outline:active {
+    transform: translateY(0);
+  }
+
+  /* Outline on dark/hero background — white border + text */
+  .btn-ghost-white {
+    border-radius: 9999px !important;
+    border: 1.5px solid oklch(1 0 0 / 30%) !important;
+    background: transparent !important;
+    color: white !important;
+    box-shadow: none !important;
+    outline: none !important;
+    transition: border-color 200ms ease, background 200ms ease, transform 200ms ease;
+  }
+  .btn-ghost-white:hover {
+    border-color: oklch(1 0 0 / 65%) !important;
+    background: oklch(1 0 0 / 10%) !important;
+    transform: translateY(-1px);
+  }
+  .btn-ghost-white:focus-visible {
+    outline: 2px solid oklch(1 0 0 / 70%) !important;
+    outline-offset: 3px !important;
+    border-radius: 9999px !important;
+    box-shadow: none !important;
+  }
+  .btn-ghost-white:active {
+    transform: translateY(0);
+  }
+
+  /* Step badge — numbered circle with botanical ring */
+  .fg-step-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, oklch(0.40 0.12 148), oklch(0.60 0.11 50));
+    box-shadow:
+      0 0 0 4px color-mix(in oklab, var(--brand-vermillion) 18%, transparent),
+      0 4px 14px -4px color-mix(in oklab, var(--brand-crimson) 55%, transparent);
+    font-weight: 700;
+    font-size: 0.9375rem;
+    color: white;
+  }
+
+  /* Botanical dots — scattered dot pattern for section backgrounds */
+  .fg-dots {
+    background-image: radial-gradient(
+      circle,
+      color-mix(in oklab, var(--brand-vermillion) 14%, transparent) 1px,
+      transparent 1px
+    );
+    background-size: 24px 24px;
+  }
+
+  /* Security badge — icon + label with left accent bar */
+  .fg-trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-left: 3px solid color-mix(in oklab, var(--brand-vermillion) 50%, transparent);
+    padding-left: 0.875rem;
+    transition: border-color 200ms ease;
+  }
+  .fg-trust-badge:hover {
+    border-color: var(--brand-vermillion);
+  }
 }
 
 @layer base {

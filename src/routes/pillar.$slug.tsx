@@ -12,9 +12,9 @@ import { SITE_CONFIG } from "@/lib/site-config";
 export const Route = createFileRoute("/pillar/$slug")({
   head: ({ params }) => {
     const p = getPillar(params.slug);
-    const title = p ? `${p.title} in San Antonio, TX` : "Loan Program";
+    const title = p ? `${p.title} in Nashville, TN` : "Loan Program";
     const description =
-      p?.description ?? "San Antonio business financing programs from Anchor Capital Group.";
+      p?.description ?? "Nashville business financing programs from Foxglove Lenders.";
     const path = `/pillar/${params.slug}`;
     return buildHead({
       title,
@@ -38,7 +38,7 @@ export const Route = createFileRoute("/pillar/$slug")({
   notFoundComponent: () => (
     <div className="mx-auto max-w-2xl px-6 py-32 text-center">
       <h1 className="text-3xl font-bold">Loan program not found</h1>
-      <Button asChild className="mt-6"><Link to="/san-antonio">Back to hub</Link></Button>
+      <Button asChild className="mt-6"><Link to="/nashville">Back to hub</Link></Button>
     </div>
   ),
   errorComponent: ({ reset }) => (
@@ -58,13 +58,13 @@ function PillarPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
-      <div aria-hidden className="h-20" />
+      <div aria-hidden className="h-14" />
       <main>
         {/* Breadcrumb */}
         <div className="border-b border-border/60 bg-[color:var(--brand-cream)]">
           <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.16em]">
-            <Link to="/san-antonio" className="inline-flex items-center gap-2 text-muted-foreground hover:text-[color:var(--brand-vermillion)]">
-              <ArrowLeft className="h-3.5 w-3.5" /> San Antonio Hub
+            <Link to="/nashville" className="inline-flex items-center gap-2 text-muted-foreground hover:text-[color:var(--brand-vermillion)]">
+              <ArrowLeft className="h-3.5 w-3.5" /> Nashville Hub
             </Link>
             <span className="text-muted-foreground">
               {kindLabel} · <span className="text-[color:var(--brand-charcoal)]">{pillar.title}</span>
@@ -84,14 +84,14 @@ function PillarPage() {
             style={{ background: "radial-gradient(circle, var(--brand-vermillion) 0%, transparent 60%)" }}
           />
           <div className="relative mx-auto max-w-4xl px-6">
-            <div className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-vermillion)]">
-              <span aria-hidden className="h-px w-10 bg-[color:var(--brand-vermillion)]" />
+            <div className="fg-eyebrow">
+              <span aria-hidden className="fg-eyebrow-dot" />
               <Sparkles className="h-3.5 w-3.5" />
               Program · {kindLabel}
             </div>
             <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight md:text-6xl">
               {pillar.title}
-              <span className="block text-[color:var(--brand-vermillion)]">in San Antonio</span>
+              <span className="block text-[color:var(--brand-vermillion)]">in Nashville</span>
             </h1>
             <p className="mt-4 max-w-2xl font-display text-lg font-medium text-white/85">{pillar.tagline}</p>
             <p className="mt-5 max-w-2xl text-base text-white/70 md:text-lg">{pillar.description}</p>
@@ -107,17 +107,17 @@ function PillarPage() {
               {pillar.highlight}
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button asChild size="lg" className="anchor-bevel rounded-none bg-[image:var(--gradient-cta)] px-7 text-sm font-bold uppercase tracking-[0.16em] text-white shadow-[var(--shadow-glow)]">
+              <Button asChild size="lg" className="btn-foxglove px-7 text-sm font-bold text-white">
                 <Link to="/apply-now">Apply Now <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-none border-white/30 bg-transparent px-7 text-sm font-semibold uppercase tracking-[0.12em] text-white hover:bg-white/10 hover:text-white">
+              <Button asChild size="lg" variant="outline" className="btn-ghost-white px-7 text-sm font-semibold">
                 <a href={SITE_CONFIG.phoneHref}><Phone className="mr-2 h-4 w-4" /> {SITE_CONFIG.phone}</a>
               </Button>
             </div>
             <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/55">
               <span className="inline-flex items-center gap-2"><ShieldCheck className="h-3.5 w-3.5 text-[color:var(--brand-vermillion)]" /> Soft credit pull only</span>
               <span className="inline-flex items-center gap-2"><CheckCircle2 className="h-3.5 w-3.5 text-[color:var(--brand-vermillion)]" /> 24-hour decisions</span>
-              <span className="inline-flex items-center gap-2"><CheckCircle2 className="h-3.5 w-3.5 text-[color:var(--brand-vermillion)]" /> TX-licensed partners</span>
+              <span className="inline-flex items-center gap-2"><CheckCircle2 className="h-3.5 w-3.5 text-[color:var(--brand-vermillion)]" /> TN-licensed partners</span>
             </div>
           </div>
         </section>
@@ -125,18 +125,19 @@ function PillarPage() {
         {/* San Antonio context */}
         <section className="bg-[color:var(--brand-cream)]">
           <div className="mx-auto max-w-4xl px-6 py-16">
-            <div className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-vermillion)]">
-              <span aria-hidden className="h-px w-10 bg-[color:var(--brand-vermillion)]" />
+            <div className="fg-eyebrow">
+              <span aria-hidden className="fg-eyebrow-dot" />
               Program Memo
             </div>
             <h2 className="mt-3 font-display text-2xl font-bold tracking-tight md:text-3xl">
-              {pillar.title} for San Antonio businesses
+              {pillar.title} for Nashville businesses
             </h2>
+            <span aria-hidden className="fg-rule" />
             {(PILLAR_BODIES[pillar.slug] ?? []).map((p, i) => (
               <p key={i} className="mt-4 text-muted-foreground">{p}</p>
             ))}
             <p className="mt-4 text-muted-foreground">
-              Every Anchor Capital Group application runs through Texas-licensed lending partners -
+              Every Foxglove Lenders application runs through Tennessee-licensed lending partners -
               one soft credit pull, side-by-side offers, no fee until close.
             </p>
           </div>
@@ -145,13 +146,14 @@ function PillarPage() {
         {/* Neighborhoods */}
         <section>
           <div className="mx-auto max-w-7xl px-6 py-16">
-            <div className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-vermillion)]">
-              <span aria-hidden className="h-px w-10 bg-[color:var(--brand-vermillion)]" />
+            <div className="fg-eyebrow">
+              <span aria-hidden className="fg-eyebrow-dot" />
               Coverage · {pillar.title}
             </div>
             <h2 className="mt-3 font-display text-2xl font-bold tracking-tight md:text-3xl">
-              {pillar.title} by San Antonio neighborhood
+              {pillar.title} by Nashville neighborhood
             </h2>
+            <span aria-hidden className="fg-rule" />
             <p className="mt-2 text-muted-foreground">
               Open a page tailored to your specific neighborhood or adjacent community.
             </p>
@@ -159,7 +161,7 @@ function PillarPage() {
               {SUBURBS.map((s, i) => (
                 <li key={s.slug}>
                   <Link
-                    to="/san-antonio/$suburb/$pillar"
+                    to="/nashville/$suburb/$pillar"
                     params={{ suburb: s.slug, pillar: pillar.slug }}
                     className="group relative flex min-w-0 items-center justify-between gap-3 bg-card p-5 transition-colors hover:bg-[color:var(--brand-charcoal)] hover:text-white"
                   >
@@ -182,13 +184,14 @@ function PillarPage() {
         {/* Related pillars */}
         <section className="bg-[color:var(--brand-cream)]">
           <div className="mx-auto max-w-7xl px-6 py-16">
-            <div className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-vermillion)]">
-              <span aria-hidden className="h-px w-10 bg-[color:var(--brand-vermillion)]" />
+            <div className="fg-eyebrow">
+              <span aria-hidden className="fg-eyebrow-dot" />
               Related {pillar.kind === "money" ? "Money Pillars" : "Vertical Pillars"}
             </div>
             <h2 className="mt-3 font-display text-2xl font-bold tracking-tight md:text-3xl">
               Other {pillar.kind === "money" ? "money" : "industry"} programs
             </h2>
+            <span aria-hidden className="fg-rule" />
             <ul className="mt-8 grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
               {related.map((p, i) => (
                 <li key={p.slug}>
@@ -218,8 +221,8 @@ function PillarPage() {
           <div aria-hidden className="pointer-events-none absolute inset-0 anchor-grid opacity-15" />
           <div aria-hidden className="pointer-events-none absolute -right-32 top-1/4 h-80 w-80 rounded-full opacity-30 blur-3xl" style={{ background: "radial-gradient(circle, var(--brand-vermillion) 0%, transparent 70%)" }} />
           <div className="relative mx-auto max-w-5xl px-6 text-center">
-            <div className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-vermillion)]">
-              <span aria-hidden className="h-px w-10 bg-[color:var(--brand-vermillion)]" />
+            <div className="fg-eyebrow">
+              <span aria-hidden className="fg-eyebrow-dot" />
               Pre-qualify · 60 seconds
             </div>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight md:text-4xl">
@@ -227,10 +230,10 @@ function PillarPage() {
               <span className="block text-[color:var(--brand-vermillion)]">Apply in 60 seconds.</span>
             </h2>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
-              <Button asChild size="lg" className="anchor-bevel rounded-none bg-[image:var(--gradient-cta)] px-7 text-sm font-bold uppercase tracking-[0.16em] text-white shadow-[var(--shadow-glow)]">
+              <Button asChild size="lg" className="btn-foxglove px-7 text-sm font-bold text-white">
                 <Link to="/apply-now">Apply Now <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-none border-white/30 bg-transparent px-7 text-sm font-semibold uppercase tracking-[0.12em] text-white hover:bg-white/10 hover:text-white">
+              <Button asChild size="lg" variant="outline" className="btn-ghost-white px-7 text-sm font-semibold">
                 <a href={SITE_CONFIG.phoneHref}><Phone className="mr-2 h-4 w-4" /> Call the desk</a>
               </Button>
             </div>

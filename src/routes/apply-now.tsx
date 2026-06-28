@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Header, Footer } from "./index";
+import { Button } from "@/components/ui/button";
 import { buildHead } from "@/lib/seo";
 import { buildGraph } from "@/lib/seo-schema";
 import { SITE_CONFIG } from "@/lib/site-config";
@@ -14,8 +15,8 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-const CITY = "San Antonio";
-const CITY_STATE = "San Antonio, TX";
+const CITY = "Nashville";
+const CITY_STATE = "Nashville, TN";
 
 export const Route = createFileRoute("/apply-now")({
   head: () => {
@@ -34,7 +35,7 @@ export const Route = createFileRoute("/apply-now")({
 
 const STEPS = [
   { n: "01", label: "Brief", desc: "60-second business overview" },
-  { n: "02", label: "Shop", desc: "Anchor pre-screens 75+ lenders" },
+  { n: "02", label: "Shop", desc: "Foxglove Lenders pre-screens 75+ lenders" },
   { n: "03", label: "Compare", desc: "Real offers side-by-side" },
   { n: "04", label: "Funded", desc: "Wire in as little as 24 hours" },
 ];
@@ -43,7 +44,7 @@ function ApplyNowPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
-      <div aria-hidden className="h-20" />
+      <div aria-hidden className="h-14" />
 
       {/* Hero - dark anchor band */}
       <section
@@ -57,8 +58,8 @@ function ApplyNowPage() {
           style={{ background: "radial-gradient(circle, var(--brand-vermillion) 0%, transparent 60%)" }}
         />
         <div className="relative mx-auto max-w-6xl px-6">
-          <div className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-vermillion)]">
-            <span aria-hidden className="h-px w-10 bg-[color:var(--brand-vermillion)]" />
+          <div className="fg-eyebrow">
+            <span aria-hidden className="fg-eyebrow-dot" />
             Application · Step 1 of 4
           </div>
           <h1 className="mt-4 font-display text-3xl font-bold tracking-tight md:text-5xl">
@@ -66,8 +67,8 @@ function ApplyNowPage() {
             <span className="block text-[color:var(--brand-vermillion)]">We'll do the shopping.</span>
           </h1>
           <p className="mt-4 max-w-2xl text-white/80">
-            Share a few details about your business and Anchor will pre-screen the right lenders for
-            your file - across {CITY_STATE} and the broader Texas market.
+            Share a few details about your business and Foxglove Lenders will pre-screen the right lenders for
+            your file - across {CITY_STATE} and the broader Tennessee market.
           </p>
           <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-[color:var(--brand-vermillion)]/40 bg-[color:var(--brand-vermillion)]/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[color:var(--brand-vermillion)] backdrop-blur">
             <ShieldCheck className="h-3.5 w-3.5" /> Soft pull · No credit impact
@@ -110,7 +111,7 @@ function ApplyNowPage() {
       </section>
 
       <main className="mx-auto grid min-w-0 max-w-6xl gap-8 px-6 py-12 lg:grid-cols-[1fr_320px]">
-        <div className="min-w-0 rounded-none border border-border bg-card shadow-sm">
+        <div className="min-w-0 rounded-2xl border border-border bg-card shadow-sm">
           <div className="flex items-center justify-between gap-3 border-b border-border bg-[color:var(--brand-cream)] px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--brand-charcoal)]/70">
             <span className="flex items-center gap-2">
               <Compass className="h-3.5 w-3.5 text-[color:var(--brand-vermillion)]" />
@@ -125,7 +126,7 @@ function ApplyNowPage() {
 
         <aside className="min-w-0 space-y-5 lg:sticky lg:top-24 lg:self-start">
           {/* Why this is safe */}
-          <div className="rounded-none border border-border bg-card p-5">
+          <div className="rounded-2xl border border-border bg-card p-5">
             <div className="flex items-center gap-2 font-display text-sm font-semibold uppercase tracking-[0.14em] text-[color:var(--brand-charcoal)]">
               <ShieldCheck className="h-4 w-4 text-[color:var(--brand-vermillion)]" /> Why this is safe
             </div>
@@ -134,7 +135,7 @@ function ApplyNowPage() {
                 "Soft credit pull, never affects your score",
                 "Bank-level 256-bit encryption",
                 "No obligation - compare offers freely",
-                "Texas-licensed lending partners only",
+                "Tennessee-licensed lending partners only",
               ].map((t) => (
                 <li key={t} className="flex gap-2.5">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[color:var(--brand-vermillion)]" />
@@ -145,7 +146,7 @@ function ApplyNowPage() {
           </div>
 
           {/* Anchor ledger - dark metric tiles */}
-          <div className="rounded-none border border-white/10 bg-[color:var(--brand-charcoal)] p-5 text-white">
+          <div className="rounded-2xl border border-white/10 bg-[color:var(--brand-charcoal)] p-5 text-white">
             <div className="flex items-center justify-between">
               <span className="font-display text-[11px] font-bold uppercase tracking-[0.18em] text-[color:var(--brand-vermillion)]">
                 The Ledger
@@ -174,19 +175,16 @@ function ApplyNowPage() {
           </div>
 
           {/* Need help - call CTA */}
-          <div className="rounded-none border border-[color:var(--brand-vermillion)]/30 bg-[color:var(--brand-vermillion)]/8 p-5">
+          <div className="rounded-2xl border border-[color:var(--brand-vermillion)]/30 bg-[color:var(--brand-vermillion)]/8 p-5">
             <div className="font-display text-sm font-semibold uppercase tracking-[0.14em] text-[color:var(--brand-charcoal)]">
               Need a quick gut-check?
             </div>
             <p className="mt-2 text-sm text-muted-foreground">
-              Talk to an Anchor advisor in {CITY} before you finish the form.
+              Talk to a Foxglove Lenders advisor in {CITY} before you finish the form.
             </p>
-            <a
-              href={SITE_CONFIG.phoneHref}
-              className="anchor-bevel mt-4 inline-flex w-full items-center justify-center gap-2 rounded-none bg-[image:var(--gradient-cta)] px-4 py-3 text-xs font-bold uppercase tracking-[0.16em] text-white shadow-[var(--shadow-glow)] transition-transform hover:-translate-y-0.5"
-            >
+            <Button asChild className="btn-foxglove mt-4 w-full text-xs font-bold text-white"><a href={SITE_CONFIG.phoneHref} className="inline-flex items-center justify-center gap-2">
               <Phone className="h-4 w-4" /> {SITE_CONFIG.phone}
-            </a>
+            </a></Button>
             <div className="mt-3 flex items-center gap-2 text-[11px] uppercase tracking-[0.14em] text-muted-foreground">
               <Clock className="h-3 w-3 text-[color:var(--brand-vermillion)]" />
               Mon-Fri · 8am-7pm CT

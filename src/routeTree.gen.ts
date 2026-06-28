@@ -9,18 +9,18 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SanAntonioRouteImport } from './routes/san-antonio'
+import { Route as NashvilleRouteImport } from './routes/nashville'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ApplyNowRouteImport } from './routes/apply-now'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as SanAntonioSuburbRouteImport } from './routes/san-antonio.$suburb'
 import { Route as PillarSlugRouteImport } from './routes/pillar.$slug'
+import { Route as NashvilleSuburbRouteImport } from './routes/nashville.$suburb'
 import { Route as IndustrySlugRouteImport } from './routes/industry.$slug'
-import { Route as SanAntonioSuburbPillarRouteImport } from './routes/san-antonio.$suburb.$pillar'
+import { Route as NashvilleSuburbPillarRouteImport } from './routes/nashville.$suburb.$pillar'
 
-const SanAntonioRoute = SanAntonioRouteImport.update({
-  id: '/san-antonio',
-  path: '/san-antonio',
+const NashvilleRoute = NashvilleRouteImport.update({
+  id: '/nashville',
+  path: '/nashville',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -38,57 +38,57 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SanAntonioSuburbRoute = SanAntonioSuburbRouteImport.update({
-  id: '/$suburb',
-  path: '/$suburb',
-  getParentRoute: () => SanAntonioRoute,
-} as any)
 const PillarSlugRoute = PillarSlugRouteImport.update({
   id: '/pillar/$slug',
   path: '/pillar/$slug',
   getParentRoute: () => rootRouteImport,
+} as any)
+const NashvilleSuburbRoute = NashvilleSuburbRouteImport.update({
+  id: '/$suburb',
+  path: '/$suburb',
+  getParentRoute: () => NashvilleRoute,
 } as any)
 const IndustrySlugRoute = IndustrySlugRouteImport.update({
   id: '/industry/$slug',
   path: '/industry/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SanAntonioSuburbPillarRoute = SanAntonioSuburbPillarRouteImport.update({
+const NashvilleSuburbPillarRoute = NashvilleSuburbPillarRouteImport.update({
   id: '/$pillar',
   path: '/$pillar',
-  getParentRoute: () => SanAntonioSuburbRoute,
+  getParentRoute: () => NashvilleSuburbRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/apply-now': typeof ApplyNowRoute
   '/contact': typeof ContactRoute
-  '/san-antonio': typeof SanAntonioRouteWithChildren
+  '/nashville': typeof NashvilleRouteWithChildren
   '/industry/$slug': typeof IndustrySlugRoute
+  '/nashville/$suburb': typeof NashvilleSuburbRouteWithChildren
   '/pillar/$slug': typeof PillarSlugRoute
-  '/san-antonio/$suburb': typeof SanAntonioSuburbRouteWithChildren
-  '/san-antonio/$suburb/$pillar': typeof SanAntonioSuburbPillarRoute
+  '/nashville/$suburb/$pillar': typeof NashvilleSuburbPillarRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/apply-now': typeof ApplyNowRoute
   '/contact': typeof ContactRoute
-  '/san-antonio': typeof SanAntonioRouteWithChildren
+  '/nashville': typeof NashvilleRouteWithChildren
   '/industry/$slug': typeof IndustrySlugRoute
+  '/nashville/$suburb': typeof NashvilleSuburbRouteWithChildren
   '/pillar/$slug': typeof PillarSlugRoute
-  '/san-antonio/$suburb': typeof SanAntonioSuburbRouteWithChildren
-  '/san-antonio/$suburb/$pillar': typeof SanAntonioSuburbPillarRoute
+  '/nashville/$suburb/$pillar': typeof NashvilleSuburbPillarRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/apply-now': typeof ApplyNowRoute
   '/contact': typeof ContactRoute
-  '/san-antonio': typeof SanAntonioRouteWithChildren
+  '/nashville': typeof NashvilleRouteWithChildren
   '/industry/$slug': typeof IndustrySlugRoute
+  '/nashville/$suburb': typeof NashvilleSuburbRouteWithChildren
   '/pillar/$slug': typeof PillarSlugRoute
-  '/san-antonio/$suburb': typeof SanAntonioSuburbRouteWithChildren
-  '/san-antonio/$suburb/$pillar': typeof SanAntonioSuburbPillarRoute
+  '/nashville/$suburb/$pillar': typeof NashvilleSuburbPillarRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -96,49 +96,49 @@ export interface FileRouteTypes {
     | '/'
     | '/apply-now'
     | '/contact'
-    | '/san-antonio'
+    | '/nashville'
     | '/industry/$slug'
+    | '/nashville/$suburb'
     | '/pillar/$slug'
-    | '/san-antonio/$suburb'
-    | '/san-antonio/$suburb/$pillar'
+    | '/nashville/$suburb/$pillar'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/apply-now'
     | '/contact'
-    | '/san-antonio'
+    | '/nashville'
     | '/industry/$slug'
+    | '/nashville/$suburb'
     | '/pillar/$slug'
-    | '/san-antonio/$suburb'
-    | '/san-antonio/$suburb/$pillar'
+    | '/nashville/$suburb/$pillar'
   id:
     | '__root__'
     | '/'
     | '/apply-now'
     | '/contact'
-    | '/san-antonio'
+    | '/nashville'
     | '/industry/$slug'
+    | '/nashville/$suburb'
     | '/pillar/$slug'
-    | '/san-antonio/$suburb'
-    | '/san-antonio/$suburb/$pillar'
+    | '/nashville/$suburb/$pillar'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ApplyNowRoute: typeof ApplyNowRoute
   ContactRoute: typeof ContactRoute
-  SanAntonioRoute: typeof SanAntonioRouteWithChildren
+  NashvilleRoute: typeof NashvilleRouteWithChildren
   IndustrySlugRoute: typeof IndustrySlugRoute
   PillarSlugRoute: typeof PillarSlugRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/san-antonio': {
-      id: '/san-antonio'
-      path: '/san-antonio'
-      fullPath: '/san-antonio'
-      preLoaderRoute: typeof SanAntonioRouteImport
+    '/nashville': {
+      id: '/nashville'
+      path: '/nashville'
+      fullPath: '/nashville'
+      preLoaderRoute: typeof NashvilleRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -162,19 +162,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/san-antonio/$suburb': {
-      id: '/san-antonio/$suburb'
-      path: '/$suburb'
-      fullPath: '/san-antonio/$suburb'
-      preLoaderRoute: typeof SanAntonioSuburbRouteImport
-      parentRoute: typeof SanAntonioRoute
-    }
     '/pillar/$slug': {
       id: '/pillar/$slug'
       path: '/pillar/$slug'
       fullPath: '/pillar/$slug'
       preLoaderRoute: typeof PillarSlugRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/nashville/$suburb': {
+      id: '/nashville/$suburb'
+      path: '/$suburb'
+      fullPath: '/nashville/$suburb'
+      preLoaderRoute: typeof NashvilleSuburbRouteImport
+      parentRoute: typeof NashvilleRoute
     }
     '/industry/$slug': {
       id: '/industry/$slug'
@@ -183,44 +183,45 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustrySlugRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/san-antonio/$suburb/$pillar': {
-      id: '/san-antonio/$suburb/$pillar'
+    '/nashville/$suburb/$pillar': {
+      id: '/nashville/$suburb/$pillar'
       path: '/$pillar'
-      fullPath: '/san-antonio/$suburb/$pillar'
-      preLoaderRoute: typeof SanAntonioSuburbPillarRouteImport
-      parentRoute: typeof SanAntonioSuburbRoute
+      fullPath: '/nashville/$suburb/$pillar'
+      preLoaderRoute: typeof NashvilleSuburbPillarRouteImport
+      parentRoute: typeof NashvilleSuburbRoute
     }
   }
 }
 
-interface SanAntonioSuburbRouteChildren {
-  SanAntonioSuburbPillarRoute: typeof SanAntonioSuburbPillarRoute
+interface NashvilleSuburbRouteChildren {
+  NashvilleSuburbPillarRoute: typeof NashvilleSuburbPillarRoute
 }
 
-const SanAntonioSuburbRouteChildren: SanAntonioSuburbRouteChildren = {
-  SanAntonioSuburbPillarRoute: SanAntonioSuburbPillarRoute,
+const NashvilleSuburbRouteChildren: NashvilleSuburbRouteChildren = {
+  NashvilleSuburbPillarRoute: NashvilleSuburbPillarRoute,
 }
 
-const SanAntonioSuburbRouteWithChildren =
-  SanAntonioSuburbRoute._addFileChildren(SanAntonioSuburbRouteChildren)
+const NashvilleSuburbRouteWithChildren = NashvilleSuburbRoute._addFileChildren(
+  NashvilleSuburbRouteChildren,
+)
 
-interface SanAntonioRouteChildren {
-  SanAntonioSuburbRoute: typeof SanAntonioSuburbRouteWithChildren
+interface NashvilleRouteChildren {
+  NashvilleSuburbRoute: typeof NashvilleSuburbRouteWithChildren
 }
 
-const SanAntonioRouteChildren: SanAntonioRouteChildren = {
-  SanAntonioSuburbRoute: SanAntonioSuburbRouteWithChildren,
+const NashvilleRouteChildren: NashvilleRouteChildren = {
+  NashvilleSuburbRoute: NashvilleSuburbRouteWithChildren,
 }
 
-const SanAntonioRouteWithChildren = SanAntonioRoute._addFileChildren(
-  SanAntonioRouteChildren,
+const NashvilleRouteWithChildren = NashvilleRoute._addFileChildren(
+  NashvilleRouteChildren,
 )
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ApplyNowRoute: ApplyNowRoute,
   ContactRoute: ContactRoute,
-  SanAntonioRoute: SanAntonioRouteWithChildren,
+  NashvilleRoute: NashvilleRouteWithChildren,
   IndustrySlugRoute: IndustrySlugRoute,
   PillarSlugRoute: PillarSlugRoute,
 }
