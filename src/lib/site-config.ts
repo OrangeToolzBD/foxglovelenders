@@ -1,4 +1,4 @@
-// Single source of truth for SITE_URL and business facts.
+﻿// Single source of truth for SITE_URL and business facts.
 // Mock/placeholder values OK while INDEXABLE=false. Before flipping
 // VITE_INDEXABLE=true, replace every mock value with the real owner data.
 
@@ -75,7 +75,7 @@ export const SITE_CONFIG = {
     fastestFundingHours: "24h",
   },
 
-  trustBadges: ["Soft Pull · No Credit Impact"],
+  trustBadges: ["Soft Pull . No Credit Impact"],
 
   author: {
     name: "Harper Caldwell",
@@ -87,7 +87,7 @@ export const SITE_CONFIG = {
   featuredStat: {
     value: "697,000",
     claim: "small businesses operating across Tennessee",
-    sourceName: "SBA Office of Advocacy — Tennessee Profile",
+    sourceName: "SBA Office of Advocacy  -  Tennessee Profile",
     sourceUrl: "https://advocacy.sba.gov/",
   },
 

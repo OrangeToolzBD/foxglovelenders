@@ -1,5 +1,5 @@
-// Foxglove Lenders — Nashville neighborhood pages.
-// Unique local content per neighborhood — never a city-page find/replace.
+﻿// Foxglove Lenders - Nashville neighborhood pages.
+// Unique local content per neighborhood - never a city-page find/replace.
 
 export type Suburb = {
   slug: string;
@@ -8,9 +8,9 @@ export type Suburb = {
   county: string;
   /** Short tagline / sub-heading. */
   tagline: string;
-  /** First paragraph — unique local intro (700+ word pages should expand on this). */
+  /** First paragraph - unique local intro (700+ word pages should expand on this). */
   intro: string;
-  /** Local landmarks and notable spots — used in body copy. */
+  /** Local landmarks and notable spots - used in body copy. */
   landmarks: string[];
   /** Notable local industries / business types. */
   industries: string[];
@@ -27,7 +27,7 @@ export const SUBURBS: Suburb[] = [
     county: "City of Nashville",
     tagline: "Honky-tonk hospitality, music industry and professional services",
     intro:
-      "Downtown Nashville is the city's hospitality, tourism and music-industry engine — Broadway honky-tonks, the Ryman Auditorium, the Country Music Hall of Fame, the Nashville Yards build-out and a thick base of law, accounting and music-publishing firms. Foxglove Lenders works with Downtown owners on hospitality acquisition financing, restaurant working capital, professional-services partner buy-ins and bridge structures sized to bachelorette-driven and event-driven cash flow.",
+      "Downtown Nashville is the city's hospitality, tourism and music-industry engine - Broadway honky-tonks, the Ryman Auditorium, the Country Music Hall of Fame, the Nashville Yards build-out and a thick base of law, accounting and music-publishing firms. Foxglove Lenders works with Downtown owners on hospitality acquisition financing, restaurant working capital, professional-services partner buy-ins and bridge structures sized to bachelorette-driven and event-driven cash flow.",
     landmarks: ["Ryman Auditorium", "Country Music Hall of Fame", "Bridgestone Arena", "Lower Broadway", "Nashville Yards"],
     industries: ["Hospitality", "Live entertainment", "Music publishing", "Professional services"],
     sampleBusinesses: [
@@ -43,7 +43,7 @@ export const SUBURBS: Suburb[] = [
     county: "City of Nashville",
     tagline: "Historic district chef-driven restaurants and boutique retail",
     intro:
-      "Germantown is Nashville's historic Victorian district north of Downtown — chef-driven restaurants, boutique retail, design studios and bed-and-breakfasts along Monroe and 6th Avenue North, plus First Horizon Park. Rent per square foot here is among the highest in the metro, which compresses margin and elevates the importance of working-capital structure for everyone in the district. Foxglove Lenders routes Germantown deals around build-outs, equipment + working capital combos and SBA 7(a) acquisitions when concept-driven operators transition owners.",
+      "Germantown is Nashville's historic Victorian district north of Downtown - chef-driven restaurants, boutique retail, design studios and bed-and-breakfasts along Monroe and 6th Avenue North, plus First Horizon Park. Rent per square foot here is among the highest in the metro, which compresses margin and elevates the importance of working-capital structure for everyone in the district. Foxglove Lenders routes Germantown deals around build-outs, equipment + working capital combos and SBA 7(a) acquisitions when concept-driven operators transition owners.",
     landmarks: ["First Horizon Park", "Bicentennial Capitol Mall", "Monroe Street", "Werthan Mills Lofts"],
     industries: ["Chef-driven restaurants", "Boutique retail", "Design studios", "Hospitality"],
     sampleBusinesses: [
@@ -59,7 +59,7 @@ export const SUBURBS: Suburb[] = [
     county: "City of Nashville",
     tagline: "Walkable retail strip, chef-driven small-plates and boutique services",
     intro:
-      "12 South runs along 12th Avenue South — Reese Witherspoon's Draper James, the murals, the Burger Up corridor and a tight cluster of boutique retail, chef-driven small-plates restaurants and boutique service businesses. Foot traffic here is heavy and weekend-skewed, which produces a revenue pattern more like a destination district than a neighborhood retail strip. Foxglove finances 12 South operators with SBA 7(a) acquisitions, equipment financing for restaurants and revenue-based financing for fast-growing boutique brands.",
+      "12 South runs along 12th Avenue South - Reese Witherspoon's Draper James, the murals, the Burger Up corridor and a tight cluster of boutique retail, chef-driven small-plates restaurants and boutique service businesses. Foot traffic here is heavy and weekend-skewed, which produces a revenue pattern more like a destination district than a neighborhood retail strip. Foxglove finances 12 South operators with SBA 7(a) acquisitions, equipment financing for restaurants and revenue-based financing for fast-growing boutique brands.",
     landmarks: ["12South murals", "Sevier Park", "Draper James flagship", "Edgehill Village"],
     industries: ["Boutique retail", "Chef-driven restaurants", "Boutique fitness", "Creative studios"],
     sampleBusinesses: [
@@ -75,7 +75,7 @@ export const SUBURBS: Suburb[] = [
     county: "City of Nashville",
     tagline: "Creative class chef-driven restaurants, breweries and design studios",
     intro:
-      "East Nashville sits across the Cumberland River from Downtown — Five Points, the Lockeland Springs district, breweries along the river and a deep base of chef-driven restaurants, design studios and creative-class boutiques. Operators here trend smaller, more concept-driven and more event-tied than Downtown or Germantown, which produces choppier monthly revenue and a higher reliance on flexible working capital. Foxglove Lenders routes East Nashville financing across working capital lines, revenue-based financing for breweries and creative shops, and SBA 7(a) when an established concept acquires or expands.",
+      "East Nashville sits across the Cumberland River from Downtown - Five Points, the Lockeland Springs district, breweries along the river and a deep base of chef-driven restaurants, design studios and creative-class boutiques. Operators here trend smaller, more concept-driven and more event-tied than Downtown or Germantown, which produces choppier monthly revenue and a higher reliance on flexible working capital. Foxglove Lenders routes East Nashville financing across working capital lines, revenue-based financing for breweries and creative shops, and SBA 7(a) when an established concept acquires or expands.",
     landmarks: ["Five Points", "Lockeland Springs", "Shelby Park", "East Side Cumberland Riverfront"],
     industries: ["Chef-driven restaurants", "Breweries", "Design studios", "Boutique retail"],
     sampleBusinesses: [
@@ -91,7 +91,7 @@ export const SUBURBS: Suburb[] = [
     county: "City of Nashville",
     tagline: "Mixed-use towers, boutique hospitality and tech-enabled services",
     intro:
-      "The Gulch is Nashville's mixed-use mid-rise district south of Downtown — boutique hotels, chef-driven restaurants, design-forward retail and a growing base of tech-enabled professional services in the new office towers. Operators here trend scale-oriented and design-forward, with clean underwriting profiles and a high fit for unsecured working capital and revenue-based products. Foxglove finances Gulch operators with hospitality SBA 7(a), revenue-based financing for tech-enabled services and unsecured lines for professional firms.",
+      "The Gulch is Nashville's mixed-use mid-rise district south of Downtown - boutique hotels, chef-driven restaurants, design-forward retail and a growing base of tech-enabled professional services in the new office towers. Operators here trend scale-oriented and design-forward, with clean underwriting profiles and a high fit for unsecured working capital and revenue-based products. Foxglove finances Gulch operators with hospitality SBA 7(a), revenue-based financing for tech-enabled services and unsecured lines for professional firms.",
     landmarks: ["Station Inn", "Gulch pedestrian bridge", "Nashville Yards spillover", "Frist Art Museum (adjacent)"],
     industries: ["Boutique hospitality", "Tech services", "Chef-driven restaurants", "Boutique retail"],
     sampleBusinesses: [
@@ -107,7 +107,7 @@ export const SUBURBS: Suburb[] = [
     county: "Williamson County",
     tagline: "South-suburb medical, dental and high-income professional services",
     intro:
-      "Brentwood sits just south of Nashville along I-65 — a north-Williamson hub for medical practices, dental groups, specialty clinics and the high-income professional services and retail surrounding them. The patient base is dense, affluent and stable, producing predictable insurance reimbursement cycles and underwriting profiles strong enough to clear SBA 7(a) at its lowest pricing tier. Foxglove routes Brentwood deals through practice acquisitions, partner buy-ins, satellite expansion and equipment refresh.",
+      "Brentwood sits just south of Nashville along I-65 - a north-Williamson hub for medical practices, dental groups, specialty clinics and the high-income professional services and retail surrounding them. The patient base is dense, affluent and stable, producing predictable insurance reimbursement cycles and underwriting profiles strong enough to clear SBA 7(a) at its lowest pricing tier. Foxglove routes Brentwood deals through practice acquisitions, partner buy-ins, satellite expansion and equipment refresh.",
     landmarks: ["CoolSprings Galleria (adjacent)", "Brentwood Place", "Granny White Pike corridor", "Brentwood Library"],
     industries: ["Medical / dental", "Specialty clinics", "Professional services", "Boutique retail"],
     sampleBusinesses: [
@@ -123,7 +123,7 @@ export const SUBURBS: Suburb[] = [
     county: "Davidson County",
     tagline: "Independent municipality with deep professional services and independent retail",
     intro:
-      "Belle Meade — an independent municipality inside Nashville's footprint along Harding Pike — concentrates a deep base of independent retail, dental practices and professional services, plus Cheekwood and the Warner Parks. Operators here trend long-tenured, with strong underwriting profiles and a high share of second- and third-generation succession deals. Foxglove Lenders routes Belle Meade financing through SBA 7(a) acquisitions, SBA 504 real estate purchases and unsecured working capital lines.",
+      "Belle Meade - an independent municipality inside Nashville's footprint along Harding Pike - concentrates a deep base of independent retail, dental practices and professional services, plus Cheekwood and the Warner Parks. Operators here trend long-tenured, with strong underwriting profiles and a high share of second- and third-generation succession deals. Foxglove Lenders routes Belle Meade financing through SBA 7(a) acquisitions, SBA 504 real estate purchases and unsecured working capital lines.",
     landmarks: ["Cheekwood Estate & Gardens", "Belle Meade Plantation", "Warner Parks", "Harding Pike corridor"],
     industries: ["Dental", "Boutique retail", "Professional services", "Wealth management"],
     sampleBusinesses: [
@@ -139,7 +139,7 @@ export const SUBURBS: Suburb[] = [
     county: "Williamson County",
     tagline: "Historic Main Street boutique retail and rapidly growing corporate corridor",
     intro:
-      "Franklin sits twenty miles south of Downtown Nashville — the historic Main Street district, Carnton, CoolSprings corporate campuses and a steady inflow of relocating households and businesses. Operators here trend boutique on Main and corporate-adjacent in CoolSprings, which means two different financing playbooks side-by-side. Foxglove Lenders routes Franklin deals across SBA 7(a) acquisitions for boutique retail, unsecured working capital for corporate-adjacent service firms and SBA 504 for owner-occupied real estate.",
+      "Franklin sits twenty miles south of Downtown Nashville - the historic Main Street district, Carnton, CoolSprings corporate campuses and a steady inflow of relocating households and businesses. Operators here trend boutique on Main and corporate-adjacent in CoolSprings, which means two different financing playbooks side-by-side. Foxglove Lenders routes Franklin deals across SBA 7(a) acquisitions for boutique retail, unsecured working capital for corporate-adjacent service firms and SBA 504 for owner-occupied real estate.",
     landmarks: ["Historic Main Street Franklin", "Carnton Plantation", "CoolSprings Galleria", "Pinkerton Park"],
     industries: ["Boutique retail", "Corporate services", "Hospitality", "Healthcare"],
     sampleBusinesses: [
@@ -155,7 +155,7 @@ export const SUBURBS: Suburb[] = [
     county: "Sumner County",
     tagline: "Old Hickory Lake suburb mixing trades, retail and family-owned operators",
     intro:
-      "Hendersonville sits northeast of Nashville on Old Hickory Lake — a fast-growing suburb mixing trades (HVAC, plumbing, electrical), retail along Indian Lake Boulevard and a deep base of family-owned restaurants and boutique services. Operators trend mid-tenure and growth-oriented. Foxglove Lenders routes Hendersonville financing through equipment lines for trades, SBA 7(a) for franchise QSR expansions and revolving lines for the in-between work.",
+      "Hendersonville sits northeast of Nashville on Old Hickory Lake - a fast-growing suburb mixing trades (HVAC, plumbing, electrical), retail along Indian Lake Boulevard and a deep base of family-owned restaurants and boutique services. Operators trend mid-tenure and growth-oriented. Foxglove Lenders routes Hendersonville financing through equipment lines for trades, SBA 7(a) for franchise QSR expansions and revolving lines for the in-between work.",
     landmarks: ["Old Hickory Lake", "Indian Lake Boulevard", "Drakes Creek Park", "Streets of Indian Lake"],
     industries: ["Trades / HVAC", "Franchise QSR", "Retail", "Family-owned services"],
     sampleBusinesses: [
@@ -171,7 +171,7 @@ export const SUBURBS: Suburb[] = [
     county: "City of Nashville",
     tagline: "Industrial-loft creative district, breweries and design studios",
     intro:
-      "Wedgewood-Houston (WeHo) sits south of Downtown Nashville — converted industrial lofts, breweries, design studios, art galleries and small-batch food producers. Operators here trend creative-class and equipment-heavy, with revenue patterns that lean seasonal and event-driven. Foxglove Lenders routes WeHo financing through equipment loans for breweries and producers, working capital for creative shops with lumpy cash flow, and revenue-based financing for fast-growing brands.",
+      "Wedgewood-Houston (WeHo) sits south of Downtown Nashville - converted industrial lofts, breweries, design studios, art galleries and small-batch food producers. Operators here trend creative-class and equipment-heavy, with revenue patterns that lean seasonal and event-driven. Foxglove Lenders routes WeHo financing through equipment loans for breweries and producers, working capital for creative shops with lumpy cash flow, and revenue-based financing for fast-growing brands.",
     landmarks: ["The Packing District", "Fort Negley", "WeHo galleries", "Houston Station"],
     industries: ["Breweries", "Small-batch food production", "Design studios", "Art galleries"],
     sampleBusinesses: [

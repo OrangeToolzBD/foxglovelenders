@@ -1,4 +1,4 @@
-import type { LucideIcon } from "lucide-react";
+﻿import type { LucideIcon } from "lucide-react";
 import {
   Building2,
   Stethoscope,
@@ -88,7 +88,7 @@ export const INDUSTRIES: Industry[] = [
         "AR Financing for GCs",
         Receipt,
         "Borrow against AIA progress billings",
-        "A revolving facility secured by your receivables — built for general contractors bridging slow-pay owners and AIA G702/G703 cycles.",
+        "A revolving facility secured by your receivables - built for general contractors bridging slow-pay owners and AIA G702/G703 cycles.",
         ["Up to 90% AR advance", "Lines $250K-$20M", "Reporting-friendly"],
         "Revolving",
       ),
@@ -134,7 +134,7 @@ export const INDUSTRIES: Industry[] = [
         "SBA 7(a) for Practices",
         HandCoins,
         "Long-term, low-rate practice capital",
-        "The SBA's flagship program — common for partner buy-ins, satellite office expansion and full practice acquisitions.",
+        "The SBA's flagship program - common for partner buy-ins, satellite office expansion and full practice acquisitions.",
         ["Up to $5M", "10-year working capital terms", "Real estate up to 25 years"],
         "From 8.25% APR",
       ),
@@ -180,7 +180,7 @@ export const INDUSTRIES: Industry[] = [
         "Merchant Cash Advance",
         CreditCard,
         "Same-day capital from card sales",
-        "Fast capital advanced against future card and platform settlements — repaid as a small percentage of daily revenue.",
+        "Fast capital advanced against future card and platform settlements - repaid as a small percentage of daily revenue.",
         ["24-hour funding", "No fixed payments", "Bad credit considered"],
         "$10K-$1M",
       ),
@@ -217,7 +217,7 @@ export const INDUSTRIES: Industry[] = [
         "Trucking Invoice Factoring",
         Receipt,
         "Same-day cash on freight invoices",
-        "Sell freight bills the day you deliver — non-recourse and recourse options with transparent advance rates.",
+        "Sell freight bills the day you deliver - non-recourse and recourse options with transparent advance rates.",
         ["Advance rates up to 95%", "Non-recourse available", "No long-term lock-in"],
         "24-hour funding",
       ),
@@ -263,7 +263,7 @@ export const INDUSTRIES: Industry[] = [
         "Inventory Line of Credit",
         CreditCard,
         "Draw what you need, when you need it",
-        "Revolving capital sized to your inventory turn — only pay interest on what you draw.",
+        "Revolving capital sized to your inventory turn - only pay interest on what you draw.",
         ["Lines $25K-$500K", "Same-day draws", "Pay interest only on used balance"],
         "Rates from 9.75%",
       ),
@@ -339,7 +339,7 @@ export const INDUSTRIES: Industry[] = [
     icon: Briefcase,
     hero: "Capital for the firm.",
     intro:
-      "Tailored financing for Nashville law firms, accounting practices, consulting groups and other partner-led firms — Downtown, Belle Meade, Brentwood and Franklin.",
+      "Tailored financing for Nashville law firms, accounting practices, consulting groups and other partner-led firms - Downtown, Belle Meade, Brentwood and Franklin.",
     services: [
       make(
         "unsecured-business-loans",
@@ -385,7 +385,7 @@ export const INDUSTRIES: Industry[] = [
     icon: Flame,
     hero: "Capital for Music City operators.",
     intro:
-      "Working capital, equipment and AR factoring for Nashville's hospitality and event ecosystem — sized to the bachelorette cycle, the convention calendar and event-driven cash flow.",
+      "Working capital, equipment and AR factoring for Nashville's hospitality and event ecosystem - sized to the bachelorette cycle, the convention calendar and event-driven cash flow.",
     services: [
       make(
         "oilfield-services-loans",
@@ -401,7 +401,7 @@ export const INDUSTRIES: Industry[] = [
         "Event Invoice Factoring",
         Receipt,
         "Same-day cash on event contracts",
-        "Sell invoices to slow-pay clients the day the event closes — purpose-built for event-industry payment cycles.",
+        "Sell invoices to slow-pay clients the day the event closes - purpose-built for event-industry payment cycles.",
         ["Advance rates up to 95%", "Non-recourse available", "Funded in 24 hours"],
         "Same-day cash",
       ),
@@ -419,7 +419,7 @@ export const INDUSTRIES: Industry[] = [
         "Asset-Based Lending",
         Boxes,
         "Revolving line on the AR ledger",
-        "A revolving facility secured by your receivables — cheaper than factoring at consistent volume.",
+        "A revolving facility secured by your receivables - cheaper than factoring at consistent volume.",
         ["Up to 90% AR advance", "Reporting-friendly", "Lines $250K-$20M"],
         "Revolving",
       ),
@@ -431,7 +431,7 @@ export const INDUSTRIES: Industry[] = [
     icon: Plane,
     hero: "Capital for Nashville's healthcare corridor.",
     intro:
-      "Nashville is the nation's largest healthcare management hub — HCA headquarters, Vanderbilt Medical, CHS and a deep base of healthcare IT, revenue-cycle and insurance-adjacent firms. Foxglove finances these operators with SBA, equipment and practice-capital structures.",
+      "Nashville is the nation's largest healthcare management hub - HCA headquarters, Vanderbilt Medical, CHS and a deep base of healthcare IT, revenue-cycle and insurance-adjacent firms. Foxglove finances these operators with SBA, equipment and practice-capital structures.",
     services: [
       make(
         "veteran-business-loans",
@@ -465,7 +465,7 @@ export const INDUSTRIES: Industry[] = [
         "SBA 7(a) for Healthcare IT",
         HandCoins,
         "Long-term capital for health-tech firms",
-        "Use SBA 7(a) for acquisition, expansion or office real estate — popular among Nashville health-tech and RCM operators.",
+        "Use SBA 7(a) for acquisition, expansion or office real estate - popular among Nashville health-tech and RCM operators.",
         ["Up to $5M", "10-year working capital terms", "Real estate up to 25 years"],
         "From 8.25% APR",
       ),
@@ -493,7 +493,7 @@ export const INDUSTRIES: Industry[] = [
         "Freight Bill Factoring",
         Receipt,
         "Same-day cash on shipper invoices",
-        "Sell freight invoices the day you deliver — non-recourse and recourse options.",
+        "Sell freight invoices the day you deliver - non-recourse and recourse options.",
         ["Advance rates up to 95%", "Non-recourse available", "24-hour funding"],
         "Same-day cash",
       ),

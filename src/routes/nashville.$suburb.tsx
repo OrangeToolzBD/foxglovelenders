@@ -1,4 +1,4 @@
-import { createFileRoute, Link, notFound, Outlet, useMatches } from "@tanstack/react-router";
+﻿import { createFileRoute, Link, notFound, Outlet, useMatches } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, Building2, CheckCircle2, MapPin, Phone, Sparkles } from "lucide-react";
 import { Header, Footer } from "./index";
 import { Button } from "@/components/ui/button";
@@ -68,7 +68,7 @@ function SuburbPage() {
               <ArrowLeft className="h-3.5 w-3.5" /> Nashville Hub
             </Link>
             <span className="text-muted-foreground">
-              {suburb.county} · <span className="text-[color:var(--brand-charcoal)]">{suburb.name}</span>
+              {suburb.county} . <span className="text-[color:var(--brand-charcoal)]">{suburb.name}</span>
             </span>
           </div>
         </div>
@@ -88,7 +88,7 @@ function SuburbPage() {
             <div className="fg-eyebrow">
               <span aria-hidden className="fg-eyebrow-dot" />
               <Sparkles className="h-3.5 w-3.5" />
-              {suburb.county} · ZIP {suburb.zips.join(", ")}
+              {suburb.county} . ZIP {suburb.zips.join(", ")}
             </div>
             <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight md:text-6xl">
               {suburb.name}
@@ -192,7 +192,7 @@ function SuburbPage() {
           <div className="mx-auto max-w-7xl px-6 py-16">
             <div className="fg-eyebrow">
               <span aria-hidden className="fg-eyebrow-dot" />
-              Top Programs · {suburb.name}
+              Top Programs . {suburb.name}
             </div>
             <h2 className="mt-3 font-display text-2xl font-bold tracking-tight md:text-3xl">
               The six plays {suburb.name} owners ask for most
@@ -229,7 +229,7 @@ function SuburbPage() {
               <span aria-hidden className="fg-eyebrow-dot" />
               Industry Programs
             </div>
-            <h2 className="mt-3 font-display text-2xl font-bold tracking-tight md:text-3xl">Vertical pillars · {suburb.name}</h2>
+            <h2 className="mt-3 font-display text-2xl font-bold tracking-tight md:text-3xl">Vertical pillars . {suburb.name}</h2>
             <span aria-hidden className="fg-rule" />
             <p className="mt-2 text-muted-foreground">
               All ten industry-specific programs are available to {suburb.name} operators.
@@ -265,7 +265,7 @@ function SuburbPage() {
           <div className="relative mx-auto max-w-5xl px-6 text-center">
             <div className="fg-eyebrow">
               <span aria-hidden className="fg-eyebrow-dot" />
-              Funding · {suburb.name}
+              Funding . {suburb.name}
             </div>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight md:text-4xl">
               Fund your {suburb.name} business, fast.

@@ -1,4 +1,4 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+﻿import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { ArrowRight, ArrowLeft, CheckCircle2, ShieldCheck, Phone, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -70,7 +70,7 @@ function IndustryPage() {
               <ArrowLeft className="h-3.5 w-3.5" /> Home
             </Link>
             <span className="text-muted-foreground">
-              Sectors · <span className="text-[color:var(--brand-charcoal)]">{industry.label}</span>
+              Sectors . <span className="text-[color:var(--brand-charcoal)]">{industry.label}</span>
             </span>
           </div>
         </div>
@@ -90,7 +90,7 @@ function IndustryPage() {
             <div className="fg-eyebrow">
               <span aria-hidden className="fg-eyebrow-dot" />
               <Sparkles className="h-3.5 w-3.5" />
-              Sector Brief · {industry.label}
+              Sector Brief . {industry.label}
             </div>
             <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight md:text-6xl">
               {industry.label}
@@ -137,7 +137,7 @@ function IndustryPage() {
         <section className="mx-auto max-w-7xl px-6 py-20">
           <div className="fg-eyebrow">
             <span aria-hidden className="fg-eyebrow-dot" />
-            Programs · {industry.label}
+            Programs . {industry.label}
           </div>
           <h2 className="mt-3 font-display text-3xl font-bold tracking-tight md:text-4xl">
             The plays we route most for {industry.label.toLowerCase()}
@@ -236,7 +236,7 @@ function IndustryPage() {
           <div className="relative mx-auto max-w-5xl px-6 text-center">
             <div className="fg-eyebrow">
               <span aria-hidden className="fg-eyebrow-dot" />
-              Ready to fund · {industry.label}
+              Ready to fund . {industry.label}
             </div>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight md:text-4xl">
               Move first.

@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -397,7 +397,7 @@ export function Header() {
                           Start Application <ArrowRight className="h-3 w-3" />
                         </Link>
                       </Button>
-                      <p className="mt-2 text-[10px] text-white/35">Soft pull · No commitment</p>
+                      <p className="mt-2 text-[10px] text-white/35">Soft pull . No commitment</p>
                     </div>
                   </div>
                   {/* Right link grid */}
@@ -745,11 +745,11 @@ function Hero() {
     <section className="relative overflow-hidden bg-[color:var(--brand-cream)]">
       <div aria-hidden className="h-1 w-full bg-[image:var(--gradient-cta)]" />
       <div className="mx-auto grid max-w-none lg:grid-cols-[1fr_500px] xl:grid-cols-[1fr_560px]">
-        {/* Left col — cream editorial */}
+        {/* Left col  -  cream editorial */}
         <div className="flex flex-col justify-center px-6 py-14 sm:px-10 lg:px-16 lg:py-28 xl:pl-24">
           <div className="fg-eyebrow">
             <span aria-hidden className="fg-eyebrow-dot" />
-            Nashville, Tennessee · Business Capital
+            Nashville, Tennessee . Business Capital
           </div>
           <h1 className="mt-5 max-w-2xl text-4xl font-bold leading-[1.1] tracking-tight text-[color:var(--brand-charcoal)] sm:text-5xl lg:text-[3.5rem]">
             Middle Tennessee's{" "}
@@ -790,12 +790,12 @@ function Hero() {
           </div>
           <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-[11px] text-muted-foreground">
             <span className="inline-flex items-center gap-1"><Lock className="h-3 w-3" /> Soft pull only</span>
-            <span aria-hidden>·</span>
+            <span aria-hidden>.</span>
             <span>No commitment required</span>
           </div>
         </div>
 
-        {/* Right col — botanical green panel with Nashville neighborhood grid */}
+        {/* Right col  -  botanical green panel with Nashville neighborhood grid */}
         <div className="flex flex-col justify-center bg-[color:var(--primary)] px-6 py-14 sm:px-8 lg:px-10 lg:py-28">
           <div className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[color:var(--brand-bronze)]">
             Nashville neighborhoods
@@ -1111,7 +1111,7 @@ function CapitalDesk() {
             <span aria-hidden className="fg-rule" />
           </div>
           <p className="max-w-sm text-sm text-white/60 md:text-right">
-            The active plays — loan products we route most often for Middle Tennessee operators.
+            The active plays  -  loan products we route most often for Middle Tennessee operators.
           </p>
         </div>
 
@@ -1255,7 +1255,7 @@ function Industries() {
           <div className="max-w-xl">
             <div className="fg-eyebrow">
               <span aria-hidden className="fg-eyebrow-dot" />
-              Sector Ledger · 010
+              Sector Ledger . 010
             </div>
             <h2 className="mt-4 font-display text-3xl font-bold tracking-tight md:text-5xl">
               The ten sectors Foxglove Lenders underwrites first
@@ -1442,7 +1442,7 @@ function SuccessStories() {
                     <div className="min-w-0 flex-1">
                       <div className="truncate text-sm font-semibold">{s.person}</div>
                       <div className="truncate text-xs text-muted-foreground">
-                        {s.role} · {s.name}
+                        {s.role} . {s.name}
                       </div>
                     </div>
                   </div>
@@ -1643,7 +1643,7 @@ export function Footer() {
                 {SITE_CONFIG.address.postalCode}
               </div>
             ) : (
-              <div>Serving {SITE_CONFIG.areasServed.join(" · ")}</div>
+              <div>Serving {SITE_CONFIG.areasServed.join(" . ")}</div>
             )}
             <div>
               <a href={SITE_CONFIG.phoneHref} className="hover:text-[color:var(--brand-vermillion)]">

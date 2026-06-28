@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+﻿import { createFileRoute } from "@tanstack/react-router";
 import { Header, Footer } from "./index";
 import { Button } from "@/components/ui/button";
 import { buildHead } from "@/lib/seo";
@@ -60,7 +60,7 @@ function ApplyNowPage() {
         <div className="relative mx-auto max-w-6xl px-6">
           <div className="fg-eyebrow">
             <span aria-hidden className="fg-eyebrow-dot" />
-            Application · Step 1 of 4
+            Application . Step 1 of 4
           </div>
           <h1 className="mt-4 font-display text-3xl font-bold tracking-tight md:text-5xl">
             Tell us the brief.
@@ -71,7 +71,7 @@ function ApplyNowPage() {
             your file - across {CITY_STATE} and the broader Tennessee market.
           </p>
           <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-[color:var(--brand-vermillion)]/40 bg-[color:var(--brand-vermillion)]/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[color:var(--brand-vermillion)] backdrop-blur">
-            <ShieldCheck className="h-3.5 w-3.5" /> Soft pull · No credit impact
+            <ShieldCheck className="h-3.5 w-3.5" /> Soft pull . No credit impact
           </div>
         </div>
       </section>
@@ -187,7 +187,7 @@ function ApplyNowPage() {
             </a></Button>
             <div className="mt-3 flex items-center gap-2 text-[11px] uppercase tracking-[0.14em] text-muted-foreground">
               <Clock className="h-3 w-3 text-[color:var(--brand-vermillion)]" />
-              Mon-Fri · 8am-7pm CT
+              Mon-Fri . 8am-7pm CT
             </div>
           </div>
 

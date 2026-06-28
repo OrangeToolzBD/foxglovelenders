@@ -1,4 +1,4 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+﻿import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, CheckCircle2, MapPin, Phone, ShieldCheck, Sparkles } from "lucide-react";
 import { Header, Footer } from "./index";
 import { Button } from "@/components/ui/button";
@@ -67,7 +67,7 @@ function PillarPage() {
               <ArrowLeft className="h-3.5 w-3.5" /> Nashville Hub
             </Link>
             <span className="text-muted-foreground">
-              {kindLabel} · <span className="text-[color:var(--brand-charcoal)]">{pillar.title}</span>
+              {kindLabel} . <span className="text-[color:var(--brand-charcoal)]">{pillar.title}</span>
             </span>
           </div>
         </div>
@@ -87,7 +87,7 @@ function PillarPage() {
             <div className="fg-eyebrow">
               <span aria-hidden className="fg-eyebrow-dot" />
               <Sparkles className="h-3.5 w-3.5" />
-              Program · {kindLabel}
+              Program . {kindLabel}
             </div>
             <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight md:text-6xl">
               {pillar.title}
@@ -148,7 +148,7 @@ function PillarPage() {
           <div className="mx-auto max-w-7xl px-6 py-16">
             <div className="fg-eyebrow">
               <span aria-hidden className="fg-eyebrow-dot" />
-              Coverage · {pillar.title}
+              Coverage . {pillar.title}
             </div>
             <h2 className="mt-3 font-display text-2xl font-bold tracking-tight md:text-3xl">
               {pillar.title} by Nashville neighborhood
@@ -223,7 +223,7 @@ function PillarPage() {
           <div className="relative mx-auto max-w-5xl px-6 text-center">
             <div className="fg-eyebrow">
               <span aria-hidden className="fg-eyebrow-dot" />
-              Pre-qualify · 60 seconds
+              Pre-qualify . 60 seconds
             </div>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight md:text-4xl">
               {pillar.title}.

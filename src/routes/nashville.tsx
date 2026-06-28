@@ -1,4 +1,4 @@
-import { createFileRoute, Link, Outlet, useMatches } from "@tanstack/react-router";
+﻿import { createFileRoute, Link, Outlet, useMatches } from "@tanstack/react-router";
 import { ArrowRight, MapPin, Banknote, Briefcase, Building2 } from "lucide-react";
 import { Header, Footer } from "./index";
 import { Button } from "@/components/ui/button";
@@ -69,9 +69,9 @@ function SanAntonioHub() {
             </div>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/55">
               <span>10 Neighborhoods</span>
-              <span aria-hidden>·</span>
+              <span aria-hidden>.</span>
               <span>24 Loan Programs</span>
-              <span aria-hidden>·</span>
+              <span aria-hidden>.</span>
               <span>60+ Local Pages</span>
             </div>
           </div>
@@ -177,7 +177,7 @@ function PillarGrid({
           <div>
             <div className="fg-eyebrow">
               <span aria-hidden className="fg-eyebrow-dot" />
-              {alt ? "Vertical Pillars · Sector Specific" : "Money Pillars · General"}
+              {alt ? "Vertical Pillars . Sector Specific" : "Money Pillars . General"}
             </div>
             <h2 className="mt-1 font-display text-2xl font-bold tracking-tight md:text-3xl">{title}</h2>
             <p className="mt-1 text-muted-foreground">{subtitle}</p>
@@ -223,7 +223,7 @@ function SuburbServicesMatrix() {
           <div>
             <div className="fg-eyebrow">
               <span aria-hidden className="fg-eyebrow-dot" />
-              Matrix · Neighborhood × Program
+              Matrix . Neighborhood × Program
             </div>
             <h2 className="mt-1 font-display text-2xl font-bold tracking-tight md:text-3xl">
               Services by neighborhood
@@ -276,7 +276,7 @@ function SuburbServicesMatrix() {
                 ))}
               </div>
               <div className="mt-4 flex items-center justify-between border-t border-border/60 pt-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
-                <span>ZIPs · {s.zips.join(", ")}</span>
+                <span>ZIPs . {s.zips.join(", ")}</span>
                 <Link
                   to="/nashville/$suburb"
                   params={{ suburb: s.slug }}

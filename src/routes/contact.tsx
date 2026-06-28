@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { Header, Footer } from "./index";
 import { Button } from "@/components/ui/button";
 import {
@@ -85,7 +85,7 @@ function ContactPage() {
               icon: Phone,
               title: "Call the desk",
               value: SITE_CONFIG.phone,
-              sub: "Mon-Fri · 8am-7pm CT · Sat 9am-2pm",
+              sub: "Mon-Fri . 8am-7pm CT . Sat 9am-2pm",
               href: SITE_CONFIG.phoneHref,
             },
             {

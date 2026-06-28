@@ -1,4 +1,4 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+﻿import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, CheckCircle2, MapPin, Phone, Sparkles } from "lucide-react";
 import { Header, Footer } from "./index";
 import { Button } from "@/components/ui/button";
@@ -77,7 +77,7 @@ function SuburbPillarPage() {
               <ArrowLeft className="h-3.5 w-3.5" /> {suburb.name}
             </Link>
             <span className="text-muted-foreground">
-              {pillar.title} · <span className="text-[color:var(--brand-charcoal)]">{suburb.name}</span>
+              {pillar.title} . <span className="text-[color:var(--brand-charcoal)]">{suburb.name}</span>
             </span>
           </div>
         </div>
@@ -97,7 +97,7 @@ function SuburbPillarPage() {
             <div className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-vermillion)]">
               <span aria-hidden className="h-px w-10 bg-[color:var(--brand-vermillion)]" />
               <MapPin className="h-3.5 w-3.5" />
-              {suburb.name} · {suburb.county}
+              {suburb.name} . {suburb.county}
             </div>
             <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight md:text-6xl">
               {pillar.title}
@@ -138,7 +138,7 @@ function SuburbPillarPage() {
         <section className="mx-auto max-w-4xl px-6 py-16">
           <div className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-vermillion)]">
             <span aria-hidden className="h-px w-10 bg-[color:var(--brand-vermillion)]" />
-            Case File · 01
+            Case File . 01
           </div>
           <h2 className="mt-3 font-display text-2xl font-bold tracking-tight md:text-3xl">
             A {suburb.name} example
@@ -166,7 +166,7 @@ function SuburbPillarPage() {
           <div className="mx-auto max-w-7xl px-6 py-16">
             <div className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-vermillion)]">
               <span aria-hidden className="h-px w-10 bg-[color:var(--brand-vermillion)]" />
-              Other Programs · {suburb.name}
+              Other Programs . {suburb.name}
             </div>
             <h2 className="mt-3 font-display text-2xl font-bold tracking-tight md:text-3xl">
               Compare the other plays in {suburb.name}
@@ -202,7 +202,7 @@ function SuburbPillarPage() {
           <div className="relative mx-auto max-w-5xl px-6 text-center">
             <div className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-vermillion)]">
               <span aria-hidden className="h-px w-10 bg-[color:var(--brand-vermillion)]" />
-              Funding Brief · 60 seconds
+              Funding Brief . 60 seconds
             </div>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight md:text-4xl">
               {pillar.title}.
