@@ -1010,18 +1010,18 @@ function CityHubCTA() {
             </div>
             <div className="rounded-2xl border border-white/15 bg-white/5 p-5 backdrop-blur sm:p-6">
               <div className="text-xs uppercase tracking-wider text-white/70">Inside the hub</div>
-              <div className="mt-4 grid grid-cols-3 gap-3 text-center">
-                <div className="rounded-xl bg-white/10 p-2.5 sm:p-4">
-                  <div className="text-base font-bold sm:text-2xl">10</div>
-                  <div className="mt-1 whitespace-nowrap text-[9px] uppercase tracking-wide text-white/70 sm:text-[11px] sm:tracking-wider">Neighborhoods</div>
+              <div className="mt-4 grid grid-cols-3 gap-2 text-center">
+                <div className="flex flex-col items-center rounded-xl bg-white/10 px-1 py-3">
+                  <div className="text-xl font-bold">10</div>
+                  <div className="mt-1 text-[10px] uppercase leading-tight tracking-wide text-white/70">Areas</div>
                 </div>
-                <div className="rounded-xl bg-white/10 p-2.5 sm:p-4">
-                  <div className="text-base font-bold sm:text-2xl">24</div>
-                  <div className="mt-1 whitespace-nowrap text-[9px] uppercase tracking-wide text-white/70 sm:text-[11px] sm:tracking-wider">Programs</div>
+                <div className="flex flex-col items-center rounded-xl bg-white/10 px-1 py-3">
+                  <div className="text-xl font-bold">24</div>
+                  <div className="mt-1 text-[10px] uppercase leading-tight tracking-wide text-white/70">Programs</div>
                 </div>
-                <div className="rounded-xl bg-white/10 p-2.5 sm:p-4">
-                  <div className="text-base font-bold sm:text-2xl">60+</div>
-                  <div className="mt-1 whitespace-nowrap text-[9px] uppercase tracking-wide text-white/70 sm:text-[11px] sm:tracking-wider">Local Pages</div>
+                <div className="flex flex-col items-center rounded-xl bg-white/10 px-1 py-3">
+                  <div className="text-xl font-bold">60+</div>
+                  <div className="mt-1 text-[10px] uppercase leading-tight tracking-wide text-white/70">Local Pages</div>
                 </div>
               </div>
               <Link
