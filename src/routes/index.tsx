@@ -367,7 +367,7 @@ export function Header() {
       <div aria-hidden className="absolute inset-x-0 top-0 h-[3px] bg-[image:var(--gradient-cta)]" />
       <div className="mx-auto flex h-14 max-w-7xl items-center justify-between gap-4 px-4 md:px-6">
         <a href="/" className="flex items-center font-semibold">
-          <img src={siteLogoUrl} alt={SITE_CONFIG.name} className="h-9 w-auto" />
+          <img src={siteLogoUrl} width={690} height={204} alt={SITE_CONFIG.name} className="h-9 w-auto" />
           <span className="sr-only">{SITE_CONFIG.name}</span>
         </a>
 
@@ -1631,7 +1631,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 md:grid-cols-4">
         <div>
           <div className="flex items-center font-semibold">
-            <img src={siteLogoUrl} alt={SITE_CONFIG.name} className="h-14 w-auto brightness-0 invert" />
+            <img src={siteLogoUrl} width={690} height={204} alt={SITE_CONFIG.name} className="h-14 w-auto brightness-0 invert" />
           </div>
           <address className="mt-6 not-italic space-y-1 text-sm text-white/65">
             <div className="font-semibold text-white">{SITE_CONFIG.name}</div>
